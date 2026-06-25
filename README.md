@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# datadiorama – Website-Relaunch (Next.js)
 
-## Getting Started
+Moderner Relaunch von **datadiorama.com** als Next.js-/React-Anwendung – im
+bestehenden Datadiorama-Design, aber technisch neu für maximale SEO- und
+AEO-Vorteile (Server-Rendering, strukturierte Daten, Faktenboxen, FAQ).
 
-First, run the development server:
+## Tech-Stack
+
+- **Next.js 16** (App Router, Turbopack) + **React 19** + **TypeScript**
+- **Tailwind CSS v4** (Design-Tokens in `src/app/globals.css`)
+- Fonts via `next/font` (Varela Round, Outfit, Share Tech Mono) – lokal ausgeliefert
+- Vollständig statisch (SSG); nur die Kontakt-API ist serverseitig
+
+## Entwicklung
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # Produktions-Build
+npm run start    # Build lokal ausliefern
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Projektstruktur
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+  app/                 # Seiten (App Router)
+    leistungen/[slug]  # 11 Leistungs-Detailseiten (datengetrieben)
+    jobs/[slug]        # Stellenangebote
+    beitraege/[slug]   # Blog-/Fachartikel
+    kontakt/           # Kontaktseite + Formular
+    api/kontakt/       # Formular-Endpunkt
+    opengraph-image    # dynamisches Social-Sharing-Bild
+    sitemap.ts, robots.ts
+  components/
+    layout/  Header, Footer
+    sections/ Hero, ServicesSection, AboutSection, ...
+    aeo/     FactBox, KeyTakeaways, Faq, Breadcrumbs  ← KI-/SEO-Optimierung
+    seo/     JsonLd
+  data/                # Inhalte (Single Source of Truth)
+    site.ts services.ts team.ts jobs.ts posts.ts posts-content.ts partners.ts
+  lib/                 # seo.ts, structured-data.ts, types.ts
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Inhalte pflegen
 
-## Learn More
+Alle Texte liegen als typisierte Daten unter `src/data/` – kein CMS nötig:
 
-To learn more about Next.js, take a look at the following resources:
+- **Leistungen:** `src/data/services.ts` (Faktenbox, Key-Takeaways, FAQ je Leistung)
+- **Team:** `src/data/team.ts`
+- **Stellen:** `src/data/jobs.ts`
+- **Beiträge:** Metadaten in `src/data/posts.ts`, Fließtext in `src/data/posts-content.ts`
+- **Standorte/Kontakt:** `src/data/site.ts`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## SEO & AEO (KI-Optimierung)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- JSON-LD: Organization, LocalBusiness (pro Standort), Service, FAQPage,
+  BreadcrumbList, JobPosting, BlogPosting (`src/lib/structured-data.ts`)
+- Faktenboxen „Auf einen Blick", „Das Wichtigste in Kürze" und FAQ-Sektionen
+  liefern Such- und KI-Systemen klar extrahierbare Antworten
+- Pro Seite: Title/Description/Canonical/OpenGraph (`src/lib/seo.ts`)
+- `sitemap.xml`, `robots.txt`, 301-Redirects alter WordPress-URLs (`next.config.ts`)
 
-## Deploy on Vercel
+## Kontaktformular aktivieren
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Das Formular funktioniert sofort (Anfragen werden serverseitig protokolliert).
+Für den E-Mail-Versand [Resend](https://resend.com) anbinden – Umgebungsvariablen:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+RESEND_API_KEY=...           # API-Key von Resend
+CONTACT_TO=info@datadiorama.com
+CONTACT_FROM=kontakt@datadiorama.com   # verifizierte Absenderdomain
+```
+
+Ohne `RESEND_API_KEY` wird die Anfrage akzeptiert und im Server-Log ausgegeben.
+
+## Vor dem Go-Live zu prüfen
+
+- [ ] **Datenschutzerklärung** rechtlich prüfen und an finales Hosting/Dienste anpassen (`src/app/datenschutz/page.tsx`)
+- [x] **Fernzugriff:** Support-Tool-Installer (Windows/macOS) liegen in `public/downloads/` und sind verlinkt. Bei neuen Versionen Dateien dort ersetzen oder ggf. auf CDN/Objektspeicher auslagern.
+- [ ] **Bilder:** aktuell von der Live-WordPress-Instanz geladen → bei Bedarf lokalisieren (`next.config.ts` → `images.remotePatterns`)
+- [ ] **Resend**-Zugangsdaten setzen (s. o.)
+- [ ] Team-Fotos optional je Person ergänzen (derzeit Initialen-Avatare)
+```

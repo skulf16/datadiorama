@@ -1,26 +1,273 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  Datadiorama Design System
+  Farben & Typografie originalgetreu aus der bestehenden Marke abgeleitet:
+  - Primär-Blau  #0058E2
+  - Sky-Blau     #2EA3F2
+  - Navy         #05092B (Sektionen, Footer, Text)
+  - Display-Font Varela Round, UI/Body Outfit, Tech-Labels Share Tech Mono
+*/
+
+@theme {
+  /* Markenfarben */
+  --color-brand: #0058e2;
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #d9e6ff;
+  --color-brand-200: #b3ccff;
+  --color-brand-300: #7da9ff;
+  --color-brand-400: #3f7cf5;
+  --color-brand-500: #0058e2;
+  --color-brand-600: #004ec9;
+  --color-brand-700: #003ea3;
+  --color-brand-800: #053084;
+  --color-brand-900: #0a2a6b;
+
+  --color-sky: #2ea3f2;
+  --color-sky-400: #51b4f6;
+  --color-sky-500: #2ea3f2;
+
+  /* Navy-Skala (dunkle Sektionen) */
+  --color-navy: #05092b;
+  --color-navy-950: #05092b;
+  --color-navy-900: #070c33;
+  --color-navy-800: #0b1240;
+  --color-navy-700: #111a52;
+  --color-navy-600: #1a2566;
+
+  /* Neutralwerte */
+  --color-ink: #05092b;
+  --color-muted: #5a6178;
+  --color-muted-light: #8a90a6;
+  --color-line: #e6e9f2;
+  --color-surface: #f4f7fc;
+  --color-surface-2: #eef2fa;
+
+  /* Schriftfamilien (next/font setzt die CSS-Variablen) */
+  --font-display: var(--font-varela-round), ui-rounded, "Segoe UI", system-ui, sans-serif;
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-share-tech-mono), ui-monospace, "SFMono-Regular", monospace;
+
+  /* Radien */
+  --radius-xs: 0.375rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+
+  /* Schatten */
+  --shadow-card: 0 1px 2px rgba(5, 9, 43, 0.04), 0 12px 32px -12px rgba(5, 9, 43, 0.12);
+  --shadow-card-hover: 0 2px 4px rgba(5, 9, 43, 0.06), 0 24px 48px -16px rgba(0, 88, 226, 0.25);
+  --shadow-brand: 0 18px 40px -16px rgba(0, 88, 226, 0.55);
+
+  /* Container */
+  --breakpoint-3xl: 96rem;
+
+  /* Animationen */
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-marquee: marquee 38s linear infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #05092b;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+  }
+
+  * {
+    border-color: var(--color-line);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.65;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-brand);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  a {
+    text-underline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Tech-Eyebrow-Label (z.B. "WAS WIR ANBIETEN") */
+  .eyebrow {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--color-brand);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 1.6rem;
+    height: 1px;
+    background: currentColor;
+    display: inline-block;
+  }
+
+  .eyebrow-center::before {
+    display: none;
+  }
+
+  /* Prose-Styling für Fließtext-Bereiche (Blog, Detailseiten) */
+  .prose-dd {
+    color: var(--color-muted);
+    font-size: 1.0625rem;
+    line-height: 1.75;
+  }
+  .prose-dd h2 {
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    margin-top: 2.25em;
+    margin-bottom: 0.6em;
+  }
+  .prose-dd h3 {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    color: var(--color-ink);
+    font-size: 1.3rem;
+    margin-top: 1.8em;
+    margin-bottom: 0.5em;
+    letter-spacing: -0.01em;
+  }
+  .prose-dd p {
+    margin-bottom: 1.1em;
+  }
+  .prose-dd ul {
+    margin: 1.1em 0;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.6rem;
+  }
+  .prose-dd ul li {
+    position: relative;
+    padding-left: 1.9rem;
+  }
+  .prose-dd ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 3px;
+    background: linear-gradient(135deg, var(--color-brand), var(--color-sky));
+  }
+  .prose-dd a {
+    color: var(--color-brand);
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  .prose-dd strong {
+    color: var(--color-ink);
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(100deg, var(--color-brand) 0%, var(--color-sky) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .bg-grid-dark {
+    background-image:
+      linear-gradient(to right, rgba(5, 9, 43, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(5, 9, 43, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Hexagon / Diorama-Form als Maske */
+  .clip-hex {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  }
+
+  .mask-fade-r {
+    -webkit-mask-image: linear-gradient(to right, #000 78%, transparent 100%);
+    mask-image: linear-gradient(to right, #000 78%, transparent 100%);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
