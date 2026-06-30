@@ -89,6 +89,27 @@
   }
 }
 
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes signal-ring {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
 @layer base {
   :root {
     --background: #ffffff;
@@ -234,6 +255,15 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+  }
+
+  .text-gradient-animated {
+    background: linear-gradient(100deg, #0058e2, #2ea3f2, #7da9ff, #2ea3f2, #0058e2);
+    background-size: 220% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-shift 9s ease-in-out infinite;
   }
 
   .bg-grid {

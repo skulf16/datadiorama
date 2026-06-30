@@ -77,7 +77,7 @@ Ohne `RESEND_API_KEY` wird die Anfrage akzeptiert und im Server-Log ausgegeben.
 ## Vor dem Go-Live zu prüfen
 
 - [ ] **Datenschutzerklärung** rechtlich prüfen und an finales Hosting/Dienste anpassen (`src/app/datenschutz/page.tsx`)
-- [x] **Fernzugriff:** Support-Tool-Installer (Windows/macOS) liegen in `public/downloads/` und sind verlinkt. Bei neuen Versionen Dateien dort ersetzen oder ggf. auf CDN/Objektspeicher auslagern.
+- [x] **Fernzugriff:** Support-Tool-Installer (Windows/macOS) werden **extern** ausgeliefert (nicht im Repo, um es schlank zu halten). Die Basis-URL ist über `NEXT_PUBLIC_DOWNLOADS_BASE_URL` konfigurierbar (Standard: `https://datadiorama.com/downloads`). Vor der finalen Domain-Migration auf einen dauerhaften Speicher (CDN/Objektspeicher) umstellen und die ENV setzen.
 - [ ] **Bilder:** aktuell von der Live-WordPress-Instanz geladen → bei Bedarf lokalisieren (`next.config.ts` → `images.remotePatterns`)
 - [ ] **Resend**-Zugangsdaten setzen (s. o.)
 - [ ] Team-Fotos optional je Person ergänzen (derzeit Initialen-Avatare)

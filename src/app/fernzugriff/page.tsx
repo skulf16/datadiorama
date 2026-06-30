@@ -13,11 +13,16 @@ export const metadata: Metadata = buildMetadata({
   noIndex: true,
 });
 
-// Support-Tool-Installer (aus der bestehenden Seite übernommen, lokal in /public/downloads).
+// Support-Tool-Installer werden extern ausgeliefert (nicht im Repo, um es schlank zu halten).
+// Basis-URL per ENV überschreibbar – so kann später leicht auf ein CDN/Objektspeicher
+// umgestellt werden. Standard: die bestehende, stabil erreichbare Download-Quelle.
+const DL_BASE =
+  process.env.NEXT_PUBLIC_DOWNLOADS_BASE_URL || "https://datadiorama.com/downloads";
+
 const DOWNLOADS = [
-  { os: "Windows", note: "Windows 10 / 11", icon: "workspace" as const, href: "/downloads/datadiorama-support_v1.exe", size: "26 MB" },
-  { os: "macOS (Apple Silicon)", note: "M1 / M2 / M3 · ARM64", icon: "workspace" as const, href: "/downloads/datadiorama-support-arm64_v1.dmg", size: "24 MB" },
-  { os: "macOS (Intel)", note: "x64", icon: "workspace" as const, href: "/downloads/datadiorama-support-x64_v1.dmg", size: "30 MB" },
+  { os: "Windows", note: "Windows 10 / 11", icon: "workspace" as const, href: `${DL_BASE}/datadiorama-support_v1.exe`, size: "26 MB" },
+  { os: "macOS (Apple Silicon)", note: "M1 / M2 / M3 · ARM64", icon: "workspace" as const, href: `${DL_BASE}/datadiorama-support-arm64_v1.dmg`, size: "24 MB" },
+  { os: "macOS (Intel)", note: "x64", icon: "workspace" as const, href: `${DL_BASE}/datadiorama-support-x64_v1.dmg`, size: "30 MB" },
 ];
 
 const steps = [
