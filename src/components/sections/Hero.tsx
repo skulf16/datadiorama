@@ -42,8 +42,8 @@ export function Hero() {
             Löser von IT-Problemen.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button href="/kontakt" size="lg" withArrow>
-              Jetzt Erstgespräch vereinbaren
+            <Button href="/angebot" size="lg" withArrow>
+              Kostenloses Angebot anfordern
             </Button>
             <Button href="/leistungen" size="lg" variant="outline-dark">
               Unsere Leistungen

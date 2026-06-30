@@ -5,7 +5,7 @@ import { AboutSection } from "@/components/sections/AboutSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { FeatureSplit } from "@/components/sections/FeatureSplit";
 import { ValuesSection } from "@/components/sections/ValuesSection";
-import { CtaSection } from "@/components/sections/CtaSection";
+import { FunnelSection } from "@/components/funnel/FunnelSection";
 import { buildMetadata } from "@/lib/seo";
 import { SITE } from "@/data/site";
 
@@ -43,7 +43,7 @@ export default function HomePage() {
         cta={{ label: "Alle Leistungen ansehen", href: "/leistungen" }}
       />
       <ValuesSection />
-      <CtaSection />
+      <FunnelSection />
     </>
   );
 }
