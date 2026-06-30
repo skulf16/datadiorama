@@ -17,8 +17,8 @@ export function Hero() {
       <HeroNetwork className="absolute inset-0 -z-20 h-full w-full" />
 
       {/* Overlays für Lesbarkeit & Tiefe */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy via-navy/85 to-navy/25" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-navy via-transparent to-navy/60" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy via-navy/65 to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
       <div className="pointer-events-none absolute -right-32 top-1/4 -z-10 h-[30rem] w-[30rem] rounded-full bg-brand/25 blur-[150px]" />
       <div className="pointer-events-none absolute -left-20 bottom-0 -z-10 h-72 w-72 rounded-full bg-sky/10 blur-[120px]" />
 

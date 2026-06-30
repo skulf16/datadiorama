@@ -4,9 +4,9 @@ import { useEffect, useRef } from "react";
 
 type Node = { x: number; y: number; vx: number; vy: number; r: number; c: string };
 
-const COLORS = ["#2EA3F2", "#0058E2", "#7DA9FF", "#ffffff"];
-const LINK_DIST = 132;
-const MOUSE_DIST = 190;
+const COLORS = ["#5BB8FF", "#2EA3F2", "#9DC4FF", "#ffffff"];
+const LINK_DIST = 155;
+const MOUSE_DIST = 210;
 
 /**
  * Animierte Netzwerk-Visualisierung als Hero-Hintergrund (Canvas).
@@ -38,13 +38,13 @@ export function HeroNetwork({ className }: { className?: string }) {
       canvas!.width = Math.max(1, Math.floor(w * dpr));
       canvas!.height = Math.max(1, Math.floor(h * dpr));
       ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const count = Math.max(28, Math.min(96, Math.round((w * h) / 15000)));
+      const count = Math.max(40, Math.min(130, Math.round((w * h) / 11000)));
       nodes = Array.from({ length: count }, () => ({
         x: Math.random() * w,
         y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.22,
-        vy: (Math.random() - 0.5) * 0.22,
-        r: Math.random() * 1.7 + 1,
+        vx: (Math.random() - 0.5) * 0.32,
+        vy: (Math.random() - 0.5) * 0.32,
+        r: Math.random() * 2 + 1.4,
         c: COLORS[Math.floor(Math.random() * COLORS.length)],
       }));
     }
@@ -65,8 +65,8 @@ export function HeroNetwork({ className }: { className?: string }) {
           const dy = a.y - b.y;
           const d = Math.hypot(dx, dy);
           if (d < LINK_DIST) {
-            ctx!.strokeStyle = `rgba(96,165,250,${(1 - d / LINK_DIST) * 0.45})`;
-            ctx!.lineWidth = 1;
+            ctx!.strokeStyle = `rgba(125,185,255,${(1 - d / LINK_DIST) * 0.72})`;
+            ctx!.lineWidth = 1.1;
             ctx!.beginPath();
             ctx!.moveTo(a.x, a.y);
             ctx!.lineTo(b.x, b.y);
@@ -78,8 +78,8 @@ export function HeroNetwork({ className }: { className?: string }) {
           const dy = a.y - mouse.y;
           const d = Math.hypot(dx, dy);
           if (d < MOUSE_DIST) {
-            ctx!.strokeStyle = `rgba(46,163,242,${(1 - d / MOUSE_DIST) * 0.6})`;
-            ctx!.lineWidth = 1;
+            ctx!.strokeStyle = `rgba(91,184,255,${(1 - d / MOUSE_DIST) * 0.85})`;
+            ctx!.lineWidth = 1.2;
             ctx!.beginPath();
             ctx!.moveTo(a.x, a.y);
             ctx!.lineTo(mouse.x, mouse.y);
@@ -87,13 +87,17 @@ export function HeroNetwork({ className }: { className?: string }) {
           }
         }
       }
+      // Knoten mit Glow zeichnen
+      ctx!.shadowBlur = 9;
+      ctx!.shadowColor = "rgba(46,163,242,0.9)";
       for (const a of nodes) {
         ctx!.beginPath();
         ctx!.fillStyle = a.c;
-        ctx!.globalAlpha = a.c === "#ffffff" ? 0.9 : 0.8;
+        ctx!.globalAlpha = a.c === "#ffffff" ? 1 : 0.95;
         ctx!.arc(a.x, a.y, a.r, 0, Math.PI * 2);
         ctx!.fill();
       }
+      ctx!.shadowBlur = 0;
       ctx!.globalAlpha = 1;
       if (!reduce) raf = requestAnimationFrame(frame);
     }
