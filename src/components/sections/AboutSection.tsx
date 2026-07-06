@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/icons/Icon";
 
 const points = [
-  { icon: "shield", title: "Zertifizierte Mitarbeiter", text: "Von Cisco & Ubiquiti geschult, kontinuierlich weitergebildet." },
+  { icon: "shield", title: "Zertifizierte Mitarbeiter", text: "Kontinuierlich weitergebildet – zertifizierter UniFi-Partner (UEWA)." },
   { icon: "network", title: "Sichere Netzwerke", text: "Durchdachte Planung, optimale WLAN-Ausleuchtung, klare Strukturen." },
   { icon: "rocket", title: "Effizienteres Arbeiten", text: "Cloud, Automatisierung und Support, der den Betrieb beschleunigt." },
 ] as const;

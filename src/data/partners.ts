@@ -42,11 +42,6 @@ export const PARTNERS: Record<string, Partner> = {
     logoWidth: 300,
     logoHeight: 300,
   },
-  cisco: {
-    key: "cisco",
-    name: "Cisco",
-    description: "Von Cisco geschulte Mitarbeiter für Netzwerktechnik auf Enterprise-Niveau.",
-  },
   microsoft: {
     key: "microsoft",
     name: "Microsoft 365",

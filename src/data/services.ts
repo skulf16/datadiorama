@@ -162,11 +162,11 @@ export const SERVICES: Service[] = [
       "Planung, Einrichtung und Betreuung sicherer Unternehmensnetzwerke – als zertifizierter UniFi-Partner.",
     metaTitle: "Netzwerkbetreuung & UniFi-Service für Unternehmen",
     metaDescription:
-      "Sichere Unternehmensnetzwerke: WLAN-Planung, Netzwerksicherheit, Hardware und Fernwartung. Als zertifizierter UniFi-Partner mit von Cisco geschulten Technikern.",
+      "Sichere Unternehmensnetzwerke: WLAN-Planung, Netzwerksicherheit, Hardware und Fernwartung – als zertifizierter UniFi-Partner (UEWA).",
     image: `${IMG}/2025/03/datadiorama-7783.jpg`,
     image2: `${IMG}/2025/03/datadiorama-8220.jpg`,
     intro:
-      "Ein gut geplantes Netzwerk ist die Grundlage für reibungsloses Arbeiten. datadiorama plant, baut und betreut Unternehmensnetzwerke mit optimaler WLAN-Ausleuchtung und effizientem Datenaustausch. Als zertifizierter UniFi-Partner (UEWA) mit von Cisco und Ubiquiti geschulten Technikern verwalten wir Ihre Geräte zentral über eine intuitive Weboberfläche.",
+      "Ein gut geplantes Netzwerk ist die Grundlage für reibungsloses Arbeiten. datadiorama plant, baut und betreut Unternehmensnetzwerke mit optimaler WLAN-Ausleuchtung und effizientem Datenaustausch. Als zertifizierter UniFi-Partner (UEWA) verwalten wir Ihre Geräte zentral über eine intuitive Weboberfläche.",
     keyTakeaways: [
       "Professionelle WLAN-Planung für lückenlose Abdeckung.",
       "Zentrale Geräteverwaltung über eine UniFi-Weboberfläche.",
@@ -220,7 +220,7 @@ export const SERVICES: Service[] = [
           "Ja. Über die zentrale Weboberfläche betreuen wir Ihr Netzwerk per Fernwartung und reagieren schnell auf Anfragen – mit einem festen Ansprechpartner.",
       },
     ],
-    partnerKeys: ["unifi", "cisco"],
+    partnerKeys: ["unifi"],
     relatedSlugs: ["hotel-wlan", "it-support", "home-office"],
   },
 
