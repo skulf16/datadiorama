@@ -41,6 +41,9 @@ export async function generateMetadata({
   });
 }
 
+// Leistungen mit pluralischem navLabel („Was Ihnen … bringen“ statt „bringt“).
+const PLURAL_NAV_LABELS = new Set(["telefonanlagen", "workspaces"]);
+
 function Paragraphs({ text }: { text: string }) {
   return (
     <>
@@ -146,7 +149,7 @@ export default async function ServiceDetailPage({
             <SectionHeading
               align="center"
               eyebrow="Ihre Vorteile"
-              title={`Was Ihnen ${service.navLabel} bringt`}
+              title={`Was Ihnen ${service.navLabel} ${PLURAL_NAV_LABELS.has(service.slug) ? "bringen" : "bringt"}`}
             />
             <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {service.benefits.map((b) => (

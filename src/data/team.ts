@@ -1,4 +1,4 @@
-import type { TeamMember } from "@/lib/types";
+import type { AvatarSpec, TeamMember } from "@/lib/types";
 
 const initials = (name: string) =>
   name
@@ -8,29 +8,45 @@ const initials = (name: string) =>
     .join("")
     .toUpperCase();
 
-const m = (name: string, role: string, image?: string): TeamMember => ({
+const m = (
+  name: string,
+  role: string,
+  opts: { image?: string; avatar?: AvatarSpec } = {},
+): TeamMember => ({
   name,
   role,
-  image,
+  image: opts.image,
+  avatar: opts.avatar,
   initials: initials(name),
 });
 
-// Verifiziert aus der bestehenden Team-Seite.
+const IMG = "https://datadiorama.com/wp-content/uploads";
+
+// Shirt-Farben aus der Markenpalette (globals.css).
+const SHIRT = {
+  brand: "#0058e2",
+  sky: "#2ea3f2",
+  navy600: "#1a2566",
+} as const;
+
+// Verifiziert aus der bestehenden Team-Seite (datadiorama.com/team).
+// Echte Porträtfotos aus den WordPress-Medien; wo dort nur ein generischer
+// Platzhalter liegt, dient ein gezeichneter Comic-Avatar als Fallback.
 export const TEAM: TeamMember[] = [
-  m("Christian Anger", "Geschäftsführung"),
-  m("Tino Schmidt", "Geschäftsführung"),
-  m("Stefan Pokorny", "Vertrieb"),
-  m("Stacey Kenny", "IT-Projektleitung"),
-  m("Maximilian Dalichow", "IT-Projektleitung"),
-  m("Nadine Gonschior", "IT-Projektmanagement"),
-  m("Ole Graf", "Ausbilder & IT-Administrator"),
-  m("Attila Kövary", "IT-Administrator"),
-  m("William Kiesel", "IT-Administrator"),
-  m("Justin Bongards", "IT-Administrator"),
-  m("Robert Schwerin", "IT-Administrator"),
-  m("Leon Cierzynski", "1st Level Support"),
-  m("Corvin Fleischer", "1st Level Support"),
-  m("Max Buchwald", "Auszubildender Fachinformatiker"),
+  m("Christian Anger", "Geschäftsführung", { image: `${IMG}/2022/11/datadiorama-3618-christian.jpg` }),
+  m("Tino Schmidt", "Geschäftsführung", { image: `${IMG}/2022/11/datadiorama-3631-tino.jpg` }),
+  m("Stefan Pokorny", "Vertrieb", { image: `${IMG}/2025/12/HJ7A2833-1x1-web.jpg` }),
+  m("Stacey Kenny", "IT-Projektleitung", { avatar: { skin: "#f6d7bb", hair: "long", hairColor: "#7a4a2f", shirt: SHIRT.brand } }),
+  m("Maximilian Dalichow", "IT-Projektleitung", { image: `${IMG}/2022/11/datadiorama-3607-max.jpg` }),
+  m("Nadine Gonschior", "IT-Projektmanagement", { image: `${IMG}/2025/12/HJ7A2597-1x1-web.jpg` }),
+  m("Ole Graf", "Ausbilder & IT-Administrator", { image: `${IMG}/2025/03/datadiorama-8301-e1743068600936.jpg` }),
+  m("Attila Kövary", "IT-Administrator", { image: `${IMG}/2025/12/HJ7A2664-1x1-web.jpg` }),
+  m("William Kiesel", "IT-Administrator", { avatar: { skin: "#b07b4f", hair: "curly", hairColor: "#1f1a17", shirt: SHIRT.sky, glasses: true } }),
+  m("Justin Bongards", "IT-Administrator", { image: `${IMG}/2025/12/webpic.png` }),
+  m("Robert Schwerin", "IT-Administrator", { avatar: { skin: "#edc39c", hair: "side", hairColor: "#55524e", shirt: SHIRT.navy600, glasses: true } }),
+  m("Leon Cierzynski", "1st Level Support", { image: `${IMG}/2025/12/HJ7A2726-1x1-web.jpg` }),
+  m("Corvin Fleischer", "1st Level Support", { image: `${IMG}/2025/12/HJ7A2679-1x1-web.jpg` }),
+  m("Max Buchwald", "Auszubildender Fachinformatiker", { image: `${IMG}/2025/03/datadiorama-8313-1x1-1.jpg` }),
 ];
 
 export interface CompanyValue {

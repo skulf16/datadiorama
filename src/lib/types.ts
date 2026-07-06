@@ -14,7 +14,8 @@ export type IconKey =
   | "server"
   | "shield"
   | "cloud"
-  | "rocket";
+  | "rocket"
+  | "dots";
 
 export interface FaqItem {
   question: string;
@@ -86,11 +87,25 @@ export interface Service {
   image2?: string;
 }
 
+/** Parameter für die gezeichneten Comic-Avatare der Teammitglieder. */
+export interface AvatarSpec {
+  /** Hautton (Hex) */
+  skin: string;
+  hair: "short" | "buzz" | "curly" | "side" | "bald" | "long" | "bob" | "bun" | "fringe";
+  hairColor: string;
+  /** Shirt-Farbe (Hex) */
+  shirt: string;
+  glasses?: boolean;
+  beard?: boolean;
+}
+
 export interface TeamMember {
   name: string;
   role: string;
   image?: string;
   initials: string;
+  /** Comic-Avatar, solange keine echten Fotos vorliegen */
+  avatar?: AvatarSpec;
 }
 
 export interface Job {

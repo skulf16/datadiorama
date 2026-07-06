@@ -105,6 +105,12 @@ const paths: Record<IconKey, React.ReactNode> = {
       <circle cx="14.5" cy="9" r="1.4" />
     </>
   ),
+  dots: (
+    <>
+      <path d="M12 4.5c-4.9 0-8.5 3.1-8.5 7.1 0 2.3 1.2 4.3 3.1 5.6L6 20.5l3.6-1.6c.8.2 1.6.3 2.4.3 4.9 0 8.5-3.1 8.5-7.1S16.9 4.5 12 4.5Z" />
+      <path d="M8.5 11.6h.01M12 11.6h.01M15.5 11.6h.01" />
+    </>
+  ),
 };
 
 export function Icon({ name, className }: IconProps) {

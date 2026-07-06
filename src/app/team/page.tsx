@@ -6,6 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ValuesSection } from "@/components/sections/ValuesSection";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { Button } from "@/components/ui/Button";
+import { TeamAvatar } from "@/components/team/TeamAvatar";
 import { TEAM, TEAM_GALLERY } from "@/data/team";
 import { buildMetadata } from "@/lib/seo";
 import { cn } from "@/lib/utils";
@@ -13,7 +14,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = buildMetadata({
   title: "Team – die Menschen hinter datadiorama",
   description:
-    "Lernen Sie das Team von datadiorama kennen: Geschäftsführung, IT-Projektleitung, Administration und Support – Ihre zertifizierten Ansprechpartner für IT in Potsdam, Berlin & der Schweiz.",
+    "Lernen Sie das Team von datadiorama kennen: Geschäftsführung, IT-Projektleitung, Administration und Support – Ihre zertifizierten Ansprechpartner für IT in Potsdam, Berlin & St. Gallen.",
   path: "/team",
 });
 
@@ -71,15 +72,27 @@ export default function TeamPage() {
             {TEAM.map((member, i) => (
               <div
                 key={member.name}
-                className="group flex flex-col items-center rounded-2xl border border-line bg-white p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]"
+                className="flex flex-col items-center rounded-2xl border border-line bg-white p-6 text-center transition-colors duration-300 hover:border-brand/30"
               >
                 <div
                   className={cn(
-                    "flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br font-display text-2xl text-white shadow-[var(--shadow-brand)]",
+                    "relative flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br shadow-[var(--shadow-brand)]",
                     gradients[i % gradients.length],
                   )}
                 >
-                  {member.initials}
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={`Porträt von ${member.name}`}
+                      fill
+                      className="object-cover"
+                      sizes="96px"
+                    />
+                  ) : member.avatar ? (
+                    <TeamAvatar spec={member.avatar} className="h-full w-full" />
+                  ) : (
+                    <span className="font-display text-2xl text-white">{member.initials}</span>
+                  )}
                 </div>
                 <h3 className="mt-4 font-sans text-base font-semibold text-ink">{member.name}</h3>
                 <p className="mt-1 text-sm text-muted">{member.role}</p>

@@ -25,6 +25,8 @@ export const FUNNEL_STEPS: FunnelStep[] = [
       { label: "IT-Betreuung", value: "IT-Betreuung", icon: "support" },
       { label: "Netzwerke / WLAN / Cloud", value: "Netzwerke / WLAN / Cloud", icon: "network" },
       { label: "Telefonanlagen", value: "Telefonanlagen", icon: "phone" },
+      { label: "Europa Cloud", value: "Europa Cloud", icon: "cloud" },
+      { label: "Etwas anderes", value: "Etwas anderes", icon: "dots" },
     ],
   },
   {

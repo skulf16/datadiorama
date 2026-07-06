@@ -11,7 +11,7 @@ import { SITE, LOCATIONS } from "@/data/site";
 export const metadata: Metadata = buildMetadata({
   title: "Kontakt – Erstgespräch vereinbaren",
   description:
-    "Kontaktieren Sie datadiorama – Ihr IT-Systemhaus in Potsdam, Berlin & der Schweiz. Telefon, E-Mail, Standorte und Kontaktformular für ein kostenloses Erstgespräch.",
+    "Kontaktieren Sie datadiorama – Ihr IT-Systemhaus in Potsdam, Berlin & St. Gallen. Telefon, E-Mail, Standorte und Kontaktformular für ein kostenloses Erstgespräch.",
   path: "/kontakt",
 });
 

@@ -43,12 +43,12 @@ export default function OgImage() {
             IT-Systemhaus &amp; Softwareentwicklung
           </div>
           <div style={{ fontSize: 72, fontWeight: 700, lineHeight: 1.05, maxWidth: 1000 }}>
-            Ihr verlässlicher IT-Partner für Telefonanlagen, Netzwerke &amp; Cloud
+            Ihr Full-Service-IT-Partner für Netzwerke, Cloud &amp; Telefonie
           </div>
         </div>
 
         <div style={{ fontSize: 28, color: "rgba(255,255,255,0.75)" }}>
-          Potsdam · Berlin · Schweiz — seit 2013
+          Potsdam · Berlin · St. Gallen — seit 2013
         </div>
       </div>
     ),

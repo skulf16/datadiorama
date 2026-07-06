@@ -5,7 +5,7 @@ import { HeroNetwork } from "@/components/sections/HeroNetwork";
 
 const stats = [
   { value: "seit 2013", label: "Erfahrenes IT-Systemhaus" },
-  { value: "3 Standorte", label: "Potsdam · Berlin · Schweiz" },
+  { value: "3 Standorte", label: "Potsdam · Berlin · St. Gallen" },
   { value: "24/7", label: "Telefonischer Support" },
   { value: "UniFi-Partner", label: "Zertifiziert (UEWA)" },
 ];
@@ -43,16 +43,16 @@ export function Hero() {
             className="mt-6 font-display text-[clamp(2.4rem,6vw,4.6rem)] leading-[1.04] text-white animate-fade-up"
             style={{ animationDelay: "80ms" }}
           >
-            Ihr verlässlicher IT-Partner für{" "}
-            <span className="text-gradient-animated">Telefonanlagen, Netzwerke &amp; Cloud</span>
+            Ihr Full-Service-IT-Partner für{" "}
+            <span className="text-gradient-animated">Netzwerke, Cloud &amp; Telefonie</span>
           </h1>
           <p
             className="mt-7 max-w-2xl text-lg leading-relaxed text-white/75 animate-fade-up sm:text-xl"
             style={{ animationDelay: "160ms" }}
           >
-            Von der Telefonanlage über die Netzwerkbetreuung bis zur Cloud-Lösung – wir halten die
-            IT von Unternehmen in Potsdam, Berlin und der Schweiz am Laufen. Zertifizierte Profis und
-            Löser von IT-Problemen.
+            Von der Netzwerkbetreuung über die Cloud-Lösung bis zur Telefonanlage – wir kümmern uns
+            um die komplette IT von Unternehmen in Potsdam, Berlin und St. Gallen. Zertifizierte
+            Profis und Löser von IT-Problemen.
           </p>
           <div
             className="mt-10 flex flex-col gap-4 animate-fade-up sm:flex-row"

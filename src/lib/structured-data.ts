@@ -22,12 +22,12 @@ export function organizationSchema() {
     areaServed: SITE.serviceArea.map((name) => ({ "@type": "AdministrativeArea", name })),
     knowsAbout: [
       "IT-Support",
-      "Telefonanlagen",
       "Netzwerkbetreuung",
       "UniFi",
       "Microsoft 365",
       "Cloud-Lösungen",
       "Softwareentwicklung",
+      "Telefonanlagen",
       "IT-Sicherheit",
     ],
     address: LOCATIONS.map((l) => ({

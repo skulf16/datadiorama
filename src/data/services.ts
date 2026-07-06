@@ -15,7 +15,7 @@ export const SERVICES: Service[] = [
       "Wir lösen Ihre IT-Probleme schnell und zuverlässig und sorgen dafür, dass alle Systeme stabil und sicher laufen.",
     metaTitle: "IT-Support für Unternehmen in Potsdam & Berlin",
     metaDescription:
-      "Professioneller IT-Support für Unternehmen: schnelle Reaktionszeiten, fester Ansprechpartner, Fernwartung und Vor-Ort-Service in Potsdam, Berlin & der Schweiz.",
+      "Professioneller IT-Support für Unternehmen: schnelle Reaktionszeiten, fester Ansprechpartner, Fernwartung und Vor-Ort-Service in Potsdam, Berlin & St. Gallen.",
     image: `${IMG}/2025/03/datadiorama-7864.jpg`,
     image2: `${IMG}/2025/03/datadiorama-8127.jpg`,
     intro:
@@ -76,10 +76,10 @@ export const SERVICES: Service[] = [
     relatedSlugs: ["netzwerkservice", "microsoft-365", "mailserver"],
   },
 
-  // 02 — Telefonanlagen
+  // 05 — Telefonanlagen (bewusst weiter hinten: nur eines von mehreren Standbeinen)
   {
     slug: "telefonanlagen",
-    order: 2,
+    order: 5,
     navLabel: "Telefonanlagen",
     icon: "phone",
     title: "Telefonanlagen für Unternehmen",
@@ -150,10 +150,10 @@ export const SERVICES: Service[] = [
     relatedSlugs: ["netzwerkservice", "home-office", "microsoft-teams"],
   },
 
-  // 03 — Netzwerkservice
+  // 02 — Netzwerkservice
   {
     slug: "netzwerkservice",
-    order: 3,
+    order: 2,
     navLabel: "Netzwerkservice",
     icon: "network",
     title: "Netzwerkbetreuung & UniFi-Service",
@@ -176,9 +176,8 @@ export const SERVICES: Service[] = [
     facts: [
       { label: "Schwerpunkt", value: "Netzwerk & WLAN für Unternehmen" },
       { label: "Zertifizierung", value: "UniFi-Partner (UEWA)" },
-      { label: "Schulung", value: "Cisco & Ubiquiti" },
       { label: "Verwaltung", value: "Zentral, per Weboberfläche" },
-      { label: "Region", value: "Potsdam, Berlin & Schweiz" },
+      { label: "Region", value: "Potsdam, Berlin & St. Gallen" },
     ],
     sections: [
       {
@@ -225,10 +224,10 @@ export const SERVICES: Service[] = [
     relatedSlugs: ["hotel-wlan", "it-support", "home-office"],
   },
 
-  // 04 — Software Engineering
+  // 03 — Software Engineering
   {
     slug: "software-engineering",
-    order: 4,
+    order: 3,
     navLabel: "Software Engineering",
     icon: "code",
     title: "Software Engineering & Individualentwicklung",
@@ -291,10 +290,10 @@ export const SERVICES: Service[] = [
     relatedSlugs: ["workspaces", "microsoft-365", "private-cloud"],
   },
 
-  // 05 — Workspaces
+  // 04 — Workspaces
   {
     slug: "workspaces",
-    order: 5,
+    order: 4,
     navLabel: "Workspaces",
     icon: "workspace",
     title: "Digitale Workspaces mit Google & Microsoft",

@@ -12,7 +12,7 @@ import { SITE } from "@/data/site";
 export const metadata: Metadata = buildMetadata({
   title: "Leistungen – IT-Service für Unternehmen",
   description:
-    "Alle IT-Leistungen von datadiorama im Überblick: IT-Support, Telefonanlagen, Netzwerkbetreuung, Microsoft 365, Cloud, Software Engineering und mehr – aus einer Hand.",
+    "Alle IT-Leistungen von datadiorama im Überblick: IT-Support, Netzwerkbetreuung, Microsoft 365, Cloud, Software Engineering, Telefonanlagen und mehr – aus einer Hand.",
   path: "/leistungen",
 });
 

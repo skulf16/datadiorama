@@ -11,11 +11,11 @@ export const SITE = {
   primaryPhoneHref: "+4933176991680",
   url: "https://datadiorama.com",
   description:
-    "datadiorama ist Ihr IT-Systemhaus und Softwareentwickler aus Potsdam – seit 2013. Von der Telefonanlage über die Netzwerkbetreuung bis zur Cloud-Lösung: Ihr Full-Service-IT-Partner für Berlin, Brandenburg und die Schweiz.",
+    "datadiorama ist Ihr IT-Systemhaus und Softwareentwickler aus Potsdam – seit 2013. Von der Netzwerkbetreuung über die Cloud-Lösung bis zur Telefonanlage: Ihr Full-Service-IT-Partner für Potsdam, Berlin und St. Gallen.",
   logo: "https://datadiorama.com/wp-content/uploads/2021/10/logo-rgb-head.svg",
   ogImage: "/og-default.png",
   locale: "de_DE",
-  serviceArea: ["Potsdam", "Berlin", "Brandenburg", "Schweiz"],
+  serviceArea: ["Potsdam", "Berlin", "Brandenburg", "St. Gallen"],
 } as const;
 
 export const LOCATIONS: Location[] = [
