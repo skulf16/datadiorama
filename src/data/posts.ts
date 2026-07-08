@@ -25,14 +25,14 @@ export const POSTS: Post[] = [
   },
   {
     slug: "proxmox",
-    title: "Proxmox: Virtualisierung aus Europa",
+    title: "Windows Server auf Proxmox übertragen – Warum der Abschied von Microsoft für viele Unternehmen sinnvoll ist",
     excerpt:
-      "Open-Source-Virtualisierung aus Österreich: Was Proxmox VE kann, für wen es sich eignet und warum es als europäische VMware-Alternative an Bedeutung gewinnt.",
+      "Steigende Lizenzkosten, Vendor Lock-in, komplexe Lizenzmodelle: Warum die Migration von Windows Servern auf Proxmox VE sinnvoll ist – und wie der sanfte Umstieg gelingt.",
     category: "IT-Infrastruktur",
     date: "2026-06-25",
-    readingMinutes: 4,
+    readingMinutes: 6,
     metaDescription:
-      "Proxmox VE im Überblick: Open-Source-Virtualisierung aus Österreich mit VMs, Containern, Backup und Hochverfügbarkeit – eine europäische Alternative zu VMware.",
+      "Windows Server auf Proxmox migrieren: weniger Lizenzkosten, mehr Unabhängigkeit und Datensouveränität. So gelingt der schrittweise Umstieg auf Open Source.",
     relatedServiceSlugs: ["private-cloud", "it-support"],
   },
   {

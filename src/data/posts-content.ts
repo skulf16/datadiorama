@@ -64,54 +64,111 @@ export const POST_CONTENT: Record<string, PostContent> = {
       }
     ]
   },
-  // Entwurf: Der Original-Beitrag auf datadiorama.com/proxmox ist (noch) ohne Inhalt.
+  // Originaltext vom Kunden (Juli 2026), Slug entspricht datadiorama.com/proxmox.
   "proxmox": {
-    "intro": "Proxmox VE (Virtual Environment) ist eine Open-Source-Plattform für Servervirtualisierung, entwickelt von der Proxmox Server Solutions GmbH aus Wien. Sie vereint virtuelle Maschinen, Container, Storage und Backup unter einer Weboberfläche – und hat sich als leistungsfähige europäische Alternative zu kommerziellen Virtualisierungslösungen wie VMware etabliert.",
+    "intro": "Viele Unternehmen betreiben ihre Infrastruktur seit Jahren auf Windows Servern. Doch steigende Lizenzkosten, zunehmende Abhängigkeiten von Microsoft-Diensten und immer komplexere Lizenzmodelle führen dazu, dass viele IT-Verantwortliche nach Alternativen suchen. Eine der interessantesten Lösungen ist die Migration bestehender Windows-Server-Umgebungen auf eine moderne Virtualisierungsplattform wie Proxmox VE (Virtual Environment) – für mehr Freiheit und weniger Kosten.",
     "keyTakeaways": [
-      "Proxmox VE ist Open Source und wird in Wien entwickelt – ein Plus für digitale Souveränität.",
-      "Die Plattform vereint virtuelle Maschinen (KVM) und leichtgewichtige Container (LXC) unter einer Weboberfläche.",
-      "Cluster, Hochverfügbarkeit und Live-Migration sind ohne Zusatzlizenzen möglich.",
-      "Mit dem Proxmox Backup Server lassen sich VMs und Container dedupliziert, inkrementell und verschlüsselt sichern."
+      "Proxmox VE bietet Enterprise-Funktionen wie Hochverfügbarkeit, Live-Migration und Cluster-Betrieb – ohne Lizenzkosten pro CPU oder VM.",
+      "Der Umstieg senkt laufende Kosten und reduziert die Herstellerabhängigkeit von Microsoft (Vendor Lock-in).",
+      "Daten, Backups und Anwendungen bleiben im eigenen Rechenzentrum oder bei einem selbst gewählten Hosting-Anbieter – gut für Datenschutz und Compliance.",
+      "Die Migration erfolgt sanft: Windows-Server laufen zunächst als virtuelle Maschinen weiter (P2V) und werden Schritt für Schritt durch Open-Source-Dienste ersetzt."
     ],
     "sections": [
       {
-        "heading": "Was ist Proxmox VE?",
-        "body": "Proxmox VE ist eine auf Debian Linux basierende Virtualisierungsplattform, die seit 2008 kontinuierlich weiterentwickelt wird. Auf einem Proxmox-Host laufen vollwertige virtuelle Maschinen (auf Basis von KVM) und ressourcenschonende Linux-Container (LXC) nebeneinander – verwaltet über eine zentrale Weboberfläche, ganz ohne zusätzliche Management-Server.\n\nDamit lassen sich mehrere Server – etwa Dateiserver, Branchensoftware, Datenbanken oder Telefonie-Systeme – auf einer physischen Maschine konsolidieren. Das spart Hardware, Strom und Wartungsaufwand und macht Umgebungen flexibler: Neue Systeme sind in Minuten aufgesetzt, Snapshots erlauben gefahrloses Testen von Updates."
-      },
-      {
-        "heading": "Die wichtigsten Funktionen im Überblick",
-        "body": "Proxmox VE bringt Funktionen mit, die bei kommerziellen Anbietern oft teuren Lizenzstufen vorbehalten sind:",
+        "heading": "Warum Proxmox?",
+        "body": "Proxmox VE ist eine Open-Source-Virtualisierungslösung, die KVM-Virtualisierung und Container-Technologie (LXC) kombiniert. Gerade für kleine und mittelständische Unternehmen stellt Proxmox eine attraktive Alternative zu Hyper-V oder VMware dar – mit vielen Funktionen, die sonst nur in teuren Enterprise-Produkten verfügbar sind:",
         "bullets": [
-          "Virtuelle Maschinen (KVM) für Windows- und Linux-Systeme",
-          "Leichtgewichtige LXC-Container für Linux-Dienste",
-          "Cluster-Betrieb mehrerer Hosts mit Hochverfügbarkeit (HA)",
-          "Live-Migration laufender Maschinen zwischen Hosts",
-          "Flexible Storage-Anbindung, u. a. ZFS und Ceph",
-          "Integrierte Firewall und Rechteverwaltung",
-          "Nahtlose Anbindung an den Proxmox Backup Server"
+          "Zentrale Verwaltung über eine Weboberfläche",
+          "Hochverfügbarkeit (HA)",
+          "Live-Migration von virtuellen Maschinen",
+          "Backup- und Restore-Funktionen",
+          "Cluster-Betrieb",
+          "Integrierte Firewall",
+          "Keine Lizenzkosten pro CPU oder VM"
         ]
       },
       {
-        "heading": "Warum Proxmox für KMU interessant ist",
-        "body": "Proxmox VE ist Open Source: Die Software selbst ist kostenfrei nutzbar, für den Produktivbetrieb empfiehlt sich ein Abonnement, das Zugriff auf das stabile Enterprise-Repository und Hersteller-Support bietet – zu einem Bruchteil klassischer Virtualisierungslizenzen. Gerade seit den Preis- und Lizenzänderungen bei VMware prüfen viele Unternehmen den Umstieg.\n\nDazu kommt der Standortvorteil: Proxmox wird in Europa entwickelt und unterliegt europäischem Recht. Wer seine IT-Infrastruktur unabhängiger aufstellen möchte, bekommt hier eine ausgereifte Lösung ohne Bindung an amerikanische Anbieter – ein Baustein der digitalen Souveränität, die wir im Beitrag „IT nach Europa holen“ ausführlich beleuchten."
+        "heading": "1. Deutlich geringere Lizenzkosten",
+        "body": "Warum sich von Microsoft lösen? Der erste Grund sind die Kosten: Durch den Umstieg auf Open-Source-Lösungen können Unternehmen ihre laufenden IT-Kosten erheblich reduzieren. Microsoft erhöht regelmäßig die Kosten für:",
+        "bullets": [
+          "Windows Server",
+          "CALs (Client Access Licenses) – Benutzer-Lizenzen",
+          "Remote Desktop Services – extra Lizenz für die Remote-Nutzung von Windows",
+          "SQL Server",
+          "Microsoft 365"
+        ]
       },
       {
-        "heading": "Virtualisierung braucht ein Backup-Konzept",
-        "body": "Virtualisierte Umgebungen vereinfachen die Datensicherung erheblich: Ganze Maschinen lassen sich im laufenden Betrieb sichern und im Ernstfall vollständig wiederherstellen. Der Proxmox Backup Server ergänzt Proxmox VE um deduplizierte, inkrementelle und verschlüsselte Backups – die sich sauber in ein mehrstufiges Backup-Konzept einfügen.\n\nOb Proxmox für Ihre Umgebung passt, hängt von Ihren Anwendungen, der vorhandenen Hardware und dem Betriebskonzept ab. Wir beraten Sie gern unverbindlich."
+        "heading": "2. Mehr Unabhängigkeit",
+        "body": "Wer vollständig auf Microsoft setzt, begibt sich in eine starke Herstellerabhängigkeit (Vendor Lock-in). Mit Proxmox und Open-Source-Technologien behält das Unternehmen die Kontrolle über seine Infrastruktur. Direkte Auswirkungen auf die eigene IT können dagegen Änderungen haben bei:",
+        "bullets": [
+          "Lizenzmodellen",
+          "Cloud-Strategien",
+          "Produktlebenszyklen",
+          "Datenschutzrichtlinien"
+        ]
+      },
+      {
+        "heading": "3. Datenschutz und Datensouveränität",
+        "body": "Viele Unternehmen möchten ihre Daten nicht in Microsofts Cloud-Diensten speichern. Mit einer eigenen Proxmox-Umgebung bleiben Daten, Backups, Benutzerinformationen und Anwendungen im eigenen Rechenzentrum oder bei einem selbst gewählten Hosting-Anbieter.\n\nDas erleichtert häufig auch die Einhaltung von Datenschutzanforderungen und Compliance-Vorgaben."
+      },
+      {
+        "heading": "4. Rechtssicherheit",
+        "body": "In vielen Fällen ist Unternehmen nicht klar, welche Microsoft-Lizenzen sie eigentlich bräuchten, um ihre Lösungen rechtssicher zu betreiben. Für jeden Server im Netzwerk wird eine Vielzahl von Lizenzen benötigt, die sich nach der Anzahl der Prozessoren, der Kerne und der Benutzer sowie der Art der Nutzung und der genutzten Programme richtet.\n\nEine solche Lizenzstruktur ist bereits bei der Einrichtung komplex – nach einigen Jahren mit Personalwachstum und Anpassungen des Aufbaus hat fast jedes Unternehmen Lizenz-Deckungslücken oder zu hohe Lizenzkosten, im schlimmsten Fall beides. Auch korrekt erworbene Lizenzen müssen sauber verwaltet werden, um im Zweifel präsentiert werden zu können. Das sind weitere verdeckte Kosten, die bei Open-Source-Lösungen gar nicht erst entstehen."
+      },
+      {
+        "heading": "5. Zukunftssichere Infrastruktur",
+        "body": "Moderne Linux-Server und Open-Source-Anwendungen bieten heute für viele Anwendungsfälle leistungsfähige und häufig kostengünstigere Alternativen. Einzelne Microsoft-Komponenten lassen sich Schritt für Schritt ablösen:",
+        "bullets": [
+          "Hyper-V → Proxmox VE",
+          "Active Directory → Samba AD oder FreeIPA",
+          "SQL Server → PostgreSQL",
+          "Exchange → Kopano, Zimbra oder Mailcow",
+          "IIS → Nginx oder Apache",
+          "Fileserver → Samba"
+        ]
+      },
+      {
+        "heading": "6. Höhere Flexibilität",
+        "body": "Die IT-Abteilung kann Systeme exakt an die eigenen Anforderungen anpassen. Open-Source-Lösungen ermöglichen:",
+        "bullets": [
+          "Individuelle Anpassungen",
+          "Automatisierung per Skript",
+          "Offene Schnittstellen",
+          "Keine künstlichen Produktbeschränkungen"
+        ]
+      },
+      {
+        "heading": "Wie erfolgt die Migration eines Windows Servers zu Proxmox?",
+        "body": "Der Umstieg muss nicht bedeuten, dass Windows sofort abgeschafft wird. Ein typisches Vorgehen:",
+        "bullets": [
+          "Schritt 1 – Bestehende Windows-Server virtualisieren: Physische Windows-Server werden als virtuelle Maschinen auf Proxmox übernommen (P2V-Migration). Die Benutzer können die Windows-Server normal weiternutzen und merken erstmal keinen Unterschied.",
+          "Schritt 2 – Hardware konsolidieren: Mehrere Server können auf einem leistungsfähigen Proxmox-Cluster betrieben werden, gleichzeitig steigt die Backup-Sicherheit.",
+          "Schritt 3 – Einzelne Dienste ersetzen: Nach und nach werden Microsoft-Dienste durch Open-Source-Alternativen ersetzt.",
+          "Schritt 4 – Windows nur dort einsetzen, wo es wirklich benötigt wird: Spezialsoftware kann weiterhin auf Windows laufen, während Standarddienste auf Linux-Systeme migriert werden."
+        ]
+      },
+      {
+        "heading": "Fazit",
+        "body": "Die Migration von Windows (Hyper-V) oder VMware auf Proxmox ist für viele Unternehmen ein sinnvoller Schritt, um Kosten zu senken, die Abhängigkeit von amerikanischen Konzernen zu reduzieren und die Kontrolle über die eigene IT-Infrastruktur zurückzugewinnen.\n\nDabei muss der Wechsel nicht radikal erfolgen. Proxmox ermöglicht einen sanften Übergang, bei dem bestehende Windows-Systeme zunächst weiterbetrieben und später schrittweise durch offene Technologien ersetzt werden können.\n\nWer langfristig auf Flexibilität, Transparenz und Datensouveränität setzt, findet in Proxmox eine leistungsfähige und wirtschaftliche Alternative zu klassischen Microsoft-Umgebungen."
       }
     ],
     "faq": [
       {
-        "question": "Ist Proxmox kostenlos?",
-        "answer": "Die Software ist Open Source und kostenfrei nutzbar. Für den Produktivbetrieb empfiehlt sich ein Abonnement, das Zugriff auf das besonders stabile Enterprise-Repository und professionellen Support bietet – deutlich günstiger als klassische Virtualisierungslizenzen."
+        "question": "Müssen wir Windows sofort abschaffen, wenn wir zu Proxmox wechseln?",
+        "answer": "Nein. Bestehende Windows-Server werden zunächst als virtuelle Maschinen auf Proxmox übernommen (P2V-Migration) und laufen normal weiter – die Benutzer merken erstmal keinen Unterschied. Erst danach werden einzelne Dienste schrittweise durch Open-Source-Alternativen ersetzt."
       },
       {
-        "question": "Kann Proxmox VMware ersetzen?",
-        "answer": "Für viele kleine und mittlere Umgebungen ja: Virtuelle Maschinen, Cluster, Hochverfügbarkeit und Live-Migration deckt Proxmox VE ab. Ob ein Umstieg sinnvoll ist, hängt von den eingesetzten Anwendungen und der vorhandenen Infrastruktur ab – das prüfen wir im Einzelfall."
+        "question": "Was kostet Proxmox?",
+        "answer": "Proxmox VE ist Open Source und verursacht keine Lizenzkosten pro CPU oder VM. Damit entfallen auch komplexe Lizenzstrukturen wie CALs oder Remote-Desktop-Lizenzen – und die verdeckten Kosten für deren Verwaltung."
       },
       {
-        "question": "Laufen auch Windows-Systeme auf Proxmox?",
-        "answer": "Ja. Windows-Systeme – einschließlich Windows Server – laufen als vollwertige virtuelle Maschinen auf KVM-Basis, inklusive Snapshots, Backups und Live-Migration."
+        "question": "Welche Open-Source-Alternativen gibt es zu Microsoft-Diensten?",
+        "answer": "Typische Ablösungen sind Proxmox VE statt Hyper-V, Samba AD oder FreeIPA statt Active Directory, PostgreSQL statt SQL Server, Kopano, Zimbra oder Mailcow statt Exchange, Nginx oder Apache statt IIS sowie Samba als Fileserver."
+      },
+      {
+        "question": "Kann Proxmox Hyper-V oder VMware ersetzen?",
+        "answer": "Ja, gerade für kleine und mittelständische Unternehmen: Proxmox VE bietet zentrale Verwaltung, Hochverfügbarkeit, Live-Migration, Cluster-Betrieb und Backup-Funktionen – Funktionen, die sonst nur in teuren Enterprise-Produkten verfügbar sind."
       }
     ]
   },
