@@ -7,7 +7,6 @@ const stats = [
   { value: "seit 2013", label: "Erfahrenes IT-Systemhaus" },
   { value: "3 Standorte", label: "Potsdam · Berlin · St. Gallen" },
   { value: "24/7", label: "Telefonischer Support" },
-  { value: "UniFi-Partner", label: "Zertifiziert (UEWA)" },
 ];
 
 export function Hero() {
@@ -69,7 +68,7 @@ export function Hero() {
 
         {/* Trust-Stats */}
         <dl
-          className="mt-20 grid max-w-4xl grid-cols-2 gap-x-8 gap-y-8 border-t border-white/10 pt-10 animate-fade-up sm:grid-cols-4"
+          className="mt-20 grid max-w-3xl grid-cols-2 gap-x-8 gap-y-8 border-t border-white/10 pt-10 animate-fade-up sm:grid-cols-3"
           style={{ animationDelay: "320ms" }}
         >
           {stats.map((s) => (

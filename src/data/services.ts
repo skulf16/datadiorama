@@ -677,10 +677,10 @@ export const SERVICES: Service[] = [
   {
     slug: "private-cloud",
     order: 11,
-    navLabel: "Private Cloud / NAS",
+    navLabel: "Datensicherheit / Backup",
     icon: "server",
     title: "Private Cloud mit Synology NAS",
-    tagline: "Ihre Daten in Europa – DSGVO-konform und unabhängig.",
+    tagline: "Ihre Daten gesichert im eigenen Haus oder sicherem Storage – DSGVO-konform und unabhängig.",
     cardDescription:
       "Eine private Cloud auf Basis von Synology NAS: volle Datenhoheit, Backups und Zugriff von überall.",
     metaTitle: "Private Cloud mit Synology NAS einrichten",

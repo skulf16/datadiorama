@@ -12,6 +12,42 @@ function withContent(post: Post): Post {
  */
 export const POSTS: Post[] = [
   {
+    slug: "die-3-stufen-des-backup-zen",
+    title: "Die 3 Stufen des Backup-Zen",
+    excerpt:
+      "Vom USB-Stick am Schlüsselbund zum unveränderlichen Duplikat im EU-Rechenzentrum: Warum jedes Unternehmen ein Backup-Konzept braucht – und wie drei Ausbaustufen zu tiefer Gelassenheit führen.",
+    category: "Datensicherheit",
+    date: "2026-06-29",
+    readingMinutes: 4,
+    metaDescription:
+      "Backup-Konzept für Unternehmen: die 3 Stufen des Backup-Zen – automatische lokale Sicherung, unveränderliches Duplikat und verschlüsselte Kopie im EU-Rechenzentrum.",
+    relatedServiceSlugs: ["private-cloud", "it-support"],
+  },
+  {
+    slug: "proxmox",
+    title: "Proxmox: Virtualisierung aus Europa",
+    excerpt:
+      "Open-Source-Virtualisierung aus Österreich: Was Proxmox VE kann, für wen es sich eignet und warum es als europäische VMware-Alternative an Bedeutung gewinnt.",
+    category: "IT-Infrastruktur",
+    date: "2026-06-25",
+    readingMinutes: 4,
+    metaDescription:
+      "Proxmox VE im Überblick: Open-Source-Virtualisierung aus Österreich mit VMs, Containern, Backup und Hochverfügbarkeit – eine europäische Alternative zu VMware.",
+    relatedServiceSlugs: ["private-cloud", "it-support"],
+  },
+  {
+    slug: "it-nach-europa-holen",
+    title: "IT nach Europa holen",
+    excerpt:
+      "Datenspeicherung, Kommunikation, Software: Auf welchen Ebenen Unternehmen ihre IT stärker unter eigene Kontrolle bringen können – ein Überblick für KMU und Institutionen.",
+    category: "Digitale Souveränität",
+    date: "2026-05-28",
+    readingMinutes: 9,
+    metaDescription:
+      "IT-Souveränität für KMU: Wie Unternehmen Datenspeicherung, E-Mail, Chat und Software stärker unter eigene Kontrolle bringen – mit europäischen Alternativen.",
+    relatedServiceSlugs: ["private-cloud", "workspaces", "mailserver"],
+  },
+  {
     slug: "it-outsourcing-vorteile",
     title: "IT-Outsourcing: Vorteile für kleine und mittlere Unternehmen",
     excerpt:

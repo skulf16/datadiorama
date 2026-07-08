@@ -12,6 +12,211 @@ export interface PostContent {
  * Wird in posts.ts mit den Metadaten zusammengeführt.
  */
 export const POST_CONTENT: Record<string, PostContent> = {
+  // Übertragen von datadiorama.com/die-3-stufen-des-backup-zen (29.06.2026).
+  "die-3-stufen-des-backup-zen": {
+    "intro": "„Kein Backup, kein Mitleid“ – solche Sprüche kennt jeder, und im Notfall helfen sie niemandem. Schlimmer noch: Sie sorgen eher dafür, dass Mitarbeitende die Datensicherung selbst in die Hand nehmen und damit unter Umständen mehr Schaden als Nutzen anrichten. Richtig ist: Unternehmen brauchen ein Backup-Konzept – und die Mitarbeitenden sollten davon wissen. Wie das aussehen kann, zeigen die drei Stufen des Backup-Zen, die wir in der Regel mit Synology-Systemen umsetzen.",
+    "keyTakeaways": [
+      "Ein Backup via Mitarbeiter ist keins – unabhängig von der Position oder der Art der Daten.",
+      "Grundlage jeder Datensicherung ist ein Backup-Konzept aus Vertrag, Technologie und verständlicher Dokumentation.",
+      "Stufe 1: automatische lokale Sicherung auf einem Speicher mit verteilten Festplatten.",
+      "Stufe 2: zusätzlich ein unveränderliches Duplikat auf einem zweiten Gerät – idealerweise in einem anderen Gebäudeteil.",
+      "Stufe 3: verschlüsselte Kopie im gesicherten EU-Rechenzentrum in Frankfurt am Main."
+    ],
+    "sections": [
+      {
+        "heading": "Warum ein Backup via Mitarbeiter keins ist",
+        "body": "Ein Beispiel: Herr Hecht arbeitet an einem wichtigen Projekt. Er weiß, nur Dummköpfe machen keine Backups, und er weiß auch: Ein Notebook kann kaputtgehen oder gestohlen werden. Also hat er einen USB-Stick am Schlüsselbund, mit dem er täglich eine Sicherheitskopie macht.\n\nWas wir uns hier fragen: Hat Herr Hecht oder seine Familie den Speicher schon einmal daheim genutzt – und ist das Netzwerk dort sicher, sind die Geräte sauber? Wird Herr Hecht den Stick abgeben, wenn er den Job wechselt? Sind wir überhaupt berechtigt, die Daten in private Hände zu geben? Denkt Herr Hecht auch an stressigen Tagen an das Backup? Und so weiter.\n\nDas Fazit ist eindeutig: Ein Backup via Mitarbeiter ist keins. Das gilt unabhängig von der Position oder der Art der Daten."
+      },
+      {
+        "heading": "Die Grundlage: ein Backup-Konzept",
+        "body": "Unternehmen müssen ein Backup-Konzept haben – und die Mitarbeitenden sollten davon wissen. Wesentliche Bestandteile eines Backup-Konzeptes sind:",
+        "bullets": [
+          "Ein Vertrag, der die Rechtskonformität sicherstellt: Was wird wo und wie lange gespeichert, wer ist dafür zuständig und wer hat Zugriff?",
+          "Technologie, die vollautomatisch sichert, was gesichert werden muss – und warnt, wenn das nicht klappt.",
+          "Eine verständliche Dokumentation zur eingesetzten Technologie, zu den physischen Speicherorten der Daten, den notwendigen Zugangsdaten und vor allem zum Prozess der Wiederherstellung."
+        ]
+      },
+      {
+        "heading": "Stufe 1: Automatische lokale Sicherung",
+        "body": "Egal, wie Sie die Datensicherung angehen: Das Backup-Konzept ist stets die Grundlage. Die folgenden Ausbaustufen betreffen vor allem den zweiten Punkt – die Technologie.\n\nAuf der ersten Stufe werden alle wichtigen Dateien, Datenbanken, virtuellen Maschinen, E-Mails usw. mindestens täglich automatisch auf einen Speicher mit verteilten Festplatten gesichert. Wir realisieren das in der Regel mit einem oder mehreren Synology-NAS-Systemen, da die Technik sehr hohe Qualität und Zuverlässigkeit zu vernünftigen Preisen bietet."
+      },
+      {
+        "heading": "Stufe 2: Lokale Sicherung mit unveränderlichem Duplikat",
+        "body": "Wie auf Stufe 1 wird alles automatisch gesichert – nur mit dem Unterschied, dass es von jedem Datenpunkt eine unveränderliche Kopie gibt. Eine Änderung an den Originaldaten ist nicht möglich; jeder Schreibvorgang erzeugt eine speicheroptimierte Kopie.\n\nDa auf dem ersten NAS üblicherweise diverse Dienste genutzt werden, nehmen wir für diesen Zweck gern ein oder mehrere weitere Geräte, die auf dem Gelände auch in einem anderen Gebäude oder Gebäudeteil untergebracht sind – um bei Einbruch oder Havarie die Sicherheit der Daten zu verbessern."
+      },
+      {
+        "heading": "Stufe 3: Kopie im gesicherten EU-Rechenzentrum",
+        "body": "Hier nehmen wir die bestehende Sicherung und kopieren sie über einen verschlüsselten Kanal in ein Speicherzentrum von Synology in Frankfurt am Main. Dort wird sie auf einem verschlüsselten Multi-Festplatten-Verbund gespeichert. Dieser steht in einem klimatisierten Raum mit Temperaturfühlern, Brandmeldern, einer vollautomatischen CO2-Löschanlage und einer Rund-um-die-Uhr-Zugangssicherung mit protokollierten Eingangsschleusen und Wachdienst.\n\nWelche Stufe in welcher Ausprägung für Sie richtig ist – und ob alle Ihre Daten oder nur kritische Teile mehrfach gesichert werden müssen –, diskutieren wir gern im Rahmen einer unverbindlichen Beratung."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Reicht es, wenn Mitarbeitende selbst Backups machen?",
+        "answer": "Nein. Ein Backup via Mitarbeiter ist keins – es hängt an einzelnen Personen, privaten Geräten und guten Vorsätzen. Rechtssicher und zuverlässig wird Datensicherung erst durch ein Backup-Konzept mit vollautomatischer Technologie."
+      },
+      {
+        "question": "Was gehört in ein Backup-Konzept?",
+        "answer": "Drei Bestandteile: ein Vertrag, der die Rechtskonformität sicherstellt (was wird wo, wie lange gespeichert, wer hat Zugriff), eine Technologie, die vollautomatisch sichert und bei Problemen warnt, sowie eine verständliche Dokumentation – insbesondere zum Prozess der Wiederherstellung."
+      },
+      {
+        "question": "Was bedeutet ein unveränderliches Backup?",
+        "answer": "Von jedem Datenpunkt existiert eine Kopie, die nachträglich nicht verändert werden kann. Jeder Schreibvorgang erzeugt eine neue, speicheroptimierte Kopie. Das schützt unter anderem vor Ransomware und versehentlichem Löschen."
+      }
+    ]
+  },
+  // Entwurf: Der Original-Beitrag auf datadiorama.com/proxmox ist (noch) ohne Inhalt.
+  "proxmox": {
+    "intro": "Proxmox VE (Virtual Environment) ist eine Open-Source-Plattform für Servervirtualisierung, entwickelt von der Proxmox Server Solutions GmbH aus Wien. Sie vereint virtuelle Maschinen, Container, Storage und Backup unter einer Weboberfläche – und hat sich als leistungsfähige europäische Alternative zu kommerziellen Virtualisierungslösungen wie VMware etabliert.",
+    "keyTakeaways": [
+      "Proxmox VE ist Open Source und wird in Wien entwickelt – ein Plus für digitale Souveränität.",
+      "Die Plattform vereint virtuelle Maschinen (KVM) und leichtgewichtige Container (LXC) unter einer Weboberfläche.",
+      "Cluster, Hochverfügbarkeit und Live-Migration sind ohne Zusatzlizenzen möglich.",
+      "Mit dem Proxmox Backup Server lassen sich VMs und Container dedupliziert, inkrementell und verschlüsselt sichern."
+    ],
+    "sections": [
+      {
+        "heading": "Was ist Proxmox VE?",
+        "body": "Proxmox VE ist eine auf Debian Linux basierende Virtualisierungsplattform, die seit 2008 kontinuierlich weiterentwickelt wird. Auf einem Proxmox-Host laufen vollwertige virtuelle Maschinen (auf Basis von KVM) und ressourcenschonende Linux-Container (LXC) nebeneinander – verwaltet über eine zentrale Weboberfläche, ganz ohne zusätzliche Management-Server.\n\nDamit lassen sich mehrere Server – etwa Dateiserver, Branchensoftware, Datenbanken oder Telefonie-Systeme – auf einer physischen Maschine konsolidieren. Das spart Hardware, Strom und Wartungsaufwand und macht Umgebungen flexibler: Neue Systeme sind in Minuten aufgesetzt, Snapshots erlauben gefahrloses Testen von Updates."
+      },
+      {
+        "heading": "Die wichtigsten Funktionen im Überblick",
+        "body": "Proxmox VE bringt Funktionen mit, die bei kommerziellen Anbietern oft teuren Lizenzstufen vorbehalten sind:",
+        "bullets": [
+          "Virtuelle Maschinen (KVM) für Windows- und Linux-Systeme",
+          "Leichtgewichtige LXC-Container für Linux-Dienste",
+          "Cluster-Betrieb mehrerer Hosts mit Hochverfügbarkeit (HA)",
+          "Live-Migration laufender Maschinen zwischen Hosts",
+          "Flexible Storage-Anbindung, u. a. ZFS und Ceph",
+          "Integrierte Firewall und Rechteverwaltung",
+          "Nahtlose Anbindung an den Proxmox Backup Server"
+        ]
+      },
+      {
+        "heading": "Warum Proxmox für KMU interessant ist",
+        "body": "Proxmox VE ist Open Source: Die Software selbst ist kostenfrei nutzbar, für den Produktivbetrieb empfiehlt sich ein Abonnement, das Zugriff auf das stabile Enterprise-Repository und Hersteller-Support bietet – zu einem Bruchteil klassischer Virtualisierungslizenzen. Gerade seit den Preis- und Lizenzänderungen bei VMware prüfen viele Unternehmen den Umstieg.\n\nDazu kommt der Standortvorteil: Proxmox wird in Europa entwickelt und unterliegt europäischem Recht. Wer seine IT-Infrastruktur unabhängiger aufstellen möchte, bekommt hier eine ausgereifte Lösung ohne Bindung an amerikanische Anbieter – ein Baustein der digitalen Souveränität, die wir im Beitrag „IT nach Europa holen“ ausführlich beleuchten."
+      },
+      {
+        "heading": "Virtualisierung braucht ein Backup-Konzept",
+        "body": "Virtualisierte Umgebungen vereinfachen die Datensicherung erheblich: Ganze Maschinen lassen sich im laufenden Betrieb sichern und im Ernstfall vollständig wiederherstellen. Der Proxmox Backup Server ergänzt Proxmox VE um deduplizierte, inkrementelle und verschlüsselte Backups – die sich sauber in ein mehrstufiges Backup-Konzept einfügen.\n\nOb Proxmox für Ihre Umgebung passt, hängt von Ihren Anwendungen, der vorhandenen Hardware und dem Betriebskonzept ab. Wir beraten Sie gern unverbindlich."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Ist Proxmox kostenlos?",
+        "answer": "Die Software ist Open Source und kostenfrei nutzbar. Für den Produktivbetrieb empfiehlt sich ein Abonnement, das Zugriff auf das besonders stabile Enterprise-Repository und professionellen Support bietet – deutlich günstiger als klassische Virtualisierungslizenzen."
+      },
+      {
+        "question": "Kann Proxmox VMware ersetzen?",
+        "answer": "Für viele kleine und mittlere Umgebungen ja: Virtuelle Maschinen, Cluster, Hochverfügbarkeit und Live-Migration deckt Proxmox VE ab. Ob ein Umstieg sinnvoll ist, hängt von den eingesetzten Anwendungen und der vorhandenen Infrastruktur ab – das prüfen wir im Einzelfall."
+      },
+      {
+        "question": "Laufen auch Windows-Systeme auf Proxmox?",
+        "answer": "Ja. Windows-Systeme – einschließlich Windows Server – laufen als vollwertige virtuelle Maschinen auf KVM-Basis, inklusive Snapshots, Backups und Live-Migration."
+      }
+    ]
+  },
+  // Übertragen von datadiorama.com/it-nach-europa-holen (28.05.2026).
+  "it-nach-europa-holen": {
+    "intro": "IT-Souveränität hat viele Dimensionen – und viele lösbare Probleme. Dieser Beitrag richtet sich an kleine und mittelständische Unternehmen sowie öffentliche und gemeinnützige Institutionen mit bis zu 500 Mitarbeitenden. Er gibt einen Überblick, auf welchen Ebenen Organisationen ihre Daten und IT-Prozesse stärker unter eigene Kontrolle bringen können: einerseits, um rechtssicher im Sinne des Datenschutzes und der gebotenen Sorgfalt zu operieren, andererseits, um im Falle einer internationalen Krise handlungsfähig zu bleiben.",
+    "keyTakeaways": [
+      "Bei Hardware und öffentlicher Infrastruktur haben einzelne Unternehmen kaum Einfluss – bei Datenspeicherung, Kommunikation und Software dagegen sehr wohl.",
+      "Für die Cloudspeicher der großen US-Anbieter gibt es zahlreiche europäische Alternativen, die oft auch Kostenvorteile bieten.",
+      "E-Mail und Team-Chat lassen sich ohne amerikanische Anbieter abwickeln – beim Umstieg auf MAPI-Unterstützung achten, wenn Outlook bleiben soll.",
+      "Bei Office-Software und Betriebssystemen entscheiden Nutzerakzeptanz und kritische Anwendungen über den richtigen Weg – Schulungen sind eine wichtige Komponente."
+    ],
+    "sections": [
+      {
+        "heading": "Hintergrund",
+        "body": "Die Unterbrechung von Lieferketten hat Europa schmerzhaft bewusst gemacht, wie stark es von seinen industriellen Partnern auf anderen Kontinenten abhängig ist. Ereignisse wie die Corona-Pandemie oder die Blockade des Suezkanals durch die Ever Given ließen europäische Apotheken leerlaufen, Bänder stillstehen und Preise für IT-Bauteile und -Produkte heftig und schnell steigen. Diese Beispiele höherer Gewalt zeichnen sich jedoch dadurch aus, dass alle Betroffenen an einem Strang ziehen, um die Folgen möglichst gering zu halten. Spätestens seit der US-Präsident öffentlich darüber räsoniert, die NATO aufzulösen und Grönland zu einem US-Bundesstaat zu machen, müssen Unternehmen sich aber auch fragen: Was wäre, wenn dies einmal nicht der Fall ist? Der CLOUD Act – ein Gesetz, das US-Unternehmen verpflichtet, der US-Regierung die Daten ihrer Kunden zur Verfügung zu stellen, auch wenn diese außerhalb der USA gehostet sind – wäre dann vielleicht nur ein Vorgeschmack auf das, was möglich wäre, falls es einen Konflikt gäbe. Zum jetzigen Zeitpunkt kann man in aller Nüchternheit sagen: Die europäische Wirtschaft könnte von einem Tag auf den anderen praktisch handlungsunfähig gemacht werden, wenn die amerikanischen Software-Giganten ihre Dienste in Europa einstellen.\n\nAber auch ohne eine Eskalation wächst die Sorge um die Sicherheit der Daten vor unbefugten Zugriffen in einer zunehmend unter Druck stehenden internationalen Rechtsordnung."
+      },
+      {
+        "heading": "Betrachtungsebenen und Eingrenzung",
+        "body": "Die Teile der IT, auf die ein Unternehmen keinen Einfluss nehmen kann, lassen wir außer Acht und nennen sie nur der Vollständigkeit halber: Die IT-Hardware wird derzeit nicht in nennenswertem Umfang in Europa hergestellt, sodass es praktisch keine Optionen gibt, hiesige Produkte einzusetzen. Und auf die öffentliche Infrastruktur haben einzelne Kunden nur marginalen Einfluss – hier hilft bestenfalls eine redundante Anbindung.\n\nIm Entscheidungsbereich eines Unternehmens liegen dagegen drei Elemente: die Speicherung der Daten, die Kommunikationsmittel und die eingesetzte Software. Diese drei sehen wir uns näher an."
+      },
+      {
+        "heading": "Datenspeicherung: Cloudspeicher",
+        "body": "Bei der Datenspeicherung geht es um die dauerhafte Speicherung von Dateien, Datenbanken und Kommunikationsarchiven auf an Netzwerke angeschlossenen Medien – also Cloudspeicher, Dateiserver und NAS-Geräte.\n\nCloudspeicher sind in der Regel von einem Anbieter gemietete Ressourcen. Der Speicherplatz ist nicht durch ein Gerät beschränkt, sondern durch den Vertrag; der physische Speicherort der Daten ist für den Nutzer zunächst nicht relevant und in der Regel auch nicht bekannt. Der Anbieter verteilt die Daten so, dass sie bei defekter Hardware oder lokalen Stromausfällen sicher sind – im Extremfall liegt eine Datei-Kopie auf fünf Kontinenten vor. Das ist einerseits ein Sicherheitsvorteil, kann aber im Hinblick auf Compliance und die Absicherung gegen Zugriffe ausländischer staatlicher Akteure zum Problem werden.\n\nDie großen US-Anbieter Microsoft, Amazon und Google sind mit Azure, AWS und Google Cloud die mit Abstand wichtigsten Akteure weltweit; zusammen machen sie etwa 64 % des weltweiten Marktes aus. Die gute Nachricht: Es gibt zahlreiche europäische Alternativen, die häufig auch Kostenvorteile bieten, da sie oft keine Lizenzierung pro Nutzer erfordern. Wichtig ist, von Anfang an einen Plan zu haben, der lokale Kopien oder vollständige Downloads sicherstellt, um Lock-in-Effekte zu vermeiden.",
+        "bullets": [
+          "Vorteil: Kein Hardwaremanagement erforderlich",
+          "Vorteil: Backups inklusive",
+          "Vorteil: Geringe Supportanforderungen",
+          "Vorteil: Sehr einfache Umsetzung ortsunabhängiger Arbeit",
+          "Vorteil: Keine Anlagenverwaltung nötig – direkte Verbuchung der laufenden Kosten",
+          "Vorteil: Skaliert in der Regel stufenlos und einfach",
+          "Nachteil: Starke Anbieterbindung, hohe Migrationsschwelle",
+          "Nachteil: Dauerhafte und steigende laufende Kosten",
+          "Nachteil: Synchronisierungsvorgänge",
+          "Nachteil: Ohne Internet ist die Arbeit schwierig",
+          "Nachteil: Geringe Kontrolle über den physischen Speicherort der Daten",
+          "Nachteil: Insolvenzen, Verkauf oder politische Konflikte können existenzbedrohend werden",
+          "Nachteil: Keine Kontrolle bei Änderungen der Funktionsweise von Anbieterseite"
+        ]
+      },
+      {
+        "heading": "Datenspeicherung: Dateiserver",
+        "body": "Dateiserver können sowohl im lokalen Netzwerk als auch in einem angemieteten Platz in einem Rechenzentrum stehen. Sie haben den Vorteil, dass sich der Großteil der Ausgaben auf die Anschaffung konzentriert – was von Vorteil sein kann, wenn die Organisation von Investitionsprogrammen profitiert. Die Verantwortung für die Speichermedien verlagert sich auf den Betreiber. Da die Verwendung von macOS oder Windows bei einem Dateiserver keine Vorteile bietet, kann hier softwareseitig voll auf europäische Lösungen gesetzt werden. Bei der Hardware ist vor allem die Ausfallsicherheit relevant: Festplatten und Netzteile sind redundant auszulegen, sodass im Betrieb getauscht werden kann.\n\nDateiserver können auch auf virtuellen Maschinen liegen, was hohe Flexibilität bei Skalierung und Backups bietet. Stehen sie in den eigenen Räumen, sind die physische Sicherung gegen unbefugte Zugriffe und eine unterbrechungsfreie Stromversorgung sicherzustellen. Für Zugriffe von außerhalb des eigenen Netzwerks ist die Einrichtung von VPN-Verbindungen erforderlich.",
+        "bullets": [
+          "Vorteil: Hoher Grad an Kontrolle über Hard- und Software",
+          "Vorteil: Hohe Flexibilität in Auslegung und Sicherung",
+          "Vorteil: Geringe Latenz bei Arbeit im lokalen Netz",
+          "Vorteil: Konzentration der Gesamtkosten auf den Investitionszeitpunkt",
+          "Vorteil: Kontinuierliches Arbeiten auch bei Internetausfall",
+          "Nachteil: Vergleichsweise hohe Supportanforderungen",
+          "Nachteil: Aktualität der Software und Gesundheit der Hardware sind selbst sicherzustellen",
+          "Nachteil: Fernzugriffe müssen extra eingerichtet werden (VPN)",
+          "Nachteil: Geo-Redundanz ist nur durch doppelte Anschaffung zu erreichen",
+          "Nachteil: Alle 5–8 Jahre ist ein Austausch erforderlich"
+        ]
+      },
+      {
+        "heading": "Datenspeicherung: NAS-Geräte",
+        "body": "NAS-Geräte sind im Wesentlichen Computer, deren Hard- und Software darauf spezialisiert ist, als Dateiserver in einem lokalen Netzwerk zu dienen. Vieles, was über Dateiserver gesagt wurde, gilt daher auch für NAS-Geräte. Sie bieten den Vorteil, dass die Ersteinrichtung vergleichsweise einfach und preiswert ist und umfangreiche Software für Backup und Wiederherstellung bereits mitgeliefert wird.\n\nNachteilig ist, dass die für den professionellen Einsatz geeigneten Anbieter (Synology, QNAP) beide in Taiwan ansässig sind. Da sich Taiwan in einem diplomatischen Dauerkonflikt mit China befindet, sind Szenarien denkbar, in denen es zu Ausfällen bei Software-Aktualisierungen oder der Lieferung von Ersatzteilen kommt.",
+        "bullets": [
+          "Vorteil: Hoher Grad an Kontrolle über den Standort der Daten",
+          "Vorteil: Geringe Latenz bei Arbeit im lokalen Netz",
+          "Vorteil: Konzentration der Gesamtkosten auf den Investitionszeitpunkt",
+          "Vorteil: Kontinuierliches Arbeiten auch bei Internetausfall",
+          "Vorteil: Vorgeplante Backup- und Restore-Prozesse",
+          "Vorteil: Geringer Einrichtungsaufwand",
+          "Nachteil: Aktualität der Software und Gesundheit der Hardware sind selbst sicherzustellen",
+          "Nachteil: Fernzugriffe müssen extra eingerichtet werden (VPN)",
+          "Nachteil: Geo-Redundanz ist nur durch doppelte Anschaffung zu erreichen",
+          "Nachteil: Einbruch, Brand etc. können zu Datenverlust führen",
+          "Nachteil: Alle 5–8 Jahre ist ein Austausch erforderlich"
+        ]
+      },
+      {
+        "heading": "Kommunikationsmittel: E-Mail und Chat",
+        "body": "E-Mail ist das bei Weitem meistgenutzte Kommunikationsmittel im geschäftlichen Bereich; innerhalb von Organisationen kommen zunehmend Gruppenchats dazu. Theoretisch ist E-Mail ein internationaler technischer Standard, der sich unkompliziert auf rein europäischer Ebene abwickeln lässt. Praktisch nutzen jedoch viele Unternehmen Google- und vor allem Microsoft-Systeme für ihre Mails – aus Nutzersicht, weil Outlook für viele synonym für E-Mail steht, aus Admin-Sicht, weil die großen Mail-Anbieter es zuletzt immer schwerer gemacht haben, die sichere Zustellung von E-Mails fremder Server mit vertretbarem Aufwand zu gewährleisten. Trotz dieser Hindernisse ist es absolut möglich, E-Mail ohne amerikanische Beteiligung abzuwickeln. Wenn die Nutzer auf Outlook bestehen – was oft weniger mit Mails als mit Kalendern und Outlook-Erweiterungen von Branchensoftware zu tun hat –, ist darauf zu achten, dass der Anbieter oder Server das MAPI-Protokoll beherrscht. Ist das der Fall, kann der Umstieg nahtlos erfolgen.\n\nBeim Chat gab es die Unternehmenskommunikation in thematisch organisierten Gruppen lange bevor Microsoft Teams sich etabliert hat. Hier stellt sich weniger die Frage, ob es möglich ist, Slack und Microsoft den Rücken zu kehren, als vielmehr, welche Lösung am besten zu den Abläufen der Organisation passt – viele lassen sich auch komplett selbst verwalten. Insbesondere die Anbindung an gemeinsam genutzte Dokumente, Single Sign-on und die Integration von Telefonie sind Funktionen, die ein Umstieg von MS Teams komplex machen können und daher Beratung erfordern."
+      },
+      {
+        "heading": "Software: Betriebssysteme, Domänen und Office",
+        "body": "Bei Betriebssystemen für Notebooks und Desktop-Computer führt Microsoft Windows mit knapp 80 % Marktanteil vor macOS mit rund 10 %. Linux ist im Unternehmensumfeld überwiegend auf Servern anzutreffen. Ob eine Umstellung aller Rechner auf Linux sinnvoll ist, hängt davon ab, ob es unternehmenskritische Prozesse gibt, die mit einer Linux-Umgebung nicht kompatibel sind. Moderne Linux-Systeme bieten mindestens ebenso viel Nutzungskomfort wie Windows; das größere Problem stellen inkompatible Anwendungen dar – Lexware Office, Adobe Photoshop und AutoCAD sind typische Fälle.\n\nEine lokale Windows-Domäne mit Active Directory regelt den Zugriff auf Dateien, Drucker und andere Netzwerkressourcen gruppenbasiert. Dennoch lässt sich mit überschaubarem Aufwand eine lokale Domäne ohne Windows-Server aufbauen – auf Basis von LDAP, dem internationalen Industriestandard, oder mit Open-Source-Lösungen, die volle Kompatibilität mit Active Directory bieten.\n\nIm Office-Bereich führt die Dominanz von Microsoft zu Vorbehalten der Benutzer, die über Jahre Expertise etwa in Excel aufgebaut haben. Nutzerakzeptanz ist eine wesentliche Voraussetzung für den Erfolg einer Umstellung – Schulungen sind hier eine wichtige Komponente. Generell ist zwischen lokal installierten Anwendungen und Webanwendungen zu unterscheiden: Browserbasierte Lösungen haben Vorteile bei Datensicherung und simultaner Zusammenarbeit und sind unabhängig vom Betriebssystem. In Europa entwickelte und gehostete Lösungen sind Nextcloud, OnlyOffice und Collabora; bei den lokal installierten Alternativen ist LibreOffice klar führend."
+      },
+      {
+        "heading": "Fazit",
+        "body": "Die weltweiten Lieferketten sind stark verschränkt, und wir alle haben Grund, uns für eine reibungslose Zusammenarbeit einzusetzen. Es ist dennoch vor dem Hintergrund der aktuellen Entwicklungen sinnvoll, sich Gedanken zu machen, wie die Arbeitsfähigkeit sichergestellt werden kann, wenn es eine Krise in der interkontinentalen Kooperation gibt.\n\nAus europäischer Sicht steht vor allem Hardware aus hiesiger Produktion praktisch nicht zur Verfügung – das zu ändern, ist Sache von Politik und Großunternehmen. Es ist aber absolut möglich, die technische Infrastruktur so aufzustellen, dass eine Weiterarbeit auch ohne Hilfe aus dem Ausland möglich ist. Dabei entsteht gleichzeitig ein Effekt für die Binnenkonjunktur, da IT-Budgets in lokalen Support und regionale Infrastrukturen fließen.\n\nSowohl bei der Kommunikation als auch bei der Speicherung von Daten und der eingesetzten Software gibt es zu den Angeboten amerikanischer Megakonzerne leistungsfähige Alternativen. Welche Umstellung auf welcher Ebene die richtige ist, hängt von vielen Faktoren ab, die am besten vor Ort von Experten beurteilt werden."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Kann ein Unternehmen seine IT komplett auf europäische Anbieter umstellen?",
+        "answer": "Bei Hardware praktisch nicht – sie wird kaum in Europa hergestellt. Bei Datenspeicherung, E-Mail, Chat und Software gibt es dagegen leistungsfähige europäische Alternativen, sodass eine weitgehende Umstellung in diesen Bereichen absolut möglich ist."
+      },
+      {
+        "question": "Warum ist der CLOUD Act für deutsche Unternehmen relevant?",
+        "answer": "Der CLOUD Act verpflichtet US-Unternehmen, der US-Regierung die Daten ihrer Kunden zur Verfügung zu stellen – auch wenn diese außerhalb der USA gehostet sind. Wer Daten bei US-Anbietern speichert, kann sich diesem Zugriff also nicht durch die Wahl eines europäischen Rechenzentrums entziehen."
+      },
+      {
+        "question": "Können wir Outlook behalten, wenn wir den Mail-Anbieter wechseln?",
+        "answer": "Ja, sofern der neue Anbieter oder Server das MAPI-Protokoll beherrscht. Dann kann der Umstieg für die Nutzer nahtlos erfolgen – inklusive der gewohnten Kalender-Funktionen."
+      },
+      {
+        "question": "Ist LibreOffice ein vollwertiger Ersatz für Microsoft Office?",
+        "answer": "LibreOffice ist die führende lokal installierte Alternative, allerdings kann es bei komplexen Formeln oder Formatierungen zu Abweichungen kommen. Entscheidend für den Erfolg einer Umstellung ist die Nutzerakzeptanz – Schulungen helfen dabei. Browserbasierte europäische Alternativen sind Nextcloud, OnlyOffice und Collabora."
+      }
+    ]
+  },
   "it-outsourcing-vorteile": {
     "intro": "IT-Outsourcing bedeutet, IT-Aufgaben wie Support, Netzwerkbetreuung, Sicherheit oder den Betrieb von Servern an einen externen Dienstleister auszulagern, statt sie vollständig intern zu leisten. Für kleine und mittlere Unternehmen (KMU) liegen die größten Vorteile in planbaren Kosten, dem Zugang zu Spezialwissen, höherer Ausfallsicherheit und der Entlastung der eigenen Mitarbeitenden. So bleibt mehr Zeit für das Kerngeschäft, während ein qualifizierter Partner die IT zuverlässig und dokumentiert betreibt.",
     "keyTakeaways": [
