@@ -64,7 +64,31 @@ Alle Texte liegen als typisierte Daten unter `src/data/` – kein CMS nötig:
 ## Kontaktformular aktivieren
 
 Das Formular funktioniert sofort (Anfragen werden serverseitig protokolliert).
-Für den E-Mail-Versand [Resend](https://resend.com) anbinden – Umgebungsvariablen:
+Der Versand läuft über `src/lib/mail.ts` – bevorzugt per SMTP (z. B.
+Google-Workspace-Relay), alternativ über [Resend](https://resend.com).
+
+**Variante A: SMTP / Google-Relay** (empfohlen; Werte in Coolify als
+Runtime-Umgebungsvariablen eintragen, Kommentare nicht mitkopieren):
+
+```
+SMTP_HOST=smtp-relay.gmail.com
+SMTP_PORT=587
+SMTP_USER=kontakt@datadiorama.com
+SMTP_PASS=...
+CONTACT_TO=info@datadiorama.com
+CONTACT_FROM=kontakt@datadiorama.com
+```
+
+- `SMTP_USER` muss ein echtes Workspace-Postfach mit 2FA sein; `SMTP_PASS`
+  ist ein App-Passwort (ohne Leerzeichen eintragen).
+- In der Google Admin Console den SMTP-Relay-Dienst mit „SMTP-Authentifizierung
+  erforderlich" und „TLS erforderlich" anlegen. Alternativ ohne Relay-Setup:
+  `SMTP_HOST=smtp.gmail.com` (Limit ~2.000 Mails/Tag).
+- Bei IP-basierter Relay-Freigabe können `SMTP_USER`/`SMTP_PASS` entfallen
+  (Hetzner-Server-IP in der Admin Console eintragen). Hinweis: Hetzner blockt
+  Port 25 – 587/465 verwenden.
+
+**Variante B: Resend** (greift nur, wenn kein `SMTP_HOST` gesetzt ist):
 
 ```
 RESEND_API_KEY=...           # API-Key von Resend
@@ -72,13 +96,14 @@ CONTACT_TO=info@datadiorama.com
 CONTACT_FROM=kontakt@datadiorama.com   # verifizierte Absenderdomain
 ```
 
-Ohne `RESEND_API_KEY` wird die Anfrage akzeptiert und im Server-Log ausgegeben.
+Ohne SMTP- und Resend-Konfiguration wird die Anfrage akzeptiert und im
+Server-Log ausgegeben.
 
 ## Vor dem Go-Live zu prüfen
 
 - [ ] **Datenschutzerklärung** rechtlich prüfen und an finales Hosting/Dienste anpassen (`src/app/datenschutz/page.tsx`)
 - [x] **Fernzugriff:** Support-Tool-Installer (Windows/macOS) werden **extern** ausgeliefert (nicht im Repo, um es schlank zu halten). Die Basis-URL ist über `NEXT_PUBLIC_DOWNLOADS_BASE_URL` konfigurierbar (Standard: `https://datadiorama.com/downloads`). Vor der finalen Domain-Migration auf einen dauerhaften Speicher (CDN/Objektspeicher) umstellen und die ENV setzen.
 - [ ] **Bilder:** aktuell von der Live-WordPress-Instanz geladen → bei Bedarf lokalisieren (`next.config.ts` → `images.remotePatterns`)
-- [ ] **Resend**-Zugangsdaten setzen (s. o.)
+- [ ] **Mail-Versand:** SMTP-/Google-Relay-Zugangsdaten in Coolify setzen (s. o.)
 - [ ] Team-Fotos optional je Person ergänzen (derzeit Initialen-Avatare)
 ```

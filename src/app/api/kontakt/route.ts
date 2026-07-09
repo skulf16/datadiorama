@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { SITE } from "@/data/site";
+import { sendContactMail } from "@/lib/mail";
 
 export const runtime = "nodejs";
 
@@ -53,41 +53,15 @@ export async function POST(request: Request) {
     message,
   ].join("\n");
 
-  // E-Mail-Versand über Resend, sofern konfiguriert (RESEND_API_KEY).
-  // Andernfalls wird die Anfrage angenommen und protokolliert – so funktioniert
-  // das Formular sofort, der produktive Versand wird per ENV aktiviert.
-  const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO || SITE.email;
-  const from = process.env.CONTACT_FROM || "kontakt@datadiorama.com";
-
-  if (apiKey) {
-    try {
-      const res = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          from: `datadiorama Website <${from}>`,
-          to: [to],
-          reply_to: email,
-          subject,
-          text,
-        }),
-      });
-      if (!res.ok) {
-        const detail = await res.text();
-        console.error("Resend-Fehler:", detail);
-        return NextResponse.json({ error: "Der Versand ist fehlgeschlagen. Bitte rufen Sie uns an." }, { status: 502 });
-      }
-    } catch (err) {
-      console.error("Mailversand-Ausnahme:", err);
-      return NextResponse.json({ error: "Der Versand ist fehlgeschlagen. Bitte rufen Sie uns an." }, { status: 502 });
-    }
-  } else {
-    // Kein Provider konfiguriert: Anfrage protokollieren (Demo-/Setup-Modus).
-    console.info("[Kontaktformular] Eingang (kein RESEND_API_KEY gesetzt):\n", text);
+  // Versand über SMTP (z. B. Google-Relay) bzw. Resend – siehe lib/mail.ts.
+  const result = await sendContactMail({
+    fromLabel: "datadiorama Website",
+    subject,
+    text,
+    replyTo: email,
+  });
+  if (!result.ok) {
+    return NextResponse.json({ error: "Der Versand ist fehlgeschlagen. Bitte rufen Sie uns an." }, { status: 502 });
   }
 
   return NextResponse.json({ ok: true });

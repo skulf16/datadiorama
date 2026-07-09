@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { SITE } from "@/data/site";
+import { sendContactMail } from "@/lib/mail";
 
 export const runtime = "nodejs";
 
@@ -52,33 +52,15 @@ export async function POST(request: Request) {
     `Telefon: ${data.phone || "-"}`,
   ].join("\n");
 
-  const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO || SITE.email;
-  const from = process.env.CONTACT_FROM || "kontakt@datadiorama.com";
-
-  if (apiKey) {
-    try {
-      const res = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
-        body: JSON.stringify({
-          from: `datadiorama Funnel <${from}>`,
-          to: [to],
-          reply_to: email,
-          subject,
-          text,
-        }),
-      });
-      if (!res.ok) {
-        console.error("Resend-Fehler:", await res.text());
-        return NextResponse.json({ error: "Der Versand ist fehlgeschlagen. Bitte rufen Sie uns an." }, { status: 502 });
-      }
-    } catch (err) {
-      console.error("Mailversand-Ausnahme:", err);
-      return NextResponse.json({ error: "Der Versand ist fehlgeschlagen. Bitte rufen Sie uns an." }, { status: 502 });
-    }
-  } else {
-    console.info("[Angebots-Funnel] Eingang (kein RESEND_API_KEY gesetzt):\n", text);
+  // Versand über SMTP (z. B. Google-Relay) bzw. Resend – siehe lib/mail.ts.
+  const result = await sendContactMail({
+    fromLabel: "datadiorama Funnel",
+    subject,
+    text,
+    replyTo: email,
+  });
+  if (!result.ok) {
+    return NextResponse.json({ error: "Der Versand ist fehlgeschlagen. Bitte rufen Sie uns an." }, { status: 502 });
   }
 
   return NextResponse.json({ ok: true });
