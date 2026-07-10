@@ -39,7 +39,6 @@ export const TEAM: TeamMember[] = [
   m("Stacey Kenny", "IT-Projektleitung", { avatar: { skin: "#f6d7bb", hair: "long", hairColor: "#7a4a2f", shirt: SHIRT.brand } }),
   m("Maximilian Dalichow", "IT-Projektleitung", { image: `${IMG}/2022/11/datadiorama-3607-max.jpg` }),
   m("Nadine Gonschior", "IT-Projektmanagement", { image: `${IMG}/2025/12/HJ7A2597-1x1-web.jpg` }),
-  m("Ole Graf", "Ausbilder & IT-Administrator", { image: `${IMG}/2025/03/datadiorama-8301-e1743068600936.jpg` }),
   m("Attila Kövary", "IT-Administrator", { image: `${IMG}/2025/12/HJ7A2664-1x1-web.jpg` }),
   m("William Kiesel", "IT-Administrator", { avatar: { skin: "#b07b4f", hair: "curly", hairColor: "#1f1a17", shirt: SHIRT.sky, glasses: true } }),
   m("Justin Bongards", "IT-Administrator", { image: `${IMG}/2025/12/webpic.png` }),
