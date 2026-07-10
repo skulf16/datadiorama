@@ -16,7 +16,7 @@ export const SERVICES: Service[] = [
     metaTitle: "IT-Support für Unternehmen in Potsdam & Berlin",
     metaDescription:
       "Professioneller IT-Support für Unternehmen: schnelle Reaktionszeiten, fester Ansprechpartner, Fernwartung und Vor-Ort-Service in Potsdam, Berlin & St. Gallen.",
-    image: `${IMG}/2025/03/datadiorama-7864.jpg`,
+    image: `${IMG}/2025/03/datadiorama-7783.jpg`,
     image2: `${IMG}/2025/03/datadiorama-8127.jpg`,
     intro:
       "IT-Support von datadiorama bedeutet, dass sich ein erfahrenes Team um den reibungslosen Betrieb Ihrer gesamten IT kümmert – von der einzelnen Arbeitsstation bis zur kompletten Server- und Netzwerklandschaft. Sie erreichen uns mit einem festen Ansprechpartner, wir lösen die meisten Anfragen per Fernwartung in kürzester Zeit und kommen bei Bedarf vor Ort. So können Sie sich ganz auf Ihr Kerngeschäft konzentrieren.",

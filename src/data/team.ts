@@ -87,7 +87,7 @@ export const TEAM_GALLERY: string[] = [
   `${IMG}/2025/03/datadiorama-8220.jpg`,
   `${IMG}/2025/03/datadiorama-8009.jpg`,
   `${IMG}/2025/04/datadiorama-8233.jpg`,
-  `${IMG}/2025/03/datadiorama-7864.jpg`,
+  `${IMG}/2025/03/datadiorama-7783.jpg`,
   `${IMG}/2025/04/datadiorama-8181.jpg`,
   `${IMG}/2025/03/datadiorama-8127.jpg`,
 ];
