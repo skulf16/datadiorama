@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
 import { Container } from "@/components/ui/Container";
 import { CtaSection } from "@/components/sections/CtaSection";
+import { AuthorByline } from "@/components/team/AuthorByline";
 import { getPostsSorted } from "@/data/posts";
 import { formatDateDE } from "@/lib/utils";
 import { buildMetadata } from "@/lib/seo";
@@ -43,7 +44,10 @@ export default function BeitraegePage() {
                   {post.title}
                 </h2>
                 <p className="mt-3 flex-1 text-[0.95rem] leading-relaxed text-muted">{post.excerpt}</p>
-                <div className="mt-6 flex items-center justify-between border-t border-line pt-4 text-sm">
+                {post.author && (
+                  <AuthorByline author={post.author} compact label="Von" className="mt-5 text-sm" />
+                )}
+                <div className="mt-5 flex items-center justify-between border-t border-line pt-4 text-sm">
                   <time className="text-muted-light" dateTime={post.date}>
                     {formatDateDE(post.date)}
                   </time>

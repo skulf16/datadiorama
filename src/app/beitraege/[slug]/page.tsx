@@ -7,6 +7,7 @@ import { KeyTakeaways } from "@/components/aeo/KeyTakeaways";
 import { Faq } from "@/components/aeo/Faq";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { Icon } from "@/components/icons/Icon";
+import { AuthorByline } from "@/components/team/AuthorByline";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildMetadata } from "@/lib/seo";
 import { formatDateDE } from "@/lib/utils";
@@ -56,7 +57,15 @@ export default async function PostPage({
     datePublished: post.date,
     dateModified: post.date,
     inLanguage: "de-DE",
-    author: { "@type": "Organization", name: SITE.fullName, url: SITE.url },
+    author: post.author
+      ? {
+          "@type": "Person",
+          name: post.author.name,
+          jobTitle: post.author.role,
+          ...(post.author.image ? { image: `${SITE.url}${post.author.image}` } : {}),
+          worksFor: { "@type": "Organization", name: SITE.fullName, url: SITE.url },
+        }
+      : { "@type": "Organization", name: SITE.fullName, url: SITE.url },
     publisher: {
       "@type": "Organization",
       name: SITE.fullName,
@@ -77,7 +86,10 @@ export default async function PostPage({
           { name: post.title, url: `/beitraege/${post.slug}` },
         ]}
       >
-        <div className="mt-2 flex items-center gap-3 text-sm text-white/60">
+        {post.author && (
+          <AuthorByline author={post.author} tone="dark" label="Von" className="mt-4" />
+        )}
+        <div className="mt-3 flex items-center gap-3 text-sm text-white/60">
           <time dateTime={post.date}>{formatDateDE(post.date)}</time>
           <span aria-hidden="true">·</span>
           <span>{post.readingMinutes} Min. Lesezeit</span>
@@ -135,6 +147,17 @@ export default async function PostPage({
                       </Link>
                     ),
                 )}
+              </div>
+            </div>
+          )}
+
+          {post.author && (
+            <div className="mt-14 rounded-2xl border border-line bg-surface p-6">
+              <p className="text-xs font-medium uppercase tracking-wide text-muted-light">
+                Verfasst von
+              </p>
+              <div className="mt-3">
+                <AuthorByline author={post.author} size="md" />
               </div>
             </div>
           )}

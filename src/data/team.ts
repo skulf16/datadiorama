@@ -49,6 +49,11 @@ export const TEAM: TeamMember[] = [
   m("Max Buchwald", "Auszubildender Fachinformatiker", { image: `${IMG}/2025/03/datadiorama-8313-1x1-1.jpg` }),
 ];
 
+/** Einzelnes Teammitglied per Namen – u. a. für die Autor-Zuordnung der Beiträge. */
+export function getTeamMember(name: string): TeamMember | undefined {
+  return TEAM.find((member) => member.name === name);
+}
+
 export interface CompanyValue {
   title: string;
   description: string;

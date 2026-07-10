@@ -1,9 +1,14 @@
 import type { Post } from "@/lib/types";
 import { POST_CONTENT } from "@/data/posts-content";
+import { getTeamMember } from "@/data/team";
+
+// Maximilian Dalichow hat sämtliche Fachbeiträge verfasst.
+const AUTHOR = getTeamMember("Maximilian Dalichow");
 
 function withContent(post: Post): Post {
   const content = POST_CONTENT[post.slug];
-  return content ? { ...post, ...content } : post;
+  const merged = content ? { ...post, ...content } : { ...post };
+  return AUTHOR ? { ...merged, author: AUTHOR } : merged;
 }
 
 /**

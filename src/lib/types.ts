@@ -154,6 +154,8 @@ export interface Post {
   sections?: ContentSection[];
   faq?: FaqItem[];
   relatedServiceSlugs?: string[];
+  /** Verfasser des Beitrags (aus dem Team) */
+  author?: TeamMember;
 }
 
 export interface Location {
