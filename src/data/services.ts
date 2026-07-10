@@ -1,6 +1,6 @@
 import type { Service } from "@/lib/types";
 
-const IMG = "https://datadiorama.com/wp-content/uploads";
+const IMG = "/media";
 
 export const SERVICES: Service[] = [
   // 01 — IT-Support

@@ -20,7 +20,7 @@ const m = (
   initials: initials(name),
 });
 
-const IMG = "https://datadiorama.com/wp-content/uploads";
+const IMG = "/media";
 
 // Shirt-Farben aus der Markenpalette (globals.css).
 const SHIRT = {
@@ -78,12 +78,12 @@ export const VALUES: CompanyValue[] = [
   },
 ];
 
-// Öffentlich zugängliche Team-/Eventfotos (WordPress-Medien).
+// Team-/Eventfotos (lokal unter public/media/, aus WordPress übernommen).
 export const TEAM_GALLERY: string[] = [
-  "https://datadiorama.com/wp-content/uploads/2025/03/datadiorama-8220.jpg",
-  "https://datadiorama.com/wp-content/uploads/2025/03/datadiorama-8009.jpg",
-  "https://datadiorama.com/wp-content/uploads/2025/04/datadiorama-8233.jpg",
-  "https://datadiorama.com/wp-content/uploads/2025/03/datadiorama-7864.jpg",
-  "https://datadiorama.com/wp-content/uploads/2025/04/datadiorama-8181.jpg",
-  "https://datadiorama.com/wp-content/uploads/2025/03/datadiorama-8127.jpg",
+  `${IMG}/2025/03/datadiorama-8220.jpg`,
+  `${IMG}/2025/03/datadiorama-8009.jpg`,
+  `${IMG}/2025/04/datadiorama-8233.jpg`,
+  `${IMG}/2025/03/datadiorama-7864.jpg`,
+  `${IMG}/2025/04/datadiorama-8181.jpg`,
+  `${IMG}/2025/03/datadiorama-8127.jpg`,
 ];

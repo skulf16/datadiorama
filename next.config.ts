@@ -1,22 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
-    // Während des Relaunchs werden die öffentlich zugänglichen Medien aus der
-    // bestehenden WordPress-Installation verwendet. Können später lokalisiert werden.
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "datadiorama.com",
-        pathname: "/wp-content/**",
-      },
-      {
-        protocol: "https",
-        hostname: "www.datadiorama.com",
-        pathname: "/wp-content/**",
-      },
-    ],
-  },
+  // Medien liegen lokal unter public/media/ (aus der früheren WordPress-Installation
+  // übernommen). Es werden keine externen Bildquellen mehr geladen.
   async redirects() {
     // Alte WordPress-URLs auf neue, sprechende Pfade umleiten (SEO-Erhalt).
     // Hinweis: /leistungen/hotel-wlan bleibt unverändert und braucht keinen Redirect.

@@ -24,6 +24,10 @@
 .DS_Store
 *.pem
 
+# Vollständiger WordPress-Upload-Ordner (Quelle für Bild-Lokalisierung).
+# Nur die tatsächlich genutzten Dateien liegen in public/media/.
+/uploads
+
 # debug
 npm-debug.log*
 yarn-debug.log*

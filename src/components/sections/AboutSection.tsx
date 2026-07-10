@@ -20,7 +20,7 @@ export function AboutSection() {
             <div className="absolute -left-4 -top-4 h-24 w-24 clip-hex bg-brand/10" aria-hidden="true" />
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-line shadow-[var(--shadow-card-hover)]">
               <Image
-                src="https://datadiorama.com/wp-content/uploads/2025/03/datadiorama-8127.jpg"
+                src="/media/2025/03/datadiorama-8127.jpg"
                 alt="datadiorama Techniker bei der Arbeit an zwei Bildschirmen"
                 fill
                 className="object-cover"

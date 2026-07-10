@@ -37,7 +37,7 @@ export default function HomePage() {
           "E-Mail- & Telefonie-Verwaltung",
           "Fernwartung & Vor-Ort-Service",
         ]}
-        image="https://datadiorama.com/wp-content/uploads/2025/03/datadiorama-7572.jpg"
+        image="/media/2025/03/datadiorama-7572.jpg"
         imageAlt="datadiorama Team im Büro bei der Netzwerk- und Systembetreuung"
         imageSide="right"
         cta={{ label: "Alle Leistungen ansehen", href: "/leistungen" }}
