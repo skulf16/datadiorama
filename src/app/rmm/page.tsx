@@ -6,14 +6,14 @@ import { SITE } from "@/data/site";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "RMM-Agent installieren",
+  title: "rmm installieren",
   description:
-    "Installieren Sie den datadiorama RMM-Agent für Windows – für proaktives Monitoring, automatische Updates und schnellen Managed-Services-Support.",
+    "Installieren Sie den datadiorama rmm für Windows – für proaktives Monitoring, automatische Updates und schnellen Managed-Services-Support.",
   path: "/rmm",
   noIndex: true,
 });
 
-// Der RMM-Agent liegt unter public/downloads/ und wird von Next.js direkt unter
+// Der rmm liegt unter public/downloads/ und wird von Next.js direkt unter
 // /downloads/… ausgeliefert. Basis-URL per ENV überschreibbar (CDN/Objektspeicher);
 // Standard: der relative Pfad, der lokal wie in Produktion funktioniert.
 const DL_BASE =
@@ -24,7 +24,7 @@ const DOWNLOADS = [
 ];
 
 const steps = [
-  "Laden Sie unten den RMM-Agent für Windows herunter.",
+  "Laden Sie unten den rmm für Windows herunter.",
   "Starten Sie die Datei mit Administratorrechten – die Installation läuft unbeaufsichtigt im Hintergrund.",
   "Fertig: Der Agent meldet sich in unserem System. Wir überwachen Zustand, Updates und Sicherheit Ihrer Geräte proaktiv.",
 ];
@@ -34,10 +34,10 @@ export default function RmmPage() {
     <>
       <PageHero
         eyebrow="Managed Services"
-        title="RMM-Agent installieren"
-        description="Mit unserem RMM-Agent behalten wir Ihre Systeme im Blick – Updates, Sicherheit und Störungen erkennen und beheben wir proaktiv, oft bevor Sie etwas bemerken."
+        title="rmm installieren"
+        description="Mit unserem rmm behalten wir Ihre Systeme im Blick – Updates, Sicherheit und Störungen erkennen und beheben wir proaktiv, oft bevor Sie etwas bemerken."
         icon="shield"
-        breadcrumbs={[{ name: "RMM-Agent", url: "/rmm" }]}
+        breadcrumbs={[{ name: "rmm", url: "/rmm" }]}
       />
 
       <section className="py-16 sm:py-20">
@@ -53,7 +53,7 @@ export default function RmmPage() {
           </ol>
 
           {/* Downloads */}
-          <h2 className="mt-14 font-display text-2xl text-ink">RMM-Agent herunterladen</h2>
+          <h2 className="mt-14 font-display text-2xl text-ink">rmm herunterladen</h2>
           <div className="mt-6 flex flex-wrap justify-center gap-4">
             {DOWNLOADS.map((d) => (
               <a
