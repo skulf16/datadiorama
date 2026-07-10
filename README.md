@@ -102,7 +102,7 @@ Server-Log ausgegeben.
 ## Vor dem Go-Live zu prüfen
 
 - [ ] **Datenschutzerklärung** rechtlich prüfen und an finales Hosting/Dienste anpassen (`src/app/datenschutz/page.tsx`)
-- [x] **Fernzugriff:** Support-Tool-Installer (Windows/macOS) werden **extern** ausgeliefert (nicht im Repo, um es schlank zu halten). Die Basis-URL ist über `NEXT_PUBLIC_DOWNLOADS_BASE_URL` konfigurierbar (Standard: `https://datadiorama.com/downloads`). Vor der finalen Domain-Migration auf einen dauerhaften Speicher (CDN/Objektspeicher) umstellen und die ENV setzen.
+- [x] **Fernzugriff:** Support-Tool-Installer (Windows/macOS) liegen unter `public/downloads/` und werden mit dem Repo ausgeliefert (`/downloads/…`). Die Basis-URL ist über `NEXT_PUBLIC_DOWNLOADS_BASE_URL` konfigurierbar (Standard: relativer Pfad `/downloads`). Optional vor der finalen Domain-Migration auf einen dauerhaften Speicher (CDN/Objektspeicher) umstellen und die ENV setzen, um das Repo schlank zu halten.
 - [ ] **Bilder:** aktuell von der Live-WordPress-Instanz geladen → bei Bedarf lokalisieren (`next.config.ts` → `images.remotePatterns`)
 - [ ] **Mail-Versand:** SMTP-/Google-Relay-Zugangsdaten in Coolify setzen (s. o.)
 - [ ] Team-Fotos optional je Person ergänzen (derzeit Initialen-Avatare)

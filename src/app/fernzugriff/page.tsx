@@ -13,11 +13,13 @@ export const metadata: Metadata = buildMetadata({
   noIndex: true,
 });
 
-// Support-Tool-Installer werden extern ausgeliefert (nicht im Repo, um es schlank zu halten).
+// Die Support-Tool-Installer liegen unter public/downloads/ und werden von Next.js
+// direkt unter /downloads/… ausgeliefert (aus der Versionskontrolle ausgenommen,
+// siehe .gitignore, um das Repo schlank zu halten).
 // Basis-URL per ENV überschreibbar – so kann später leicht auf ein CDN/Objektspeicher
-// umgestellt werden. Standard: die bestehende, stabil erreichbare Download-Quelle.
+// umgestellt werden. Standard: der relative Pfad, der lokal wie in Produktion funktioniert.
 const DL_BASE =
-  process.env.NEXT_PUBLIC_DOWNLOADS_BASE_URL || "https://datadiorama.com/downloads";
+  process.env.NEXT_PUBLIC_DOWNLOADS_BASE_URL || "/downloads";
 
 const DOWNLOADS = [
   { os: "Windows", note: "Windows 10 / 11", icon: "workspace" as const, href: `${DL_BASE}/datadiorama-support_v1.exe`, size: "26 MB" },
