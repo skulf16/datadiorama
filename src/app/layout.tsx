@@ -4,6 +4,10 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
+import {
+  ConsentAndTagManager,
+  TagManagerNoScript,
+} from "@/components/analytics/ConsentAndTagManager";
 import { organizationSchema, websiteSchema } from "@/lib/structured-data";
 import { SITE } from "@/data/site";
 
@@ -59,7 +63,11 @@ export default function RootLayout({
       lang="de"
       className={`${varelaRound.variable} ${outfit.variable} ${shareTechMono.variable} h-full antialiased`}
     >
+      <head>
+        <ConsentAndTagManager />
+      </head>
       <body className="flex min-h-full flex-col bg-white">
+        <TagManagerNoScript />
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <Header />
         <main className="flex-1">{children}</main>
