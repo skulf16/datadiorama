@@ -1,24 +1,29 @@
 /**
- * Cookiebot (Consent-Banner) und Google Tag Manager mit Google Consent Mode v2.
+ * Google Consent Mode v2 und Google Tag Manager.
  *
- * Die Reihenfolge im <head> ist zwingend und darf nicht getauscht werden:
+ * Reihenfolge im <head> – zwingend, darf nicht getauscht werden:
  *   1. Consent Mode Default – setzt alle Kategorien auf "denied", bevor
  *      irgendein Tag laufen kann.
- *   2. Cookiebot (uc.js) – zeigt das Banner und aktualisiert den Consent-Zustand
- *      nach der Entscheidung des Nutzers.
- *   3. Google Tag Manager – lädt und steuert seine Tags über die Consent-Signale.
+ *   2. Google Tag Manager – lädt und steuert seine Tags über die Consent-Signale.
  *
- * Die beiden Google-Skripte tragen data-cookieconsent="ignore", damit das
- * Auto-Blocking von Cookiebot sie nicht blockiert: Consent Mode wirkt nur, wenn
- * Default-Zustand und gtm.js bereits *vor* der Einwilligung ausgeführt werden.
- * Das Blockieren der einzelnen Tags übernimmt dann Consent Mode selbst.
+ * Beide Skripte tragen data-cookieconsent="ignore", damit das Auto-Blocking von
+ * Cookiebot sie nicht blockiert: Consent Mode wirkt nur, wenn Default-Zustand und
+ * gtm.js bereits *vor* der Einwilligung ausgeführt werden. Das Gating der
+ * einzelnen Tags übernimmt dann Consent Mode selbst.
+ *
+ * Cookiebot selbst wird bewusst nicht hier eingebunden, sondern erst nach der
+ * Hydration – Begründung in [CookiebotLoader].
  */
 
-const COOKIEBOT_ID = "b17229b7-3763-4151-91d4-2824e62de0dd";
+import { CookiebotLoader } from "./CookiebotLoader";
+
 const GTM_ID = "GTM-PC8N6C8";
 
-// Consent Mode: Default-Zustand vor dem CMP. security_storage bleibt "granted",
-// wait_for_update gibt Cookiebot 500 ms Zeit, den gespeicherten Consent zu melden.
+// Consent Mode: Default-Zustand vor dem CMP. security_storage bleibt "granted".
+// wait_for_update ist bewusst großzügig (2000 ms statt der üblichen 500 ms):
+// uc.js startet erst nach der Hydration, und wiederkehrende Besucher mit
+// gespeicherter Einwilligung sollen ihren "granted"-Zustand noch innerhalb des
+// Wartefensters melden können – sonst gingen die ersten Hits als "denied" raus.
 const consentDefault = `
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
@@ -30,7 +35,7 @@ gtag("consent", "default", {
   functionality_storage: "denied",
   personalization_storage: "denied",
   security_storage: "granted",
-  wait_for_update: 500,
+  wait_for_update: 2000,
 });
 gtag("set", "ads_data_redaction", true);
 gtag("set", "url_passthrough", false);
@@ -57,22 +62,11 @@ export function ConsentAndTagManager() {
         data-cookieconsent="ignore"
         dangerouslySetInnerHTML={{ __html: consentDefault }}
       />
-      {/*
-       * Bewusst ohne async/defer: uc.js muss blockierend laufen, damit das
-       * Auto-Blocking aktiv ist, bevor weitere Skripte geparst werden.
-       */}
-      {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-      <script
-        id="Cookiebot"
-        src="https://consent.cookiebot.com/uc.js"
-        data-cbid={COOKIEBOT_ID}
-        data-blockingmode="auto"
-        type="text/javascript"
-      />
       <script
         data-cookieconsent="ignore"
         dangerouslySetInnerHTML={{ __html: gtmLoader }}
       />
+      <CookiebotLoader />
     </>
   );
 }
