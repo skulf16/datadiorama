@@ -740,6 +740,142 @@ export const SERVICES: Service[] = [
     partnerKeys: ["synology"],
     relatedSlugs: ["workspaces", "mailserver", "it-support"],
   },
+
+  // 12 — Azure Beratung
+  {
+    slug: "azure-beratung",
+    order: 12,
+    navLabel: "Azure Beratung",
+    icon: "cloud",
+    title: "Azure Beratung für Unternehmen",
+    tagline: "Wann sich der Schritt in die Microsoft-Cloud lohnt - und wann nicht.",
+    cardDescription:
+      "Wir prüfen, welche Ihrer Systeme in die Cloud gehören, planen die Migration und kalkulieren die Betriebskosten vorab.",
+    metaTitle: "Azure Beratung in Potsdam & Berlin - Microsoft Azure Consulting",
+    metaDescription:
+      "Azure Beratung vom IT-Systemhaus aus Potsdam: Cloud-Strategie, Azure Migration, Sicherheit & Kostenoptimierung. Persönliche Betreuung in Potsdam, Berlin & St. Gallen.",
+    image: `${IMG}/2025/03/datadiorama-7783.jpg`,
+    image2: `${IMG}/2025/03/datadiorama-8127.jpg`,
+    intro:
+      "Eine Azure Beratung prüft, welche Server, Daten und Anwendungen Ihres Unternehmens sich für Microsoft Azure eignen, plant die Migration und kalkuliert die laufenden Kosten vorab. datadiorama begleitet Sie dabei von der Bestandsaufnahme bis zum Regelbetrieb - als IT-Systemhaus aus Potsdam, das auch Ihre Arbeitsplätze und Netzwerke kennt. Mit einer ehrlichen Antwort: Nicht jedes System gehört in die Cloud.",
+    keyTakeaways: [
+      "Eine Azure Beratung klärt, welche Systeme in die Cloud gehören, plant die Migration und kalkuliert die Betriebskosten vorab.",
+      "Typischer Ablauf: Bestandsaufnahme, Konzept mit Kostenschätzung, Testmigration, Umzug, Übergang in den Regelbetrieb.",
+      "Azure lohnt sich am ehesten, wenn eine Server-Erneuerung ansteht, Microsoft 365 bereits läuft oder Standorte und Home-Office angebunden werden sollen.",
+      "Es gibt Fälle, in denen die Cloud die teurere Wahl ist - eine seriöse Beratung sagt das offen.",
+      "Persönliche Beratung vor Ort in Potsdam und Berlin oder per Fernwartung.",
+    ],
+    facts: [
+      { label: "Leistung", value: "Azure Beratung, Migration & Betrieb" },
+      { label: "Region", value: "Potsdam, Berlin & St. Gallen" },
+      { label: "Schwerpunkte", value: "Strategie, Migration, Sicherheit, Kosten" },
+      { label: "Modell", value: "Projekt oder laufende Betreuung" },
+      { label: "Erfahrung", value: "Systemhaus seit 2013" },
+    ],
+    sections: [
+      {
+        heading: "Was macht eine Azure Beratung?",
+        body:
+          "Eine Azure Beratung analysiert Ihre bestehende Infrastruktur und erstellt einen konkreten Plan: welche Systeme in Microsofts Cloud-Plattform verlagert werden, wie die Umgebung dort aufgebaut wird und was der Betrieb kostet. Das Ergebnis ist ein Konzept mit Architektur, Zeitplan und Kostenschätzung - kein Prospekt.\n\nWichtig für die Einordnung: Microsoft Azure ist nicht dasselbe wie Microsoft 365. Microsoft 365 umfasst die Arbeitsanwendungen wie Exchange Online, Teams und SharePoint. Azure ist die darunterliegende Cloud-Plattform, auf der Unternehmen eigene Server, Datenbanken und Anwendungen betreiben - mit mehreren hundert einzelnen Diensten. Diese Menge ist der eigentliche Grund, warum es Beratung braucht. Niemand benötigt hunderte Dienste. Die Kunst liegt darin, die drei bis zehn auszuwählen, die zu Ihrem Unternehmen passen, und den Rest zu ignorieren.",
+      },
+      {
+        heading: "In welchen Situationen liegt Azure auf dem Tisch?",
+        body:
+          "Selten entsteht ein Cloud-Projekt aus dem Nichts. In den Umgebungen, die wir als Systemhaus betreuen, ist es fast immer eine von vier Ausgangslagen:",
+        bullets: [
+          "Die Server-Hardware erreicht ihr Lebensende, und die Ersatzinvestition wird mit der Cloud-Miete verglichen.",
+          "Das Unternehmen arbeitet bereits mit Microsoft 365, und die Identitäten liegen ohnehin in Entra ID, Microsofts Cloud-Verzeichnisdienst.",
+          "Standorte, Außendienst oder Home-Office brauchen Zugriff auf zentrale Systeme, und das bisherige VPN-Konstrukt ächzt.",
+          "Eine einzelne Anwendung, etwa die Warenwirtschaft, wird vom Hersteller künftig nur noch in der Cloud betrieben.",
+        ],
+      },
+      {
+        heading: "Lohnt sich Azure auch für kleine Unternehmen?",
+        body:
+          "Ja, aber anders, als die Werbung es zeichnet. Kleine Unternehmen profitieren vor allem davon, dass sie keine Hardware vorfinanzieren und keine Serverpflege organisieren müssen; bezahlt wird nach Verbrauch. Der häufigste sinnvolle Einstieg ist deshalb nicht die große Migration, sondern ein einzelner Baustein: ein Cloud-Backup nach der 3-2-1-Regel, nach der Unternehmen drei Kopien ihrer Daten auf zwei Medientypen vorhalten sollten, davon eine außer Haus (Quelle: BSI). Oder ein einzelner Server, der ohnehin ersetzt werden müsste.\n\nDer Punkt, an dem viele Projekte kippen, ist die Kostenlogik: Ein lokaler Server kostet einmal viel und dann wenig. Azure kostet nichts in der Anschaffung und dann jeden Monat. Wer eine Umgebung eins zu eins in die Cloud hebt, ohne die Maschinen passend zu dimensionieren, zahlt drauf. Deshalb gehört die Verbrauchskalkulation in die Beratung, nicht in die erste Monatsrechnung.",
+      },
+      {
+        heading: "Alternativen im Vergleich: Azure, lokaler Server oder Private Cloud?",
+        body:
+          "Wer nur eine Option prüft, entscheidet nicht, sondern bestätigt. Azure spielt seine Stärke aus, wo Last schwankt, Teams verteilt arbeiten oder Investitionen vermieden werden sollen: keine Anschaffungskosten, kurzfristige Skalierung, wählbarer Datenstandort wie Deutschland. Ein lokaler Server bleibt die bessere Wahl bei stabilen Altanwendungen mit großen lokalen Datenmengen und geringem Bedarf an Fernzugriff. Eine Private Cloud beim Dienstleister passt, wenn feste Monatskosten gewünscht sind und wenig Eigenbetrieb. Und ein Hybrid-Modell kombiniert beides: Kritisches bleibt lokal verfügbar, der Rest läuft in Azure.\n\nEhrlich eingeordnet: Azure ist nicht automatisch die richtige Antwort. Dauerhaft voll ausgelastete Rechenlast ist in der Miete teurer als im Eigentum, und ein funktionierender, gepflegter lokaler Server ist kein Sanierungsfall. Genau das klären wir in der Bestandsaufnahme.",
+      },
+      {
+        heading: "Was kostet der Betrieb in Azure?",
+        body:
+          "Die Betriebskosten setzen sich im Kern aus drei Blöcken zusammen: Rechenleistung, Speicher und Datenverkehr aus der Cloud heraus. Dazu kommen Lizenzen und, falls beauftragt, die Betreuung durch einen Dienstleister. Konkrete Euro-Beträge hängen so stark an Größe und Nutzungsprofil der Umgebung, dass jede pauschale Zahl unseriös wäre; belastbar wird die Kalkulation erst nach der Bestandsaufnahme. Nehmen Sie dafür am besten direkt Kontakt mit uns auf.\n\nDrei Stellhebel entscheiden über die Rechnung: Reservierungen (wer Kapazität für ein oder drei Jahre fest bucht, zahlt deutlich weniger als im flexiblen Tarif), richtige Dimensionierung (Cloud-Maschinen lassen sich kleiner anlegen als alte physische Server, die auf Zuwachs gekauft wurden) und Abschalten (Testsysteme, die nachts und am Wochenende durchlaufen, sind reine Geldvernichtung). Klingt banal. Ist aber in der Praxis der häufigste Kostentreiber.",
+      },
+      {
+        heading: "Wie steht es um Datenschutz und DSGVO?",
+        body:
+          "Azure lässt sich DSGVO-konform betreiben - das passiert aber nicht von selbst, sondern durch Konfiguration. Drei Punkte gehören in jedes Konzept: die Regionswahl (Microsoft betreibt Rechenzentrumsregionen unter anderem in Deutschland und der Schweiz), der Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO und der Zugriffsschutz mit Multi-Faktor-Authentifizierung und abgestuften Berechtigungen. Ein Admin-Konto ohne MFA ist im Jahr 2026 fahrlässig; einen vollständigen Schutz gibt es in der IT-Sicherheit allerdings nicht.\n\nFür die Einordnung der Anbieter-Sicherheit hilft der Kriterienkatalog C5 des BSI, mit dem Cloud-Dienste ihre Sicherheitsmaßnahmen nachweisen. Bei Spezialfällen, etwa besonders sensiblen Datenkategorien, gehört Ihr Datenschutzbeauftragter mit an den Tisch.",
+      },
+    ],
+    benefits: [
+      { title: "Alles aus einer Hand", description: "Cloud, Netzwerk und Arbeitsplätze zusammen gedacht - ein Ansprechpartner für Ihre gesamte IT.", icon: "cloud" },
+      { title: "Sicher & DSGVO-konform", description: "Europäische Rechenzentren, MFA und saubere Berechtigungen von Anfang an.", icon: "shield" },
+      { title: "Kalkulierbare Kosten", description: "Passend dimensionierte Ressourcen und laufende Kostenoptimierung statt Cloud-Kostenfalle.", icon: "rocket" },
+    ],
+    process: [
+      {
+        title: "Bestandsaufnahme",
+        description: "Wir erfassen Server, Anwendungen, Datenmengen und Abhängigkeiten. Hier entscheidet sich, was migriert wird und was nicht.",
+      },
+      {
+        title: "Konzept & Kostenschätzung",
+        description: "Sie erhalten eine Architektur mit den geplanten Azure-Diensten, Sicherheitsrichtlinien und einer Schätzung der monatlichen Betriebskosten.",
+      },
+      {
+        title: "Aufbau der Grundumgebung",
+        description: "Netzwerk, Identitäten über Entra ID, Multi-Faktor-Authentifizierung und Zugriffsregeln stehen, bevor die erste Anwendung umzieht.",
+      },
+      {
+        title: "Testmigration",
+        description: "Ein unkritisches System oder eine Pilotgruppe zieht zuerst um. Was hier hakt, hakt später nicht im Echtbetrieb.",
+      },
+      {
+        title: "Migration",
+        description: "Server, Daten und Anwendungen werden schrittweise verlagert, meist außerhalb der Geschäftszeiten, damit Ihr Betrieb weiterläuft.",
+      },
+      {
+        title: "Regelbetrieb & Optimierung",
+        description: "Monitoring, Backup und Kostenkontrolle werden eingerichtet; auf Wunsch übernehmen wir die laufende Betreuung.",
+      },
+    ],
+    faq: [
+      {
+        question: "Was ist der Unterschied zwischen Microsoft Azure und Microsoft 365?",
+        answer:
+          "Microsoft 365 sind die fertigen Arbeitsanwendungen wie E-Mail (Exchange Online), Teams und SharePoint. Azure ist die Cloud-Plattform darunter, auf der Unternehmen eigene Server, Datenbanken und Anwendungen betreiben. Viele Firmen nutzen beides: Microsoft 365 für die Büroarbeit, Azure für Serverdienste, die vorher lokal liefen.",
+      },
+      {
+        question: "Brauche ich für Azure ein eigenes IT-Team?",
+        answer:
+          "Nein, aber jemand muss die Umgebung betreiben. Auch eine Cloud-Umgebung braucht Updates, Überwachung, Backup-Kontrolle und Kostenpflege. Kleine und mittlere Unternehmen lagern das meist an ein Systemhaus aus, das die Umgebung als Managed Service betreut.",
+      },
+      {
+        question: "Was passiert bei einem Internetausfall?",
+        answer:
+          "Ohne Internetverbindung sind Cloud-Systeme nicht erreichbar, daran führt kein Weg vorbei. Deshalb gehören eine zweite Internetleitung oder ein Mobilfunk-Fallback in jedes Konzept, und wirklich betriebskritische Systeme mit Offline-Anforderung bleiben in einem Hybrid-Modell lokal.",
+      },
+      {
+        question: "Kann ich Azure später wieder verlassen?",
+        answer:
+          "Ja, ein Rückweg oder Anbieterwechsel ist möglich, aber mit Aufwand verbunden. Virtuelle Maschinen und Daten lassen sich exportieren; je stärker eine Umgebung Azure-eigene Spezialdienste nutzt, desto aufwendiger wird der Umzug. Eine gute Beratung spricht dieses Exit-Szenario von Anfang an mit an.",
+      },
+      {
+        question: "Welche Systeme gehören nicht in die Cloud?",
+        answer:
+          "Typische Kandidaten für den Verbleib im Haus sind Altanwendungen ohne Cloud-Freigabe des Herstellers, Systeme mit sehr großen lokalen Datenmengen, Maschinensteuerungen in der Produktion und alles, was auch bei einem Internetausfall laufen muss. Genau dafür gibt es Hybrid-Modelle.",
+      },
+      {
+        question: "Wie lange dauert eine Migration zu Azure?",
+        answer:
+          "Einzelne Workloads wie ein Cloud-Backup sind in wenigen Tagen eingerichtet. Eine vollständige Migration einer kleinen bis mittleren Umgebung dauert von der Bestandsaufnahme bis zum Regelbetrieb in der Regel mehrere Wochen bis wenige Monate, abhängig von Datenmenge, Anwendungen und Testaufwand.",
+      },
+    ],
+    partnerKeys: ["microsoft"],
+    relatedSlugs: ["microsoft-365", "private-cloud", "it-support"],
+  },
 ];
 
 export function getServicesSorted(): Service[] {
