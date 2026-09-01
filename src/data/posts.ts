@@ -26,7 +26,7 @@ export const POSTS: Post[] = [
     readingMinutes: 4,
     metaDescription:
       "Backup-Konzept für Unternehmen: die 3 Stufen des Backup-Zen – automatische lokale Sicherung, unveränderliches Duplikat und verschlüsselte Kopie im EU-Rechenzentrum.",
-    relatedServiceSlugs: ["private-cloud", "it-support"],
+    relatedServiceSlugs: ["private-cloud", "it-beratung"],
   },
   {
     slug: "proxmox",
@@ -38,7 +38,7 @@ export const POSTS: Post[] = [
     readingMinutes: 6,
     metaDescription:
       "Windows Server auf Proxmox migrieren: weniger Lizenzkosten, mehr Unabhängigkeit und Datensouveränität. So gelingt der schrittweise Umstieg auf Open Source.",
-    relatedServiceSlugs: ["private-cloud", "it-support"],
+    relatedServiceSlugs: ["private-cloud", "it-beratung"],
   },
   {
     slug: "it-nach-europa-holen",
@@ -62,7 +62,7 @@ export const POSTS: Post[] = [
     readingMinutes: 6,
     metaDescription:
       "IT-Outsourcing für KMU: Vorteile, Kosten und Auswahlkriterien. Wann sich ein externes IT-Systemhaus lohnt und worauf Sie achten sollten.",
-    relatedServiceSlugs: ["it-support", "netzwerkservice"],
+    relatedServiceSlugs: ["it-beratung", "netzwerkservice"],
   },
   {
     slug: "google-workspace-vs-microsoft-365",
@@ -134,7 +134,7 @@ export const POSTS: Post[] = [
     readingMinutes: 5,
     metaDescription:
       "Was ist Informationssicherheit? Schutzziele, rechtliche Pflichten und die Folgen unzureichender Sicherheit – so schützen Sie Ihr Unternehmen effektiv.",
-    relatedServiceSlugs: ["it-support", "mailserver", "netzwerkservice"],
+    relatedServiceSlugs: ["it-beratung", "mailserver", "netzwerkservice"],
   },
   {
     slug: "dokumentenmanagement",
@@ -170,7 +170,7 @@ export const POSTS: Post[] = [
     readingMinutes: 4,
     metaDescription:
       "UniFi Ubiquiti im Überblick: Hardware, Software und Vorteile des skalierbaren WLAN-Systems für Unternehmen – eingerichtet vom zertifizierten UniFi-Partner.",
-    relatedServiceSlugs: ["netzwerkservice", "hotel-wlan", "it-support"],
+    relatedServiceSlugs: ["netzwerkservice", "hotel-wlan", "it-beratung"],
   },
   {
     slug: "edge-computing",
@@ -182,7 +182,7 @@ export const POSTS: Post[] = [
     readingMinutes: 5,
     metaDescription:
       "Edge Computing transportiert Unternehmen schneller, intelligenter und vernetzter in die Zukunft. Vorteile, Herausforderungen und Anwendungsbereiche im Überblick.",
-    relatedServiceSlugs: ["netzwerkservice", "private-cloud", "it-support"],
+    relatedServiceSlugs: ["netzwerkservice", "private-cloud", "it-beratung"],
   },
   {
     slug: "blockchain-technologie",
@@ -194,7 +194,7 @@ export const POSTS: Post[] = [
     readingMinutes: 4,
     metaDescription:
       "Blockchain-Technologie verständlich erklärt: Aufbau, Besonderheiten, Einsatzbranchen sowie Vor- und Nachteile und rechtliche Aspekte für Unternehmen.",
-    relatedServiceSlugs: ["software-engineering", "it-support"],
+    relatedServiceSlugs: ["software-engineering", "it-beratung"],
   },
   {
     slug: "kuenstliche-intelligenz-und-maschinelles-lernen",
@@ -206,7 +206,7 @@ export const POSTS: Post[] = [
     readingMinutes: 5,
     metaDescription:
       "Künstliche Intelligenz und Maschinelles Lernen: 4 Anwendungsbereiche, in denen kleine und mittelständische Unternehmen von KI und ML profitieren können.",
-    relatedServiceSlugs: ["software-engineering", "it-support"],
+    relatedServiceSlugs: ["software-engineering", "it-beratung"],
   },
   {
     slug: "cyber-angriff",
@@ -218,7 +218,7 @@ export const POSTS: Post[] = [
     readingMinutes: 5,
     metaDescription:
       "Cyber-Angriffe gelten nicht nur in Regierungskreisen als Bedrohung. Wir erläutern gängige Maschen und helfen, die Backdoor zu schließen.",
-    relatedServiceSlugs: ["it-support", "netzwerkservice", "home-office"],
+    relatedServiceSlugs: ["it-beratung", "netzwerkservice", "home-office"],
   },
   {
     slug: "microsoft-exchange-server",
@@ -230,7 +230,7 @@ export const POSTS: Post[] = [
     readingMinutes: 5,
     metaDescription:
       "Microsoft Exchange Server: Wie die Server-Software funktioniert und welche 5 Vorteile sie Unternehmen bietet – von E-Mail-Verwaltung bis Skalierbarkeit.",
-    relatedServiceSlugs: ["mailserver", "microsoft-365", "it-support"],
+    relatedServiceSlugs: ["mailserver", "microsoft-365", "it-beratung"],
   },
   {
     slug: "passwort-manager-fuer-unternehmen",
@@ -242,7 +242,7 @@ export const POSTS: Post[] = [
     readingMinutes: 6,
     metaDescription:
       "Schützen Sie mit einem Passwort-Manager für Unternehmen Ihre Konten. Wir haben hier die besten miteinander verglichen.",
-    relatedServiceSlugs: ["it-support", "workspaces"],
+    relatedServiceSlugs: ["it-beratung", "workspaces"],
   },
   {
     slug: "starlink-internet",
@@ -254,7 +254,7 @@ export const POSTS: Post[] = [
     readingMinutes: 5,
     metaDescription:
       "Ist Starlink eine gute Wahl für Ihre Internetanbindung? Finden Sie es heraus. Alle Infos zu den Kosten und der Abdeckung gibt es hier.",
-    relatedServiceSlugs: ["netzwerkservice", "it-support", "home-office"],
+    relatedServiceSlugs: ["netzwerkservice", "it-beratung", "home-office"],
   },
   {
     slug: "netzwerksicherheit-unternehmen",
@@ -266,7 +266,7 @@ export const POSTS: Post[] = [
     readingMinutes: 6,
     metaDescription:
       "Netzwerksicherheit im Unternehmen: Die 6 häufigsten Probleme – von schwachen Firewalls über Phishing-Mails bis BYOD – und wie Sie ihnen begegnen.",
-    relatedServiceSlugs: ["netzwerkservice", "it-support", "home-office"],
+    relatedServiceSlugs: ["netzwerkservice", "it-beratung", "home-office"],
   },
   {
     slug: "automatisierung-von-geschaeftsprozessen",
@@ -278,7 +278,7 @@ export const POSTS: Post[] = [
     readingMinutes: 3,
     metaDescription:
       "Nie wieder Copy & Paste: Wie die Automatisierung von Geschäftsprozessen Zeit und Kosten spart, Fehler verhindert und Mitarbeitende entlastet.",
-    relatedServiceSlugs: ["software-engineering", "it-support"],
+    relatedServiceSlugs: ["software-engineering", "it-beratung"],
   },
   {
     slug: "it-sicherheit-schulung",
@@ -290,7 +290,7 @@ export const POSTS: Post[] = [
     readingMinutes: 4,
     metaDescription:
       "IT-Sicherheit-Schulung: Warum Security-Awareness-Trainings für Mitarbeitende der größte Hebel gegen Cyberangriffe sind – und welche Schulungen sinnvoll sind.",
-    relatedServiceSlugs: ["it-support", "home-office"],
+    relatedServiceSlugs: ["it-beratung", "home-office"],
   },
   {
     slug: "microsoft-365-migration-fallbeispiel",
@@ -326,7 +326,7 @@ export const POSTS: Post[] = [
     readingMinutes: 4,
     metaDescription:
       "Der Penetrationstest zeigt IT-Sicherheitslücken in Unternehmen auf und schließt dadurch Datenlücken. Wie er abläuft, erfahren Sie hier.",
-    relatedServiceSlugs: ["netzwerkservice", "it-support"],
+    relatedServiceSlugs: ["netzwerkservice", "it-beratung"],
   },
   {
     slug: "ipv4-auf-ipv6-umstellung",
@@ -338,7 +338,7 @@ export const POSTS: Post[] = [
     readingMinutes: 4,
     metaDescription:
       "Die IPv4-Adressen sind bald aufgebraucht – neue Geräte können dann keine Verbindung mehr mit dem Web herstellen. Wie Sie auf IPv6 umstellen, klären wir hier.",
-    relatedServiceSlugs: ["netzwerkservice", "it-support"],
+    relatedServiceSlugs: ["netzwerkservice", "it-beratung"],
   },
   {
     slug: "word-online-nutzen",
@@ -374,7 +374,7 @@ export const POSTS: Post[] = [
     readingMinutes: 5,
     metaDescription:
       "E-Mails archivieren mit Outlook? Geht – manuell oder automatisch. Alle Infos und den genauen Pfad, um mit Outlook E-Mails zu archivieren, finden Sie hier.",
-    relatedServiceSlugs: ["mailserver", "workspaces", "it-support"],
+    relatedServiceSlugs: ["mailserver", "workspaces", "it-beratung"],
   },
   {
     slug: "virtuelle-server-vorteile",
@@ -386,7 +386,7 @@ export const POSTS: Post[] = [
     readingMinutes: 5,
     metaDescription:
       "Virtuelle Server haben viele Vorteile. Wir arbeiten in diesem Artikel die 8 wichtigsten heraus und erklären, warum sich die Umstellung lohnt.",
-    relatedServiceSlugs: ["private-cloud", "it-support", "home-office"],
+    relatedServiceSlugs: ["private-cloud", "it-beratung", "home-office"],
   },
   {
     slug: "cloud-loesungen-fuer-unternehmen",
@@ -410,7 +410,7 @@ export const POSTS: Post[] = [
     readingMinutes: 5,
     metaDescription:
       "Auf der Suche nach einem Rechnungsprogramm für Kleinunternehmer? Wir vergleichen hier die 4 besten Anbieter – und geben Entscheidungshilfen. Jetzt lesen!",
-    relatedServiceSlugs: ["software-engineering", "it-support"],
+    relatedServiceSlugs: ["software-engineering", "it-beratung"],
   },
 ];
 

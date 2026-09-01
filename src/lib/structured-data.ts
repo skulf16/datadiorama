@@ -21,6 +21,7 @@ export function organizationSchema() {
     slogan: SITE.tagline,
     areaServed: SITE.serviceArea.map((name) => ({ "@type": "AdministrativeArea", name })),
     knowsAbout: [
+      "IT-Beratung",
       "IT-Support",
       "Netzwerkbetreuung",
       "UniFi",

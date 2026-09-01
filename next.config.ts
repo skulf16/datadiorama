@@ -8,6 +8,9 @@ const nextConfig: NextConfig = {
     // Hinweis: /leistungen/hotel-wlan bleibt unverändert und braucht keinen Redirect.
     return [
       // Leistungs-Detailseiten
+      // IT-Support wurde zu IT-Beratung umbenannt (Haupt-Keyword-Wechsel)
+      { source: "/leistungen/it-support", destination: "/leistungen/it-beratung", permanent: true },
+      { source: "/it-support", destination: "/leistungen/it-beratung", permanent: true },
       { source: "/leistungen/telefonanlage-fuer-unternehmen", destination: "/leistungen/telefonanlagen", permanent: true },
       { source: "/leistungen/home-office-einrichten", destination: "/leistungen/home-office", permanent: true },
       { source: "/leistungen/emails-sicher-zustellen", destination: "/leistungen/mailserver", permanent: true },

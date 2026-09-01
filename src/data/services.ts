@@ -3,77 +3,132 @@ import type { Service } from "@/lib/types";
 const IMG = "/media";
 
 export const SERVICES: Service[] = [
-  // 01 — IT-Support
+  // 01 — IT-Beratung
   {
-    slug: "it-support",
+    slug: "it-beratung",
     order: 1,
-    navLabel: "IT-Support",
+    navLabel: "IT-Beratung",
     icon: "support",
-    title: "IT-Support für Unternehmen",
-    tagline: "Schnelle, zuverlässige Hilfe – damit Ihre IT einfach läuft.",
+    title: "IT-Beratung für Unternehmen",
+    tagline: "Unabhängige Beratung, die auch die Umsetzung übernimmt.",
     cardDescription:
-      "Wir lösen Ihre IT-Probleme schnell und zuverlässig und sorgen dafür, dass alle Systeme stabil und sicher laufen.",
-    metaTitle: "IT-Support für Unternehmen in Potsdam & Berlin",
+      "Wir analysieren Ihre IT, empfehlen nur, was zu Ihrem Unternehmen passt – und setzen es anschließend selbst um und betreiben es.",
+    metaTitle: "IT-Beratung für Unternehmen in Potsdam & Berlin",
     metaDescription:
-      "Professioneller IT-Support für Unternehmen: schnelle Reaktionszeiten, fester Ansprechpartner, Fernwartung und Vor-Ort-Service in Potsdam, Berlin & St. Gallen.",
+      "IT-Beratung vom Systemhaus: Bestandsaufnahme, IT-Strategie, Sicherheit & Kostenplanung für kleine und mittlere Unternehmen. Umsetzung und Betreuung inklusive – Potsdam, Berlin & St. Gallen.",
     image: `${IMG}/2025/03/datadiorama-7783.jpg`,
     image2: `${IMG}/2025/03/datadiorama-8127.jpg`,
     intro:
-      "IT-Support von datadiorama bedeutet, dass sich ein erfahrenes Team um den reibungslosen Betrieb Ihrer gesamten IT kümmert – von der einzelnen Arbeitsstation bis zur kompletten Server- und Netzwerklandschaft. Sie erreichen uns mit einem festen Ansprechpartner, wir lösen die meisten Anfragen per Fernwartung in kürzester Zeit und kommen bei Bedarf vor Ort. So können Sie sich ganz auf Ihr Kerngeschäft konzentrieren.",
+      "Eine IT-Beratung klärt, wie Ihre IT aufgestellt sein muss, damit sie das Geschäft trägt statt bremst: welche Systeme bleiben, was ersetzt wird, wo Risiken liegen und was der Betrieb kosten darf. datadiorama berät als IT-Systemhaus aus Potsdam – mit dem Unterschied, dass wir nicht nur ein Konzept abgeben, sondern die Umsetzung und den laufenden Betrieb selbst übernehmen. Unsere Empfehlungen müssen deshalb in der Praxis funktionieren, nicht nur auf Folien.",
     keyTakeaways: [
-      "Fester Ansprechpartner statt anonymer Hotline.",
-      "Schnelle Hilfe per sicherer Fernwartung – Vor-Ort-Einsatz in Potsdam & Berlin.",
-      "Wahlweise als laufende Betreuung (Managed IT) oder bei akutem Bedarf.",
-      "Zertifizierte Technikerinnen und Techniker mit kontinuierlicher Weiterbildung.",
+      "IT-Beratung vom Systemhaus: Analyse, Konzept, Umsetzung und Betrieb aus einer Hand.",
+      "Herstellerunabhängige Empfehlungen – wir verkaufen keine Lizenzen um ihrer selbst willen.",
+      "Typische Themen: IT-Strategie, Serverersatz, Cloud oder lokal, IT-Sicherheit, Kostenplanung.",
+      "Für kleine und mittlere Unternehmen, die keine eigene IT-Abteilung haben – oder sie entlasten wollen.",
+      "Persönlich vor Ort in Potsdam und Berlin oder per Fernwartung.",
     ],
     facts: [
-      { label: "Leistung", value: "IT-Support & Managed IT" },
-      { label: "Reaktion", value: "Schnelle Hilfe per Fernwartung" },
-      { label: "Vor-Ort-Service", value: "Potsdam, Berlin & Umgebung" },
-      { label: "Modell", value: "Wartungsvertrag oder auf Abruf" },
+      { label: "Leistung", value: "IT-Beratung, Umsetzung & Managed IT" },
+      { label: "Region", value: "Potsdam, Berlin & St. Gallen" },
+      { label: "Schwerpunkte", value: "Strategie, Infrastruktur, Sicherheit, Kosten" },
+      { label: "Modell", value: "Projekt oder laufende Betreuung" },
       { label: "Erfahrung", value: "Systemhaus seit 2013" },
     ],
     sections: [
       {
-        heading: "Ihr IT-Support aus einer Hand",
+        heading: "Was macht eine IT-Beratung?",
         body:
-          "Als IT-Systemhaus betreuen wir Hardware, Software, Netzwerke und Cloud-Dienste gemeinsam – nicht in Silos. Dadurch finden wir die Ursache eines Problems schneller, statt nur Symptome zu behandeln. Ob Drucker, E-Mail, VPN oder Serverausfall: Sie haben einen Ansprechpartner, der Ihre Umgebung kennt und dokumentiert.",
+          "Eine IT-Beratung nimmt Ihre bestehende IT auf – Arbeitsplätze, Server, Netzwerk, Cloud-Dienste, Verträge – und beantwortet daraus die Fragen, die im Alltag liegen bleiben: Wo ist die Umgebung verwundbar? Welche Hardware muss in den nächsten zwei Jahren ersetzt werden? Gehören Systeme in die Cloud oder bleiben sie besser im Haus? Und was kostet das alles im Betrieb?\n\nDas Ergebnis ist kein Foliensatz, sondern ein umsetzbarer Plan mit Prioritäten und Kostenrahmen. Der Unterschied zur klassischen IT-Unternehmensberatung: Wir sind Systemhaus. Was wir empfehlen, bauen wir anschließend selbst auf und betreiben es – und stehen damit für unsere eigenen Empfehlungen gerade.",
         bullets: [
-          "Anwender-Support für Windows, macOS und Microsoft 365",
-          "Server-, Netzwerk- und Firewall-Betreuung",
-          "Einrichtung neuer Arbeitsplätze und Onboarding",
-          "Regelmäßige Updates, Backups und Monitoring",
+          "Bestandsaufnahme von Infrastruktur, Software und Verträgen",
+          "IT-Strategie und Investitionsplanung mit Prioritäten",
+          "Sicherheits-Check: Backups, Updates, Zugriffe, Notfallplan",
+          "Entscheidungsvorlagen: Cloud vs. lokal, Kauf vs. Miete, Anbieterwahl",
         ],
       },
       {
-        heading: "Fernwartung & Vor-Ort-Service",
+        heading: "In welchen Situationen lohnt sich IT-Beratung?",
         body:
-          "Die meisten Anliegen lassen sich per sicherer Fernwartung lösen – das spart Zeit und Wege. Über unser Tool starten Sie eine geschützte Sitzung mit einem Klick. Wenn Hardware getauscht oder ein Netzwerk geplant werden muss, sind wir in Potsdam, Berlin und Umgebung auch persönlich vor Ort.",
+          "Die wenigsten Unternehmen suchen IT-Beratung aus Langeweile. In der Praxis sind es fast immer konkrete Auslöser:",
+        bullets: [
+          "Server oder Arbeitsplätze erreichen ihr Lebensende, und vor der Ersatzinvestition soll die Richtung stimmen.",
+          "Das Unternehmen wächst, und die IT, die für fünf Leute gereicht hat, trägt keine zwanzig.",
+          "Ein Sicherheitsvorfall – im eigenen Haus oder bei einem Wettbewerber – wirft die Frage auf, wie gut man selbst aufgestellt ist.",
+          "Der bisherige IT-Dienstleister oder der langjährige Administrator hört auf, und niemand weiß genau, wie die Umgebung aufgebaut ist.",
+          "Die IT-Kosten steigen, ohne dass klar ist, wofür eigentlich.",
+        ],
+      },
+      {
+        heading: "IT-Beratung für den Mittelstand: unabhängig, aber nicht unverbindlich",
+        body:
+          "Große Beratungshäuser rechnen in Tagessätzen und verabschieden sich mit dem Konzept. Reine Wiederverkäufer beraten in Richtung der Produkte, an denen sie verdienen. Wir positionieren uns dazwischen: herstellerunabhängig in der Empfehlung, aber mit der Verantwortung für Umsetzung und Betrieb.\n\nDas diszipliniert die Beratung. Eine Lösung, die wir hinterher selbst warten müssen, empfehlen wir nur, wenn sie im Alltag funktioniert. Und wenn die ehrliche Antwort lautet, dass Ihre bestehende Umgebung noch zwei Jahre gut trägt, dann sagen wir das – ein gepflegtes System ist kein Sanierungsfall.",
+      },
+      {
+        heading: "Beratung, die nicht beim Konzept endet",
+        body:
+          "Nach der Entscheidung übernehmen wir die Umsetzung: Beschaffung, Einrichtung, Migration und Dokumentation. Danach betreiben wir die Umgebung auf Wunsch als Managed IT weiter – mit Monitoring, Updates, Backups und einem festen Ansprechpartner, der Ihre IT kennt. Die meisten Anliegen lösen wir per sicherer Fernwartung; in Potsdam, Berlin und Umgebung sind wir auch persönlich vor Ort.",
+      },
+      {
+        heading: "Was kostet IT-Beratung?",
+        body:
+          "Das hängt vom Umfang ab: Eine kompakte Bestandsaufnahme mit Empfehlungen ist ein überschaubares Projekt von wenigen Tagen, eine begleitete Neuausrichtung der gesamten Infrastruktur entsprechend mehr. Wir nennen Ihnen nach einem kostenlosen Erstgespräch einen festen Rahmen – keine offenen Tagessatz-Rechnungen. Wenn wir anschließend die Umsetzung übernehmen, fließt die Analyse dort ohnehin ein.",
       },
     ],
     benefits: [
-      { title: "Weniger Ausfallzeiten", description: "Proaktives Monitoring und schnelle Reaktion halten Ihre Systeme stabil.", icon: "shield" },
-      { title: "Fester Ansprechpartner", description: "Ihr Team kennt Ihre IT – keine Warteschleifen, keine ständig neuen Tickets.", icon: "support" },
-      { title: "Planbare Kosten", description: "Wartungsverträge machen IT-Kosten kalkulierbar statt unvorhersehbar.", icon: "rocket" },
+      { title: "Beratung mit Haftung im Alltag", description: "Wir setzen um, was wir empfehlen – und betreiben es danach. Das hält Konzepte ehrlich.", icon: "shield" },
+      { title: "Fester Ansprechpartner", description: "Ein Team, das Ihre Umgebung kennt und dokumentiert – keine anonyme Hotline.", icon: "support" },
+      { title: "Planbare Kosten", description: "Klare Projektrahmen und kalkulierbare Betreuungspauschalen statt offener Tagessätze.", icon: "rocket" },
+    ],
+    process: [
+      {
+        title: "Erstgespräch",
+        description: "Kostenlos und unverbindlich: Wir klären Ausgangslage, Ziele und ob wir zueinander passen.",
+      },
+      {
+        title: "Bestandsaufnahme",
+        description: "Wir erfassen Arbeitsplätze, Server, Netzwerk, Cloud-Dienste und Verträge – und dokumentieren, was oft nie dokumentiert wurde.",
+      },
+      {
+        title: "Konzept & Empfehlung",
+        description: "Sie erhalten einen priorisierten Maßnahmenplan mit Kostenrahmen: was dringend ist, was warten kann, was nichts bringt.",
+      },
+      {
+        title: "Umsetzung",
+        description: "Auf Wunsch führen wir die Maßnahmen selbst durch – Beschaffung, Einrichtung, Migration, meist außerhalb der Geschäftszeiten.",
+      },
+      {
+        title: "Betrieb & Weiterentwicklung",
+        description: "Als Managed IT betreuen wir die Umgebung laufend und passen die Strategie an, wenn sich Ihr Unternehmen verändert.",
+      },
     ],
     faq: [
       {
-        question: "Wie schnell bekomme ich bei einem IT-Problem Hilfe?",
+        question: "Was ist der Unterschied zwischen IT-Beratung und IT-Support?",
         answer:
-          "Die meisten Anfragen lösen wir kurzfristig per Fernwartung. Mit einem Wartungsvertrag sind Reaktionszeiten verbindlich vereinbart. Akute Störungen behandeln wir vorrangig.",
+          "IT-Support löst akute Probleme im laufenden Betrieb – ein Drucker streikt, E-Mails kommen nicht an. IT-Beratung setzt davor an: Sie sorgt dafür, dass die IT so geplant ist, dass solche Probleme seltener auftreten. Bei datadiorama bekommen Sie beides aus einer Hand – die Beratung legt die Richtung fest, der Support hält den Alltag am Laufen.",
       },
       {
-        question: "Bietet ihr IT-Support auch ohne Vertrag an?",
+        question: "Lohnt sich IT-Beratung auch für kleine Unternehmen?",
         answer:
-          "Ja. Sie können uns als laufende Betreuung beauftragen oder im akuten Bedarfsfall hinzuziehen. Für regelmäßigen Support empfehlen wir einen Wartungsvertrag, weil wir Ihre Umgebung dann bereits kennen.",
+          "Gerade dort. Kleine und mittlere Unternehmen haben selten eine eigene IT-Abteilung, treffen aber dieselben Entscheidungen: Serverersatz, Cloud, Sicherheit, Datenschutz. Eine kompakte Bestandsaufnahme mit klaren Empfehlungen kostet wenig im Vergleich zu einer Fehlinvestition oder einem vermeidbaren Ausfall.",
       },
       {
-        question: "Welche Systeme unterstützt datadiorama?",
+        question: "Seid ihr herstellerunabhängig?",
         answer:
-          "Wir betreuen Windows- und macOS-Arbeitsplätze, Server, Netzwerke, Firewalls sowie Cloud-Dienste wie Microsoft 365 und Google Workspace.",
+          "Wir empfehlen, was zu Ihrer Situation passt – auch wenn das eine Lösung ist, an der wir nichts verdienen, oder die Empfehlung lautet, Bestehendes weiterzubetreiben. Als Systemhaus arbeiten wir mit etablierten Herstellern wie Microsoft, Synology und UniFi, sind aber an keinen gebunden.",
+      },
+      {
+        question: "Übernehmt ihr nach der Beratung auch Umsetzung und Support?",
+        answer:
+          "Ja, das ist der Normalfall. Wir setzen die empfohlenen Maßnahmen selbst um und betreuen die Umgebung danach als Managed IT weiter – mit Monitoring, Updates, Backups und schneller Hilfe per Fernwartung oder vor Ort in Potsdam und Berlin.",
+      },
+      {
+        question: "Wie läuft der Einstieg ab?",
+        answer:
+          "Mit einem kostenlosen Erstgespräch, telefonisch oder vor Ort. Danach entscheiden Sie, ob wir mit einer Bestandsaufnahme starten. Sie gehen kein Abo und keine Verpflichtung ein.",
       },
     ],
-    relatedSlugs: ["netzwerkservice", "microsoft-365", "mailserver"],
+    relatedSlugs: ["netzwerkservice", "microsoft-365", "azure-beratung"],
   },
 
   // 05 — Telefonanlagen (bewusst weiter hinten: nur eines von mehreren Standbeinen)
@@ -221,7 +276,7 @@ export const SERVICES: Service[] = [
       },
     ],
     partnerKeys: ["unifi"],
-    relatedSlugs: ["hotel-wlan", "it-support", "home-office"],
+    relatedSlugs: ["hotel-wlan", "it-beratung", "home-office"],
   },
 
   // 03 — Software Engineering
@@ -410,7 +465,7 @@ export const SERVICES: Service[] = [
           "Ja. Wir betreuen sowohl eigene Mailserver als auch Cloud-Postfächer und ergänzen sie um Spam-Schutz und Archivierung.",
       },
     ],
-    relatedSlugs: ["microsoft-365", "workspaces", "it-support"],
+    relatedSlugs: ["microsoft-365", "workspaces", "it-beratung"],
   },
 
   // 07 — Microsoft 365
@@ -608,7 +663,7 @@ export const SERVICES: Service[] = [
       },
     ],
     partnerKeys: ["unifi"],
-    relatedSlugs: ["netzwerkservice", "it-support", "home-office"],
+    relatedSlugs: ["netzwerkservice", "it-beratung", "home-office"],
   },
 
   // 10 — Home-Office
@@ -738,7 +793,7 @@ export const SERVICES: Service[] = [
       },
     ],
     partnerKeys: ["synology"],
-    relatedSlugs: ["workspaces", "mailserver", "it-support"],
+    relatedSlugs: ["workspaces", "mailserver", "it-beratung"],
   },
 
   // 12 — Azure Beratung
@@ -874,7 +929,7 @@ export const SERVICES: Service[] = [
       },
     ],
     partnerKeys: ["microsoft"],
-    relatedSlugs: ["microsoft-365", "private-cloud", "it-support"],
+    relatedSlugs: ["microsoft-365", "private-cloud", "it-beratung"],
   },
 ];
 
