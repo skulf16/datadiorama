@@ -66,7 +66,7 @@ export default function TeamPage() {
           <SectionHeading
             eyebrow="Unser Team"
             title="Ihre Ansprechpartner"
-            description="14 Köpfe, ein Ziel: schnelles und störungsfreies Arbeiten für Sie und Ihre Kolleginnen und Kollegen."
+            description={`${TEAM.length} Köpfe, ein Ziel: schnelles und störungsfreies Arbeiten für Sie und Ihre Kolleginnen und Kollegen.`}
           />
           <div className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
             {TEAM.map((member, i) => (
