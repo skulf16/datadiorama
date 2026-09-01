@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { sendContactMail } from "@/lib/mail";
 import { normalizePhone, PHONE_ERROR } from "@/lib/phone";
+import { SITE } from "@/data/site";
 
 export const runtime = "nodejs";
 
@@ -66,7 +67,10 @@ export async function POST(request: Request) {
     replyTo: email,
   });
   if (!result.ok) {
-    return NextResponse.json({ error: "Der Versand ist fehlgeschlagen. Bitte rufen Sie uns an." }, { status: 502 });
+    return NextResponse.json(
+      { error: `Ihre Anfrage konnte leider nicht übermittelt werden. Bitte versuchen Sie es später erneut oder rufen Sie uns direkt an: ${SITE.primaryPhone}.` },
+      { status: 502 },
+    );
   }
 
   return NextResponse.json({ ok: true });

@@ -17,4 +17,4 @@ export function normalizePhone(input: string): { ok: boolean; value: string } {
   return { ok: true, value: parsed.number };
 }
 
-export const PHONE_ERROR = "Bitte geben Sie eine gültige Telefonnummer an.";
+export const PHONE_ERROR = "Bitte geben Sie eine richtige Telefonnummer an.";
