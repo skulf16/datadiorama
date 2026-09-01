@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Container } from "@/components/ui/Container";
 import Link from "next/link";
 import { PageHero } from "@/components/sections/PageHero";
-import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
 import { Icon } from "@/components/icons/Icon";
+import { JobApplyForm } from "@/components/sections/JobApplyForm";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { jobPostingSchema } from "@/lib/structured-data";
 import { buildMetadata } from "@/lib/seo";
@@ -95,25 +95,28 @@ export default async function JobDetailPage({
 
       <section className="py-16 sm:py-20">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-3 lg:gap-14">
-            <div className="flex flex-col gap-12 lg:col-span-2">
+          <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+            <div className="flex flex-col gap-12">
               <List title="Deine Aufgaben" items={job.tasks} icon="rocket" />
               <List title="Dein Profil" items={job.profile} icon="shield" />
               <List title="Unsere Benefits" items={job.benefits} icon="support" />
             </div>
 
-            <aside className="lg:col-span-1">
+            <aside>
               <div className="lg:sticky lg:top-28">
                 <div className="rounded-2xl border border-line bg-white p-7 shadow-[var(--shadow-card)]">
                   <h2 className="font-display text-xl text-ink">Jetzt bewerben</h2>
                   <p className="mt-2 text-sm leading-relaxed text-muted">
-                    Sende uns deine Unterlagen per E-Mail – wir melden uns zeitnah und persönlich.
+                    Hinterlasse uns deine Kontaktdaten – wir melden uns zeitnah und persönlich.
                   </p>
-                  <div className="mt-6 flex flex-col gap-3">
-                    <Button href={mailto} withArrow className="w-full">
-                      Per E-Mail bewerben
-                    </Button>
-                    <a href={`tel:${SITE.primaryPhoneHref}`} className="flex items-center justify-center gap-2 rounded-full border border-line px-5 py-3 text-sm font-medium text-ink transition-colors hover:border-brand hover:text-brand">
+                  <div className="mt-6">
+                    <JobApplyForm jobTitle={job.title} />
+                  </div>
+                  <div className="mt-4 flex flex-col gap-2 border-t border-line pt-4 text-sm">
+                    <a href={mailto} className="flex items-center justify-center gap-2 font-medium text-brand hover:underline">
+                      <Icon name="mail" className="h-4 w-4" /> Oder per E-Mail bewerben
+                    </a>
+                    <a href={`tel:${SITE.primaryPhoneHref}`} className="flex items-center justify-center gap-2 font-medium text-ink transition-colors hover:text-brand">
                       <Icon name="phone" className="h-4 w-4" /> {SITE.primaryPhone}
                     </a>
                   </div>

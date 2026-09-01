@@ -9,6 +9,7 @@ type Payload = {
   email?: string;
   phone?: string;
   message?: string;
+  job?: string; // Stellenbezeichnung bei Bewerbungen
   consent?: string | boolean;
   website?: string; // Honeypot
 };
@@ -31,8 +32,12 @@ export async function POST(request: Request) {
   const name = (data.name ?? "").trim();
   const email = (data.email ?? "").trim();
   const message = (data.message ?? "").trim();
+  const job = (data.job ?? "").trim();
+  const phone = (data.phone ?? "").trim();
 
-  if (!name || !email || !message) {
+  // Bei Bewerbungen reichen Name, E-Mail und Telefon (oder Nachricht) – sonst ist die Nachricht Pflicht.
+  const missingRequired = !name || !email || (job ? !phone && !message : !message);
+  if (missingRequired) {
     return NextResponse.json({ error: "Bitte füllen Sie alle Pflichtfelder aus." }, { status: 422 });
   }
   if (!isEmail(email)) {
@@ -42,15 +47,16 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Bitte stimmen Sie der Datenschutzerklärung zu." }, { status: 422 });
   }
 
-  const subject = `Neue Kontaktanfrage von ${name}`;
+  const subject = job ? `Bewerbung: ${job} – ${name}` : `Neue Kontaktanfrage von ${name}`;
   const text = [
+    ...(job ? [`Stelle: ${job}`] : []),
     `Name: ${name}`,
     `Unternehmen: ${data.company ?? "-"}`,
     `E-Mail: ${email}`,
-    `Telefon: ${data.phone ?? "-"}`,
+    `Telefon: ${phone || "-"}`,
     "",
     "Nachricht:",
-    message,
+    message || "-",
   ].join("\n");
 
   // Versand über SMTP (z. B. Google-Relay) bzw. Resend – siehe lib/mail.ts.
