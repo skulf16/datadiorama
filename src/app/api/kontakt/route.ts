@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { sendContactMail } from "@/lib/mail";
+import { normalizePhone, PHONE_ERROR } from "@/lib/phone";
 
 export const runtime = "nodejs";
 
@@ -33,8 +34,12 @@ export async function POST(request: Request) {
   const email = (data.email ?? "").trim();
   const message = (data.message ?? "").trim();
   const job = (data.job ?? "").trim();
-  const phone = (data.phone ?? "").trim();
+  const phoneResult = normalizePhone(data.phone ?? "");
+  const phone = phoneResult.value;
 
+  if (!phoneResult.ok) {
+    return NextResponse.json({ error: PHONE_ERROR }, { status: 422 });
+  }
   // Bei Bewerbungen reichen Name, E-Mail und Telefon (oder Nachricht) – sonst ist die Nachricht Pflicht.
   const missingRequired = !name || !email || (job ? !phone && !message : !message);
   if (missingRequired) {

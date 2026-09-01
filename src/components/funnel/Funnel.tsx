@@ -5,6 +5,7 @@ import { Icon } from "@/components/icons/Icon";
 import { Button } from "@/components/ui/Button";
 import { FUNNEL_STEPS, FUNNEL_CONTACT } from "@/data/funnel";
 import { cn } from "@/lib/utils";
+import { normalizePhone, PHONE_ERROR } from "@/lib/phone";
 
 const TOTAL = FUNNEL_STEPS.length + 1; // 2 Fragen + Kontakt
 const inputBase =
@@ -31,6 +32,15 @@ export function Funnel() {
     setError(null);
     const form = e.currentTarget;
     const fd = Object.fromEntries(new FormData(form).entries());
+
+    const phone = normalizePhone(String(fd.phone ?? ""));
+    if (!phone.ok) {
+      setStatus("error");
+      setError(PHONE_ERROR);
+      return;
+    }
+    fd.phone = phone.value;
+
     try {
       const res = await fetch("/api/angebot", {
         method: "POST",

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/Button";
+import { normalizePhone, PHONE_ERROR } from "@/lib/phone";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -19,6 +20,14 @@ export function JobApplyForm({ jobTitle }: { jobTitle: string }) {
 
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
+
+    const phone = normalizePhone(String(data.phone ?? ""));
+    if (!phone.ok || !phone.value) {
+      setStatus("error");
+      setError(PHONE_ERROR);
+      return;
+    }
+    data.phone = phone.value;
 
     try {
       const res = await fetch("/api/kontakt", {

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { sendContactMail } from "@/lib/mail";
+import { normalizePhone, PHONE_ERROR } from "@/lib/phone";
 
 export const runtime = "nodejs";
 
@@ -31,6 +32,11 @@ export async function POST(request: Request) {
   const lastName = (data.lastName ?? "").trim();
   const email = (data.email ?? "").trim();
 
+  const phoneResult = normalizePhone(data.phone ?? "");
+  if (!phoneResult.ok) {
+    return NextResponse.json({ error: PHONE_ERROR }, { status: 422 });
+  }
+
   if (!firstName || !lastName || !email) {
     return NextResponse.json({ error: "Bitte füllen Sie Vorname, Nachname und E-Mail aus." }, { status: 422 });
   }
@@ -49,7 +55,7 @@ export async function POST(request: Request) {
     `Name: ${firstName} ${lastName}`,
     `E-Mail: ${email}`,
     `Firma: ${data.company || "-"}`,
-    `Telefon: ${data.phone || "-"}`,
+    `Telefon: ${phoneResult.value || "-"}`,
   ].join("\n");
 
   // Versand über SMTP (z. B. Google-Relay) bzw. Resend – siehe lib/mail.ts.
