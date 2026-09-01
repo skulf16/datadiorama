@@ -2,13 +2,37 @@ import type { Post } from "@/lib/types";
 import { POST_CONTENT } from "@/data/posts-content";
 import { getTeamMember } from "@/data/team";
 
-// Maximilian Dalichow hat sämtliche Fachbeiträge verfasst.
-const AUTHOR = getTeamMember("Maximilian Dalichow");
+// Autor-Zuordnung nach Themenschwerpunkt; ohne Eintrag gilt der Standard-Autor.
+const DEFAULT_AUTHOR = "Maximilian Dalichow";
+
+const POST_AUTHORS: Record<string, string> = {
+  // Christian Anger: Strategie, Souveränität & Datenschutz
+  "it-nach-europa-holen": "Christian Anger",
+  "it-outsourcing-vorteile": "Christian Anger",
+  "blockchain-technologie": "Christian Anger",
+  "was-ist-der-us-cloud-act": "Christian Anger",
+  "was-ist-informationssicherheit": "Christian Anger",
+  "it-sicherheit-schulung": "Christian Anger",
+  "edge-computing": "Christian Anger",
+  "starlink-internet": "Christian Anger",
+  // Tino Schmidt: Business-, Cloud- & Workspace-Themen
+  "kuenstliche-intelligenz-und-maschinelles-lernen": "Tino Schmidt",
+  "automatisierung-von-geschaeftsprozessen": "Tino Schmidt",
+  "cloud-loesungen-fuer-unternehmen": "Tino Schmidt",
+  "rechnungsprogramm-fuer-kleinunternehmer": "Tino Schmidt",
+  "google-workspace-vs-microsoft-365": "Tino Schmidt",
+  "dokumentenmanagement": "Tino Schmidt",
+  "microsoft-365-migration-fallbeispiel": "Tino Schmidt",
+  "web-app-vs-desktop-app": "Tino Schmidt",
+  "word-online-nutzen": "Tino Schmidt",
+  // Alle übrigen Beiträge: Maximilian Dalichow (Standard-Autor)
+};
 
 function withContent(post: Post): Post {
   const content = POST_CONTENT[post.slug];
   const merged = content ? { ...post, ...content } : { ...post };
-  return AUTHOR ? { ...merged, author: AUTHOR } : merged;
+  const author = getTeamMember(POST_AUTHORS[post.slug] ?? DEFAULT_AUTHOR);
+  return author ? { ...merged, author } : merged;
 }
 
 /**
