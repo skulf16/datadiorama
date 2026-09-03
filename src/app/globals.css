@@ -243,6 +243,27 @@
     font-weight: 600;
     text-decoration: underline;
   }
+  .prose-dd table {
+    width: 100%;
+    margin: 1.1em 0;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .prose-dd th {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    color: var(--color-ink);
+    text-align: left;
+    padding: 0.6rem 0.9rem;
+    border-bottom: 2px solid var(--color-line);
+    background: var(--color-surface);
+  }
+  .prose-dd td {
+    padding: 0.6rem 0.9rem;
+    border-bottom: 1px solid var(--color-line);
+    vertical-align: top;
+  }
   .prose-dd strong {
     color: var(--color-ink);
     font-weight: 600;

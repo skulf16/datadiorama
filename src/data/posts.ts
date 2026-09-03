@@ -25,6 +25,8 @@ const POST_AUTHORS: Record<string, string> = {
   "microsoft-365-migration-fallbeispiel": "Tino Schmidt",
   "web-app-vs-desktop-app": "Tino Schmidt",
   "word-online-nutzen": "Tino Schmidt",
+  "apple-business-manager": "Tino Schmidt",
+  "mdm-vergleich-jamf-kandji-mosyle": "Tino Schmidt",
   // Alle übrigen Beiträge: Maximilian Dalichow (Standard-Autor)
 };
 
@@ -435,6 +437,42 @@ export const POSTS: Post[] = [
     metaDescription:
       "Auf der Suche nach einem Rechnungsprogramm für Kleinunternehmer? Wir vergleichen hier die 4 besten Anbieter – und geben Entscheidungshilfen. Jetzt lesen!",
     relatedServiceSlugs: ["software-engineering", "it-beratung"],
+  },
+  {
+    slug: "apple-device-management-mdm-fuer-mac",
+    title: "Apple Device Management: Macs im Unternehmen zentral verwalten",
+    excerpt:
+      "Ab einer Handvoll Macs wird manuelle Verwaltung zum Risiko. Wie Mobile Device Management (MDM) für macOS funktioniert, was Apple Business Manager und Zero-Touch-Rollout leisten - und wann sich der Einstieg lohnt.",
+    category: "IT-Infrastruktur",
+    date: "2026-09-03",
+    readingMinutes: 9,
+    metaDescription:
+      "Apple Device Management erklärt: Macs, iPhones & iPads per MDM zentral verwalten - mit Apple Business Manager, Zero-Touch-Rollout, FileVault & Update-Steuerung.",
+    relatedServiceSlugs: ["mac-it-service", "it-beratung", "home-office"],
+  },
+  {
+    slug: "apple-business-manager",
+    title: "Apple Business Manager: Was das kostenlose Apple-Portal für Unternehmen leistet",
+    excerpt:
+      "Geräte automatisch ausrollen, Apps zentral kaufen, Firmen-Apple-Accounts verwalten: Was der Apple Business Manager kann, was er kostet - und warum er ohne MDM nur die halbe Miete ist.",
+    category: "Software & Tools",
+    date: "2026-09-03",
+    readingMinutes: 8,
+    metaDescription:
+      "Apple Business Manager erklärt: Einrichtung, Kosten, automatische Geräteregistrierung und App-Verwaltung - und warum erst die Kombination mit einem MDM den Nutzen bringt.",
+    relatedServiceSlugs: ["mac-it-service", "it-beratung"],
+  },
+  {
+    slug: "mdm-vergleich-jamf-kandji-mosyle",
+    title: "MDM für Apple im Vergleich: Jamf, Kandji oder Mosyle?",
+    excerpt:
+      "Drei MDM-Plattformen für Mac, iPhone und iPad im Vergleich: Funktionsumfang, Verwaltungsaufwand und Kosten - und warum wir für kleine und mittlere Unternehmen meist bei Mosyle landen.",
+    category: "Software & Tools",
+    date: "2026-09-03",
+    readingMinutes: 9,
+    metaDescription:
+      "Jamf, Kandji und Mosyle im Vergleich: Welches Apple-MDM passt zu welchem Unternehmen? Funktionen, Kosten und Praxiserfahrung aus dem Systemhaus-Alltag.",
+    relatedServiceSlugs: ["mac-it-service", "it-beratung"],
   },
 ];
 

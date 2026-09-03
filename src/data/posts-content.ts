@@ -2281,4 +2281,231 @@ export const POST_CONTENT: Record<string, PostContent> = {
       }
     ]
   },
+  // Satellit zur Leistungsseite /leistungen/mac-it-service (ENTWURF, 03.09.2026).
+  "apple-device-management-mdm-fuer-mac": {
+    "intro": "Apple Device Management bezeichnet die zentrale Verwaltung von Macs, iPhones und iPads im Unternehmen über eine MDM-Plattform (Mobile Device Management). Statt jedes Gerät einzeln einzurichten und zu pflegen, definiert die IT einmal Richtlinien - Verschlüsselung, Updates, WLAN, Software - und das MDM setzt sie automatisch auf allen Geräten durch. Die Grundlage dafür liefert Apple selbst: Der Apple Business Manager ordnet Geräte verbindlich dem Unternehmen zu und übergibt sie beim ersten Einschalten an das MDM. In diesem Beitrag erklären wir, wie das Zusammenspiel funktioniert, was es im Alltag bringt und ab wann sich der Einstieg lohnt.",
+    "keyTakeaways": [
+      "MDM verwaltet Macs, iPhones und iPads zentral: Richtlinien einmal definieren, automatisch auf allen Geräten durchsetzen.",
+      "Der Apple Business Manager ist Apples kostenloses Unternehmensportal - er verankert Geräte im Unternehmen und macht den automatischen Rollout (Zero-Touch) möglich.",
+      "Verschlüsselung (FileVault), Update-Steuerung und Fernsperrung verlorener Geräte sind die drei wichtigsten Sicherheitsfunktionen im Alltag.",
+      "Faustregel: Ab etwa fünf Apple-Geräten lohnt sich die zentrale Verwaltung - der häufigste Auslöser ist aber ein konkreter Vorfall oder eine Compliance-Anforderung.",
+      "MDM ist ein Werkzeug, kein Selbstläufer: Die Richtlinien, der Rollout und die Pflege brauchen jemanden, der Apple-Umgebungen kennt."
+    ],
+    "sections": [
+      {
+        "heading": "Was ist Apple Device Management?",
+        "body": "Apple Device Management ist der Oberbegriff für die zentrale Verwaltung von Apple-Geräten in Organisationen. Technisch besteht es aus zwei Bausteinen: dem Apple Business Manager, Apples kostenlosem Portal, das Geräte und App-Lizenzen dem Unternehmen zuordnet, und einer MDM-Plattform, die die eigentliche Verwaltung übernimmt - also Konfigurationsprofile verteilt, Software installiert, Updates steuert und Sicherheitsrichtlinien durchsetzt. Das zugrunde liegende Verwaltungsprotokoll definiert Apple selbst und dokumentiert es öffentlich (Quelle: Apple Platform Deployment, support.apple.com).\n\nDas Prinzip ist schnell erklärt. Die IT hinterlegt im MDM einmal, wie ein Firmengerät auszusehen hat - welche Programme installiert sind, dass die Festplatte verschlüsselt ist, welches WLAN und VPN konfiguriert wird, wie schnell Updates eingespielt werden müssen. Jedes registrierte Gerät gleicht sich laufend mit diesen Vorgaben ab. Manuelles Einrichten am einzelnen Mac entfällt damit weitgehend."
+      },
+      {
+        "heading": "Zero-Touch-Rollout: der Mac richtet sich selbst ein",
+        "body": "Der sichtbarste Gewinn ist der automatische Rollout, oft Zero-Touch genannt. Kauft das Unternehmen einen Mac über Apple oder einen autorisierten Händler, wird die Seriennummer automatisch dem Apple Business Manager des Unternehmens zugeordnet. Beim ersten Einschalten meldet sich das Gerät bei Apple, erfährt dort, zu welcher Organisation es gehört, und verbindet sich mit dem hinterlegten MDM. Von da an läuft alles automatisch: Benutzerkonto, Programme, Sicherheitsrichtlinien, Netzwerkzugänge.\n\nFür den Arbeitsalltag heißt das: Ein neues MacBook kann direkt an den Mitarbeiter versendet werden - auch ins Home-Office. Nach dem Auspacken und Anmelden ist es ein fertig konfiguriertes, verwaltetes Firmengerät, ohne dass es je auf dem Schreibtisch eines Administrators lag. Und der umgekehrte Fall funktioniert ebenso: Verlässt jemand das Unternehmen, lässt sich das Gerät aus der Ferne zurücksetzen und für den Nachfolger neu ausrollen."
+      },
+      {
+        "heading": "Die drei wichtigsten Sicherheitsfunktionen im Alltag",
+        "body": "In der Praxis reduziert sich der Sicherheitsgewinn eines MDM auf drei Funktionen, die fast jedes Unternehmen braucht:",
+        "bullets": [
+          "Erzwungene Verschlüsselung: FileVault verschlüsselt die Festplatte des Macs vollständig (Quelle: Apple Platform Deployment); das MDM erzwingt die Aktivierung und hinterlegt den Wiederherstellungsschlüssel zentral. Ein gestohlenes MacBook bleibt damit in aller Regel ein Hardware-Verlust statt eines Datenlecks.",
+          "Update-Steuerung: macOS- und App-Updates werden zentral geplant und nachgehalten. Das MDM zeigt jederzeit, welches Gerät auf welchem Stand ist - der Nachweis, den Cyber-Versicherungen und Auditoren sehen wollen.",
+          "Fernsperrung und Fernlöschung: Ein verlorenes oder gestohlenes Gerät wird aus der Ferne gesperrt oder vollständig gelöscht - unabhängig davon, wo es sich befindet."
+        ]
+      },
+      {
+        "heading": "Ab wann lohnt sich MDM für Macs?",
+        "body": "Die ehrliche Antwort: früher, als die meisten denken. Als Faustregel gelten etwa fünf Geräte - ab dieser Größe kostet die manuelle Pflege in der Regel mehr Zeit, als die Einführung eines MDM einmalig braucht. Der tatsächliche Auslöser ist in der Praxis aber selten die Stückzahl, sondern ein Ereignis: ein verlorenes MacBook, eine Anforderung aus einem Kundenaudit oder einer Cyber-Versicherung, ein neuer Mitarbeiter, der am ersten Tag arbeitsfähig sein soll, oder schlicht die Erkenntnis, dass niemand sagen kann, welche Macs im Unternehmen auf welchem Stand sind.\n\n[CASE: Unternehmen (Branche, Größe), Region, Monat/Jahr, Ausgangslage unverwaltete Macs, Einführung ABM + MDM, Ergebnis]\n\nEine Zahl, ab der sich MDM für jedes Unternehmen rechnet, gibt es nicht - das hängt an Gerätezahl, Fluktuation und Compliance-Anforderungen und zeigt sich erst in der Bestandsaufnahme. Klar ist die Richtung: Die Einrichtung von Apple Business Manager und MDM ist ein einmaliges, überschaubares Projekt. Danach wächst die Umgebung praktisch von selbst mit - ob fünf oder fünfzig Geräte, der Verwaltungsaufwand pro zusätzlichem Mac fällt kaum noch ins Gewicht."
+      },
+      {
+        "heading": "Muss es überhaupt ein MDM sein? Die Alternativen im Vergleich",
+        "body": "Zentrale Verwaltung ist kein Selbstzweck, und nicht jede Umgebung braucht sofort die volle Ausbaustufe. Drei Wege stehen zur Wahl:",
+        "table": {
+          "headers": ["", "Manuelle Verwaltung", "Apple Business Essentials", "Spezialisiertes MDM"],
+          "rows": [
+            ["Geeignet für", "1-4 Geräte, kein Compliance-Druck", "Kleinstfirmen mit einfachen Anforderungen (Verfügbarkeit je Land prüfen)", "Ab ca. 5 Geräten, gemischte Flotten, Audit-Anforderungen"],
+            ["Zero-Touch-Rollout", "Nein - jedes Gerät wird von Hand eingerichtet", "Ja, eingeschränkter Funktionsumfang", "Ja, vollständig"],
+            ["Nachweis für Audits und Versicherung", "Nicht praktikabel", "Grundfunktionen", "Ja - Verschlüsselungs- und Update-Status pro Gerät"],
+            ["Laufende Kosten", "Keine Lizenz, aber Arbeitszeit pro Gerät", "Abo pro Nutzer [PREIS PRÜFEN]", "Lizenz pro Gerät, je nach Anbieter [PREIS PRÜFEN]"],
+            ["Grenze", "Skaliert nicht, kein Schutz bei Verlust", "Wenig Tiefe, an Apple gebunden", "Braucht jemanden, der Richtlinien definiert und pflegt"]
+          ]
+        }
+      },
+      {
+        "heading": "Was MDM nicht löst",
+        "body": "Ein MDM ist ein Werkzeug, keine IT-Abteilung. Es setzt Richtlinien durch - aber jemand muss sie definieren, testen und pflegen. Welche Updates wie schnell verpflichtend werden, wie streng die Passwortregeln sind, welche Software zum Standard gehört: Das sind Entscheidungen, die Apple-Erfahrung und Kenntnis der jeweiligen Arbeitsabläufe brauchen. Zu strenge Richtlinien blockieren die Arbeit, zu lasche verfehlen den Zweck. Und ein unverwalteter Firmen-Mac ohne Festplattenverschlüsselung ist im Jahr 2026 keine Nachlässigkeit mehr, sondern ein vermeidbares Risiko.\n\nDazu kommt die Integration: Dateiablagen, Microsoft 365 oder Google Workspace, Drucker, VPN und Telefonie müssen auf dem Mac genauso funktionieren wie auf den Windows-Geräten daneben. Ein MDM konfiguriert das - entworfen und gepflegt werden muss es von Menschen, die beide Welten kennen.\n\nWenn Sie klären möchten, wie Apple Device Management in Ihrer Umgebung aussehen könnte, können Sie ein unverbindliches Erstgespräch mit datadiorama vereinbaren - die Leistungsseite zum Mac IT-Service beschreibt, was eine laufende Betreuung umfasst."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Was kostet Apple Device Management?",
+        "answer": "Der Apple Business Manager ist kostenlos. Die MDM-Plattform kostet eine Lizenz pro Gerät und Monat - je nach Anbieter von wenigen Euro bis zum Mehrfachen davon. Dazu kommt die einmalige Einrichtung (Portal, Richtlinien, Rollout) und optional die laufende Betreuung durch ein Systemhaus. Für kleine und mittlere Flotten ist das Gesamtpaket meist deutlich günstiger als der Zeitaufwand manueller Verwaltung."
+      },
+      {
+        "question": "Funktioniert MDM auch für bereits gekaufte, eingerichtete Macs?",
+        "answer": "Ja. Geräte, die nicht über den Apple Business Manager gekauft wurden, lassen sich nachträglich registrieren - seit einigen macOS-Versionen auch mit denselben Verwaltungsrechten wie ab Werk zugeordnete Geräte. Bestehende Installationen können dabei erhalten bleiben; für einen sauberen, nachweisbaren Stand empfehlen wir bei Altgeräten aber oft die Neuinstallation mit Datenübernahme."
+      },
+      {
+        "question": "Sehen Administratoren mit MDM private Daten auf dem Gerät?",
+        "answer": "Nein. MDM verwaltet Konfiguration und Sicherheit - installierte Profile, Verschlüsselungsstatus, Update-Stand, installierte verwaltete Apps. Persönliche Dateien, Browserverläufe oder E-Mail-Inhalte sind für das MDM nicht einsehbar. Apple hat das Protokoll bewusst so gestaltet, dass Verwaltung und Privatsphäre getrennt bleiben."
+      },
+      {
+        "question": "Brauchen wir MDM auch für iPhones und iPads?",
+        "answer": "Wenn Firmendaten darauf liegen: ja. E-Mail, Teams, Dateizugriffe - ein Firmen-iPhone ohne Verwaltung ist dasselbe Risiko wie ein unverwalteter Mac. Der Vorteil: Dasselbe MDM verwaltet Mac, iPhone und iPad gemeinsam, die einmal geschaffene Grundlage (Apple Business Manager, Richtlinien) gilt für alle Gerätetypen."
+      }
+    ]
+  },
+  // Satellit zur Leistungsseite /leistungen/mac-it-service (ENTWURF, 03.09.2026).
+  "apple-business-manager": {
+    "intro": "Der Apple Business Manager ist Apples kostenloses Web-Portal für Unternehmen. Er erfüllt drei Aufgaben: Er ordnet gekaufte Apple-Geräte verbindlich der Organisation zu (und macht damit den automatischen Rollout möglich), er verwaltet App-Lizenzen zentral, und er stellt verwaltete Apple Accounts für Mitarbeitende bereit. Was er bewusst nicht tut: Geräte konfigurieren - dafür braucht es zusätzlich ein MDM. Dieser Beitrag erklärt, was der Apple Business Manager leistet, wie die Einrichtung abläuft und warum er erst im Zusammenspiel mit einer Geräteverwaltung seinen Wert entfaltet.",
+    "keyTakeaways": [
+      "Der Apple Business Manager (ABM) ist kostenlos - Apple verlangt weder Einrichtungs- noch laufende Gebühren.",
+      "Kernfunktion 1: Automatische Geräteregistrierung - über Apple oder autorisierte Händler gekaufte Geräte gehören verbindlich dem Unternehmen und rollen sich per Zero-Touch selbst aus.",
+      "Kernfunktion 2: Apps und Bücher - Volumenlizenzen zentral kaufen und Apps ohne private Apple-IDs auf Firmengeräte verteilen.",
+      "Kernfunktion 3: Verwaltete Apple Accounts - Firmen-Accounts, die dem Unternehmen gehören, nicht dem Mitarbeiter.",
+      "Ohne MDM bleibt der ABM ein Verzeichnis: Erst die Kombination mit einer Geräteverwaltung macht aus der Zuordnung eine automatische Einrichtung."
+    ],
+    "sections": [
+      {
+        "heading": "Was ist der Apple Business Manager?",
+        "body": "Der Apple Business Manager ist das zentrale Verwaltungsportal, über das Apple Unternehmen den organisierten Einsatz seiner Geräte ermöglicht. Er ist der Nachfolger der früheren Programme DEP (Device Enrollment Program) und VPP (Volume Purchase Program), die Apple in einem Portal zusammengeführt hat. Die Anmeldung steht Unternehmen mit D-U-N-S-Nummer offen und ist kostenlos (Quelle: Apple Business Manager Benutzerhandbuch, support.apple.com).\n\nEine Sache vorab, weil sie im Alltag ständig verwechselt wird: Der ABM ist kein MDM. Er konfiguriert keine Geräte, installiert keine Software und setzt keine Richtlinien durch. Er ist die Autoritätsschicht darunter - er legt fest, welche Geräte und Accounts zum Unternehmen gehören und an welches MDM sie übergeben werden."
+      },
+      {
+        "heading": "Automatische Geräteregistrierung: die wichtigste Funktion",
+        "body": "Kauft ein Unternehmen Apple-Geräte direkt bei Apple oder bei einem autorisierten Händler, kann der Verkäufer die Seriennummern automatisch dem Apple Business Manager des Kunden zuordnen. Die Folge: Das Gerät ist ab Werk als Firmengerät verankert - nicht durch einen Aufkleber oder eine Excel-Liste, sondern kryptografisch bei Apple hinterlegt.\n\nBeim ersten Einschalten prüft jedes Apple-Gerät, ob es einer Organisation zugeordnet ist. Wenn ja, wird es verpflichtend beim hinterlegten MDM registriert - der Nutzer kann die Verwaltung nicht überspringen, und die Zuordnung übersteht auch ein vollständiges Zurücksetzen (Quelle: Apple Platform Deployment). Das ist der entscheidende Unterschied zur nachträglichen, manuellen MDM-Registrierung und erschwert zugleich den Weiterverkauf gestohlener Firmengeräte erheblich: Ein entwendetes Gerät lässt sich nicht einfach durch Neuinstallation in ein Privatgerät verwandeln."
+      },
+      {
+        "heading": "Apps zentral kaufen und verteilen",
+        "body": "Der zweite Baustein ist die zentrale App-Beschaffung, ehemals VPP. Das Unternehmen kauft App-Lizenzen im ABM - auch kostenlose Apps werden dort als Lizenzen bezogen - und das MDM verteilt sie auf die Geräte. Die Lizenzen gehören dem Unternehmen und lassen sich neu zuweisen, wenn ein Gerät ausscheidet oder ein Mitarbeiter wechselt.\n\nDer praktische Gewinn: Auf Firmengeräten braucht niemand eine private Apple-ID, um Software zu installieren. Apps erscheinen automatisch, Updates laufen zentral gesteuert, und die Frage, wem eine gekaufte Lizenz eigentlich gehört, stellt sich nicht mehr."
+      },
+      {
+        "heading": "Verwaltete Apple Accounts",
+        "body": "Der dritte Baustein sind verwaltete Apple Accounts (Managed Apple Accounts): Apple-Konten, die das Unternehmen anlegt und kontrolliert - inklusive Zurücksetzen von Passwörtern und Löschen beim Austritt. Sie lassen sich mit bestehenden Verzeichnisdiensten wie Microsoft Entra ID oder Google Workspace verbinden, sodass Mitarbeitende sich mit ihren gewohnten Firmen-Zugangsdaten anmelden.\n\nFür Unternehmen löst das ein altes Problem: Firmendaten in iCloud-Konten, die dem Mitarbeiter privat gehören. Mit verwalteten Accounts bleibt die Kontrolle über Konten und die damit verbundenen Daten beim Unternehmen."
+      },
+      {
+        "heading": "Wie läuft die Einrichtung ab?",
+        "body": "Die Anmeldung am Apple Business Manager ist ein einmaliger Vorgang, der sich in fünf Schritte gliedert:",
+        "bullets": [
+          "1. Registrierung mit Unternehmensdaten und D-U-N-S-Nummer auf business.apple.com.",
+          "2. Verifizierung durch Apple - hier hakt es, wenn Firmendaten nicht exakt mit den hinterlegten Registerdaten übereinstimmen.",
+          "3. Anlage der Administratoren und Vergabe der Rollen. Klären Sie früh, wer diese Verantwortung dauerhaft trägt.",
+          "4. Einkaufskanäle verbinden: Apple direkt oder die Händlernummern der autorisierten Reseller, damit künftige Käufe automatisch zugeordnet werden.",
+          "5. MDM als Verwaltungsziel hinterlegen und Bestandsgeräte nachregistrieren, sofern sie nie über einen autorisierten Kanal gekauft wurden."
+        ]
+      },
+      {
+        "heading": "Wo liegen die Stolpersteine?",
+        "body": "Klingt nach einem Nachmittag? Der Portal-Teil schon. Zeit kostet erfahrungsgemäß das Drumherum: die Verifizierung bei abweichenden Firmendaten, Bestandsgeräte ohne autorisierten Kaufnachweis, und die organisatorische Frage, wem die Administratorrolle gehört, wenn es keine eigene IT-Abteilung gibt. Pauschal lässt sich der Aufwand nicht beziffern - das hängt davon ab, wie die vorhandenen Geräte beschafft und eingerichtet wurden.\n\n[CASE: Unternehmen (Branche, Größe), Region, Monat/Jahr, ABM-Einführung mit Bestandsgeräten, Aufwand und Ergebnis]"
+      },
+      {
+        "heading": "Reicht der Apple Business Manager allein?",
+        "body": "Nein - für sich allein bleibt er ein Verzeichnis. Die Zuordnung eines Geräts zum Unternehmen entfaltet erst dann Wirkung, wenn ein MDM das Gerät beim ersten Start übernimmt, konfiguriert und dauerhaft verwaltet. Der Unterschied im Überblick:",
+        "table": {
+          "headers": ["", "Nur ABM", "ABM + MDM"],
+          "rows": [
+            ["Geräte gehören verbindlich dem Unternehmen", "Ja", "Ja"],
+            ["Automatische Einrichtung neuer Geräte (Zero-Touch)", "Nein - nur die Zuordnung", "Ja, vollständig"],
+            ["Verschlüsselung, Updates, Richtlinien durchsetzen", "Nein", "Ja"],
+            ["Apps zentral kaufen", "Ja (Lizenzkauf)", "Ja, inklusive automatischer Verteilung"],
+            ["Verlorenes Gerät sperren oder löschen", "Nein", "Ja"],
+            ["Kosten", "Kostenlos", "Kostenlos + MDM-Lizenz pro Gerät [PREIS PRÜFEN]"]
+          ]
+        }
+      },
+      {
+        "heading": "Der nächste Schritt",
+        "body": "Welche MDM-Plattform das Zusammenspiel vervollständigt, hängt von Größe und Anspruch ab - einen Vergleich der drei gängigsten Lösungen Jamf, Kandji und Mosyle finden Sie in einem eigenen Beitrag. Wenn Sie klären möchten, was die Einführung in Ihrer Umgebung bedeuten würde, können Sie ein unverbindliches Erstgespräch mit datadiorama vereinbaren."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Was kostet der Apple Business Manager?",
+        "answer": "Nichts. Apple stellt das Portal kostenlos bereit - es gibt weder Einrichtungsgebühren noch laufende Kosten. Kosten entstehen erst durch die MDM-Plattform (Lizenz pro Gerät) und gegebenenfalls durch die Dienstleistung für Einrichtung und Betrieb."
+      },
+      {
+        "question": "Können wir bereits vorhandene Geräte in den Apple Business Manager aufnehmen?",
+        "answer": "Ja. Geräte, die nicht über einen autorisierten Kanal gekauft wurden, lassen sich nachträglich hinzufügen - bei neueren macOS- und iOS-Versionen direkt über das MDM bzw. mit dem Apple Configurator. Der Aufwand pro Gerät ist überschaubar; bei größeren Beständen planen wir das als strukturierte Migration."
+      },
+      {
+        "question": "Was ist der Unterschied zwischen Apple Business Manager und Apple Business Essentials?",
+        "answer": "Der Apple Business Manager ist das kostenlose Verwaltungsportal. Apple Business Essentials ist ein kostenpflichtiges Abo-Produkt von Apple, das ein einfaches MDM, iCloud-Speicher und Support bündelt - es ist allerdings nicht in allen Ländern verfügbar und im Funktionsumfang begrenzt. Für die meisten Unternehmen ist die Kombination aus ABM und einem spezialisierten MDM die flexiblere Lösung."
+      },
+      {
+        "question": "Brauchen kleine Unternehmen mit drei Macs schon einen Apple Business Manager?",
+        "answer": "Die Anmeldung lohnt sich früh, weil sie kostenlos ist und künftige Gerätekäufe automatisch erfasst. Ob zusätzlich schon ein MDM sinnvoll ist, hängt vom Einzelfall ab - sobald Firmendaten auf den Geräten liegen und Compliance- oder Versicherungsanforderungen bestehen, empfehlen wir den Schritt auch bei kleinen Stückzahlen."
+      }
+    ]
+  },
+  // Satellit zur Leistungsseite /leistungen/mac-it-service (ENTWURF, 03.09.2026).
+  // Hinweis Redaktion: datadiorama setzt selbst Mosyle ein - Vergleich fair halten, Empfehlung transparent begründen.
+  "mdm-vergleich-jamf-kandji-mosyle": {
+    "intro": "Wer Macs, iPhones und iPads im Unternehmen zentral verwalten will, kommt an drei Namen kaum vorbei: Jamf, dem etablierten Enterprise-Standard; Kandji, der designorientierten Automatisierungsplattform; und Mosyle, dem Preis-Leistungs-Spezialisten. Alle drei sind reine Apple-MDMs und beherrschen die Grundlagen - Zero-Touch-Rollout, Verschlüsselung, Update-Steuerung - zuverlässig. Die Unterschiede liegen in Tiefe, Bedienung und im Preis. Die Kurzantwort vorweg: Für Konzerne mit eigenem Mac-Admin-Team spricht vieles für Jamf; für kleine und mittlere Unternehmen liefert Mosyle nach unserer Erfahrung ein sehr gutes Verhältnis aus Funktionsumfang und Kosten - es ist die Plattform, mit der datadiorama die Apple-Umgebungen seiner Kunden betreibt.",
+    "keyTakeaways": [
+      "Alle drei Plattformen decken die Kernaufgaben ab: automatischer Rollout über Apple Business Manager, FileVault-Verschlüsselung, Update-Steuerung, App-Verteilung, Fernsperrung.",
+      "Jamf gilt als Enterprise-Standard mit der größten Funktionstiefe und dem größten Ökosystem - bei Listenpreisen im oberen Bereich und spürbarem Einarbeitungs- und Pflegeaufwand [PREIS PRÜFEN].",
+      "Kandji punktet mit moderner Oberfläche und vorgefertigten Automatisierungen und positioniert sich preislich ebenfalls im oberen Segment [PREIS PRÜFEN].",
+      "Mosyle bietet die Kernfunktionen zu deutlich niedrigeren Lizenzkosten und ist schnell eingeführt - für die typischen Anforderungen kleiner und mittlerer Unternehmen reicht der Funktionsumfang in der Regel aus [PREIS PRÜFEN].",
+      "Wichtiger als das Werkzeug ist die Pflege: Ein günstiges, gut betreutes MDM leistet im Alltag mehr als ein mächtiges, das niemand beherrscht."
+    ],
+    "sections": [
+      {
+        "heading": "Worum es beim Vergleich wirklich geht",
+        "body": "Vorab eine Einordnung, die in Vergleichstabellen gern untergeht: Die Basisfunktionen eines Apple-MDM definiert Apple selbst. Zero-Touch-Rollout, Konfigurationsprofile, erzwungene Verschlüsselung, App-Verteilung über den Apple Business Manager - all das läuft über Apples dokumentiertes Verwaltungsprotokoll (Quelle: Apple Platform Deployment) und funktioniert bei jedem etablierten Anbieter. Wer nur diese Grundlagen braucht, kann mit keiner der drei Plattformen viel falsch machen.\n\nDie Unterschiede entstehen darüber: bei Automatisierung und Skripting, bei Compliance-Reports, bei der Integration in Verzeichnisdienste und Sicherheitswerkzeuge - und beim Preis, der sich zwischen den Anbietern nach deren Listenpreisen erheblich unterscheiden kann [PREIS PRÜFEN]. Die richtige Frage ist also nicht, welches MDM das mächtigste ist, sondern welches zum Unternehmen passt."
+      },
+      {
+        "heading": "Die drei Plattformen im Überblick",
+        "body": "So sortieren sich Jamf, Kandji und Mosyle entlang der Kriterien, die in der Auswahl tatsächlich den Ausschlag geben (Preisniveaus qualitativ nach Anbieter-Listenpreisen, Stand September 2026 [PREIS PRÜFEN]):",
+        "table": {
+          "headers": ["", "Jamf", "Kandji", "Mosyle"],
+          "rows": [
+            ["Typischer Einsatz", "Konzern, größerer Mittelstand mit Mac-Admin-Team", "IT-Teams mit Automatisierungs-Anspruch", "Kleine und mittlere Unternehmen, betreute Umgebungen"],
+            ["Funktionstiefe", "Am umfangreichsten, inkl. Skripting und großem Integrations-Ökosystem", "Hoch, mit vorgefertigten Automatisierungen (Blueprints)", "Kernfunktionen vollständig, inkl. Security-Bausteine in größeren Paketen"],
+            ["Einführungsaufwand", "Hoch - entfaltet Wert erst mit dedizierter Pflege", "Mittel - viele Vorlagen nehmen Arbeit ab", "Niedrig - Grundkonfiguration in Tagen realistisch"],
+            ["Preisniveau pro Gerät", "Oberes Segment [PREIS PRÜFEN]", "Oberes Segment [PREIS PRÜFEN]", "Unteres Segment [PREIS PRÜFEN]"],
+            ["Grenzen", "Kosten und Komplexität in kleinen Umgebungen", "Preis; jüngster Anbieter mit kleinerem Ökosystem", "Oberfläche stellenweise verschachtelt; weniger Spezial-Workflows"]
+          ]
+        }
+      },
+      {
+        "heading": "Jamf: der Enterprise-Standard",
+        "body": "Jamf ist der älteste und größte Anbieter im Apple-Management und in Konzernumgebungen weit verbreitet. Die Plattform (Jamf Pro, dazu Produkte für Sicherheit und Zugriffsverwaltung) bietet eine sehr große Funktionstiefe: feingranulare Smart Groups, mächtiges Skripting, ein breites Ökosystem aus Integrationen, Schulungen und Community-Wissen.\n\nDiese Tiefe hat zwei Preise. Den ersten zahlt man in der Lizenz - Jamf liegt nach den Listenpreisen des Anbieters pro Gerät über den beiden Wettbewerbern, und relevante Funktionen verteilen sich auf mehrere Produkte [PREIS PRÜFEN]. Den zweiten zahlt man in Zeit: Jamf Pro entfaltet seinen Wert erst, wenn jemand die Plattform wirklich beherrscht und laufend pflegt. In Unternehmen mit eigenem Mac-Admin-Team ist das gut investiert; in einem 30-Personen-Betrieb ohne eigene IT bleibt ein Teil des bezahlten Funktionsumfangs erfahrungsgemäß ungenutzt. Für kleinere Umgebungen bietet Jamf mit Jamf Now eine vereinfachte Variante mit reduziertem Funktionsumfang."
+      },
+      {
+        "heading": "Kandji: modern und automatisiert",
+        "body": "Kandji ist der jüngste der drei Anbieter und hat sich mit einer sehr aufgeräumten Oberfläche und vorgefertigten Automatisierungen einen Namen gemacht. Die sogenannten Blueprints bündeln Konfigurationen zu nachvollziehbaren Paketen, und eine umfangreiche Bibliothek fertiger Compliance-Vorlagen nimmt viel Handarbeit ab.\n\nKandji richtet sich damit an Teams, die Enterprise-Ansprüche haben, aber nicht die Zeit für die Tiefenpflege einer Jamf-Umgebung - und positioniert sich nach den Listenpreisen des Anbieters auch preislich in dieser Liga [PREIS PRÜFEN]. Für kleine und mittlere Unternehmen ist Kandji eine gute, aber selten die wirtschaftlichste Wahl: Man bezahlt eine Automatisierungstiefe, die ein betreuender Dienstleister in vielen Fällen ohnehin mitbringt."
+      },
+      {
+        "heading": "Mosyle: die Kernfunktionen zum kleinen Preis",
+        "body": "Mosyle kommt ursprünglich aus dem Bildungsbereich, wo große Geräteflotten und knappe Budgets zusammentreffen - eine Herkunft, die man der Preisgestaltung bis heute anmerkt. Die Business-Plattform deckt die Verwaltung von Mac, iPhone, iPad und Apple TV ab: Zero-Touch-Rollout, FileVault-Verwaltung, Update-Steuerung, App-Verteilung, Single Sign-On und - in den größeren Paketen - auch Endpoint-Security-Funktionen wie Malware-Schutz und Web-Filterung.\n\nWarum landet die Wahl in betreuten KMU-Umgebungen so oft hier? Drei Gründe. Erstens der Preis: Die Lizenzkosten pro Gerät liegen nach den Listenpreisen der Anbieter unter denen von Jamf und Kandji - bei kleinen Flotten spürbar, bei wachsenden deutlich [PREIS PRÜFEN]. Zweitens die Einführungszeit: Eine saubere Grundkonfiguration steht in Tagen, nicht in Wochen. Drittens die Abdeckung: Für sichere, nachweisbar verwaltete Geräte mit automatischem Rollout - das, was kleine und mittlere Unternehmen in aller Regel tatsächlich brauchen - fehlt in Mosyle nichts Wesentliches.\n\nEhrlicherweise gehört dazu: Die Oberfläche wirkt stellenweise verschachtelter als bei Kandji, und wer hochspezielle Enterprise-Workflows oder ein besonders breites Integrations-Ökosystem braucht, findet bei Jamf mehr. Nur ist das in der Größenklasse, um die es hier geht, selten die Anforderung."
+      },
+      {
+        "heading": "Welches MDM passt zu welchem Unternehmen?",
+        "body": "Pauschal lässt sich die Wahl nicht treffen - jede Umgebung ist anders gewachsen, und Sonderfälle wie Branchensoftware oder bestehende Sicherheitswerkzeuge können das Bild drehen. Als Ausgangspunkt taugt diese Sortierung:",
+        "bullets": [
+          "Konzern oder größerer Mittelstand mit eigenem Mac-Admin-Team und speziellen Workflows: Jamf - die Funktionstiefe wird dort tatsächlich genutzt und rechtfertigt Preis und Pflegeaufwand.",
+          "IT-Team, das viel selbst automatisieren will und Wert auf vorgefertigte Compliance-Vorlagen legt: Kandji - wenn das Budget die Lizenzkosten trägt.",
+          "Kleine und mittlere Unternehmen, mit oder ohne eigene IT: Mosyle - Abdeckung der Kernanforderungen, schnelle Einführung und ein sehr gutes Preis-Leistungs-Verhältnis [PREIS PRÜFEN].",
+          "In jedem Fall gilt: Das MDM ist nur so gut wie seine Pflege. Richtlinien definieren, Updates testen, Ausnahmen sauber behandeln - das leistet keine Plattform von allein."
+        ]
+      },
+      {
+        "heading": "Fazit mit offenem Visier",
+        "body": "Volle Transparenz: datadiorama betreibt die Apple-Umgebungen seiner Kunden mit Mosyle - diese Empfehlung kommt also aus der täglichen Arbeit mit genau dieser Plattform, nicht aus einer neutralen Labor-Messung. Die Argumente dahinter (Preis, Einführungszeit, ausreichende Tiefe für KMU) halten wir für nachvollziehbar; prüfen Sie sie gegen die aktuellen Preislisten und Funktionsübersichten der drei Anbieter.\n\n[CASE: Unternehmen (Branche, Größe), Region, Monat/Jahr, MDM-Auswahl und Einführung, Ergebnis]\n\nWenn Sie klären möchten, welche Plattform zu Ihrer Umgebung passt, können Sie ein unverbindliches Erstgespräch mit datadiorama vereinbaren."
+      }
+    ],
+    "faq": [
+      {
+        "question": "Ist Mosyle schlechter als Jamf, weil es günstiger ist?",
+        "answer": "Nein - es ist anders zugeschnitten. Jamf bietet mehr Tiefe für Spezialfälle und das größere Ökosystem; Mosyle konzentriert sich auf die Kernaufgaben des Apple-Managements und hält dadurch Preis und Komplexität niedrig. Für die typischen Anforderungen kleiner und mittlerer Unternehmen decken beide dasselbe ab - bezahlt wird bei Jamf vor allem Funktionsumfang, der in dieser Größenklasse selten genutzt wird."
+      },
+      {
+        "question": "Können wir später von einem MDM zu einem anderen wechseln?",
+        "answer": "Ja. Da die Geräte über den Apple Business Manager dem Unternehmen zugeordnet sind, lässt sich das Verwaltungsziel umstellen; die Geräte registrieren sich anschließend beim neuen MDM. Der Aufwand liegt im Nachbauen der Richtlinien und im geordneten Umzug der Geräte - machbar, aber kein Knopfdruck. Umso wichtiger ist eine passende Wahl am Anfang."
+      },
+      {
+        "question": "Gibt es auch MDM-Lösungen, die Windows und Apple gemeinsam verwalten?",
+        "answer": "Ja, etwa Microsoft Intune. Plattformübergreifende Lösungen verwalten Apple-Geräte aber erfahrungsgemäß weniger tief und reibungsloser als spezialisierte Apple-MDMs - etwa bei Update-Steuerung und Rollout. In gemischten Umgebungen hat sich für uns die Kombination bewährt: ein spezialisiertes Apple-MDM für Macs, iPhones und iPads neben der bestehenden Windows-Verwaltung."
+      },
+      {
+        "question": "Welche Kosten kommen neben der MDM-Lizenz auf uns zu?",
+        "answer": "Die einmalige Einführung - Apple Business Manager einrichten, Richtlinien definieren, Geräte migrieren - und optional die laufende Betreuung. Der Apple Business Manager selbst ist kostenlos. Bei der Lizenz rechnen alle drei Anbieter pro Gerät und Monat bzw. Jahr; konkrete Preise nennen die Anbieter auf ihren Websites, und wir kalkulieren sie im Rahmen eines Angebots transparent mit."
+      }
+    ]
+  },
 };

@@ -119,6 +119,28 @@ export default async function PostPage({
                       ))}
                     </ul>
                   )}
+                  {sec.table && (
+                    <div className="overflow-x-auto">
+                      <table>
+                        <thead>
+                          <tr>
+                            {sec.table.headers.map((h) => (
+                              <th key={h}>{h}</th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {sec.table.rows.map((row, r) => (
+                            <tr key={r}>
+                              {row.map((cell, c) => (
+                                <td key={c}>{cell}</td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

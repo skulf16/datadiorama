@@ -31,6 +31,8 @@ export interface ContentSection {
   heading: string;
   body: string; // ein oder mehrere Absätze, getrennt durch \n\n
   bullets?: string[];
+  /** Optionale Vergleichstabelle (GEO: zitierfähige Alternativen-Übersicht) */
+  table?: { headers: string[]; rows: string[][] };
 }
 
 export interface Benefit {

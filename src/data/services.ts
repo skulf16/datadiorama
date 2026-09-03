@@ -931,6 +931,154 @@ export const SERVICES: Service[] = [
     partnerKeys: ["microsoft"],
     relatedSlugs: ["microsoft-365", "private-cloud", "it-beratung"],
   },
+
+  // 13 - Mac & Apple IT-Service (ENTWURF: Bilder ergänzen, Erfahrungswerte prüfen)
+  {
+    slug: "mac-it-service",
+    order: 13,
+    navLabel: "Mac IT-Service",
+    icon: "workspace",
+    title: "Mac IT-Service für Unternehmen - Ihr Apple-Systemhaus",
+    tagline: "Betreuung, Verwaltung und Support für Macs im Unternehmen - aus einer Hand.",
+    cardDescription:
+      "Wir betreuen Apple-Arbeitsplätze im Unternehmen: Einrichtung, Geräteverwaltung per MDM, Support und Sicherheit - auch in gemischten Umgebungen mit Windows.",
+    metaTitle: "Mac IT-Service & Apple Support für Unternehmen",
+    metaDescription:
+      "Mac IT-Service vom Systemhaus: Apple-Geräte im Unternehmen einrichten, per MDM verwalten und laufend betreuen - auch neben Windows. Potsdam, Berlin & St. Gallen.",
+    image: `${IMG}/2025/03/datadiorama-8009.jpg`,
+    image2: `${IMG}/2025/03/datadiorama-8126.jpg`,
+    intro:
+      "Ein Mac IT-Service übernimmt die Einrichtung, Verwaltung und Betreuung von Apple-Geräten im Unternehmen: vom automatischen Rollout neuer Macs über die zentrale Geräteverwaltung (MDM) bis zum Support im Alltag. datadiorama betreut als IT-Systemhaus aus Potsdam Macs, iPhones und iPads genauso selbstverständlich wie Windows-Umgebungen - viele unserer Kunden fahren beides parallel. Sie bekommen Apple-Arbeitsplätze, die zentral verwaltet, sicher konfiguriert und im Störungsfall schnell wieder einsatzbereit sind.",
+    keyTakeaways: [
+      "Mac-Betreuung vom Systemhaus: Einrichtung, Geräteverwaltung, Support und Sicherheit aus einer Hand.",
+      "Zero-Touch-Rollout: Neue Macs konfigurieren sich beim ersten Einschalten selbst - über Apple Business Manager und MDM.",
+      "Zentrale Verwaltung mit Mosyle: Updates, Sicherheitsrichtlinien und Software auf allen Geräten, ohne jeden Mac einzeln anzufassen.",
+      "Auch für gemischte Umgebungen: Macs neben Windows, Microsoft 365 oder Google Workspace - kein Entweder-oder.",
+      "Persönlich vor Ort in Potsdam und Berlin oder per Fernwartung; feste Ansprechpartner statt Hotline.",
+    ],
+    facts: [
+      { label: "Leistung", value: "Mac-Betreuung, MDM & Apple Support" },
+      { label: "Geräte", value: "Mac, MacBook, iPhone, iPad" },
+      { label: "Verwaltung", value: "Mosyle MDM & Apple Business Manager" },
+      { label: "Region", value: "Potsdam, Berlin & St. Gallen" },
+      { label: "Modell", value: "Laufende Betreuung oder Projekt" },
+    ],
+    sections: [
+      {
+        heading: "Was umfasst ein Mac IT-Service für Unternehmen?",
+        body:
+          "Ein Mac IT-Service ist die laufende Betreuung von Apple-Geräten im Unternehmen durch ein Systemhaus - vergleichbar mit klassischer IT-Betreuung, nur mit Apple-Kompetenz. Dazu gehören die Einrichtung neuer Geräte, die zentrale Verwaltung per Mobile Device Management (MDM), automatische Updates und Sicherheitsrichtlinien, die Anbindung an Ihre bestehende Infrastruktur und der Support, wenn etwas klemmt.\n\nDer Unterschied zum Apple Store oder zur Apple-Hotline: Wir kennen Ihre Umgebung. Ein Mac im Unternehmen ist kein Einzelgerät, sondern Teil eines Netzwerks mit Dateiablagen, Druckern, E-Mail, Microsoft 365 oder Google Workspace und Sicherheitsanforderungen. Genau diese Integration ist unser Alltag als Systemhaus - seit 2013.",
+        bullets: [
+          "Beschaffung, Einrichtung und Zero-Touch-Rollout neuer Macs",
+          "Zentrale Geräteverwaltung (MDM) mit Sicherheitsrichtlinien und Update-Steuerung",
+          "Integration in bestehende Netzwerke, Microsoft 365 und Google Workspace",
+          "Support per Fernwartung und vor Ort in Potsdam und Berlin",
+        ],
+      },
+      {
+        heading: "Wann lohnt sich professionelle Mac-Betreuung?",
+        body:
+          "In vielen Unternehmen fangen Macs klein an: Die Geschäftsführung arbeitet mit einem MacBook, das Marketing braucht Apple-Geräte für Grafik und Video, neue Mitarbeitende bringen den Wunsch nach dem gewohnten Gerät mit. Solange es zwei oder drei Geräte sind, verwaltet die sich jeder selbst. Ab etwa fünf bis zehn Macs kippt das: Niemand weiß, welche Geräte auf welchem Stand sind, Updates bleiben liegen, und beim Ausscheiden eines Mitarbeiters ist unklar, wie man an das Gerät und die Daten kommt.\n\nSpätestens dann braucht es zentrale Verwaltung - und einen Partner, der Apple-Umgebungen nicht nebenbei, sondern strukturiert betreut. Typische Auslöser aus unserer Praxis:",
+        bullets: [
+          "Die Zahl der Macs wächst, aber niemand hat einen Überblick über Geräte, Updates und Sicherheit.",
+          "Ein neuer Mitarbeiter soll am ersten Tag ein fertig eingerichtetes Gerät haben - nicht nach drei Tagen Handarbeit.",
+          "Compliance oder Cyber-Versicherung verlangen Festplattenverschlüsselung, Update-Nachweise und Gerätekontrolle.",
+          "Der bisherige IT-Dienstleister kennt nur Windows und behandelt Macs als Fremdkörper.",
+          "Ein MacBook geht verloren, und niemand kann es aus der Ferne sperren oder löschen.",
+        ],
+      },
+      {
+        heading: "Zentrale Geräteverwaltung mit Mosyle und Apple Business Manager",
+        body:
+          "Kern jeder professionellen Mac-Umgebung ist ein Mobile Device Management. Wir setzen dafür auf Mosyle, eine auf Apple spezialisierte MDM-Plattform, in Kombination mit dem Apple Business Manager. Das Zusammenspiel ermöglicht den sogenannten Zero-Touch-Rollout: Ein neu gekaufter Mac wird beim ersten Einschalten automatisch Ihrem Unternehmen zugeordnet, bezieht seine Konfiguration, Sicherheitsrichtlinien und Programme selbst - ohne dass ihn ein Administrator je angefasst hat.\n\nIm laufenden Betrieb steuert das MDM Updates für macOS und Anwendungen, erzwingt Festplattenverschlüsselung (FileVault), verteilt WLAN- und VPN-Profile und kann verlorene Geräte aus der Ferne sperren oder löschen. Für Sie heißt das: Jeder Mac ist nachweisbar auf einem definierten, sicheren Stand - ob er in Potsdam im Büro steht oder im Home-Office in St. Gallen.",
+      },
+      {
+        heading: "Macs neben Windows: gemischte Umgebungen sind der Normalfall",
+        body:
+          "Die wenigsten Unternehmen sind reine Apple-Häuser. Der Normalfall im Mittelstand: Windows-Arbeitsplätze in Verwaltung und Buchhaltung, Macs in Geschäftsführung, Marketing oder Entwicklung - dazu Microsoft 365 oder Google Workspace als gemeinsame Plattform. Genau für diese Realität sind wir aufgestellt: Als Systemhaus betreuen wir beide Welten und sorgen dafür, dass Dateiablagen, E-Mail, Kalender, Drucker und Telefonie auf dem Mac genauso funktionieren wie auf dem PC.\n\nDas unterscheidet uns von reinen Apple-Dienstleistern, die bei der Windows-Hälfte Ihrer IT passen müssen - und von Windows-Systemhäusern, für die der Mac ein geduldeter Sonderfall bleibt.",
+      },
+      {
+        heading: "Was kostet Mac-Betreuung für Unternehmen?",
+        body:
+          "Die laufende Betreuung rechnen wir als monatliche Pauschale pro Gerät oder Arbeitsplatz ab - abhängig vom Leistungsumfang (Verwaltung, Support-Zeiten, Vor-Ort-Anteil). Die MDM-Lizenz für Mosyle kommt pro Gerät hinzu und ist im Vergleich zu anderen Apple-MDM-Lösungen bewusst günstig gewählt. Einmalige Projekte wie die Einführung von Apple Business Manager und MDM oder die Migration bestehender, unverwalteter Macs kalkulieren wir als Festpreis-Projekt.\n\nNach einem kostenlosen Erstgespräch nennen wir Ihnen einen konkreten Rahmen - ohne offene Tagessätze und ohne Grundgebühr für Leistungen, die Sie nicht brauchen.",
+      },
+    ],
+    benefits: [
+      {
+        title: "Apple-Kompetenz vom Systemhaus",
+        description:
+          "Macs sind bei uns kein Sonderfall, sondern Alltag - inklusive Integration in Windows- und Cloud-Umgebungen.",
+        icon: "workspace",
+      },
+      {
+        title: "Sicher und nachweisbar verwaltet",
+        description:
+          "Verschlüsselung, Updates und Richtlinien zentral per MDM - mit Nachweisen für Compliance und Versicherung.",
+        icon: "shield",
+      },
+      {
+        title: "Neue Geräte ohne Handarbeit",
+        description:
+          "Zero-Touch-Rollout: Der Mac richtet sich beim ersten Einschalten selbst ein - fertig konfiguriert am ersten Arbeitstag.",
+        icon: "rocket",
+      },
+    ],
+    process: [
+      {
+        title: "Erstgespräch & Bestandsaufnahme",
+        description:
+          "Wir erfassen Ihre Apple-Geräte, die bestehende Infrastruktur und klären Ziele: Verwaltung, Sicherheit, Support.",
+      },
+      {
+        title: "Apple Business Manager & MDM",
+        description:
+          "Wir richten den Apple Business Manager für Ihr Unternehmen ein, verbinden ihn mit Mosyle und definieren Ihre Richtlinien.",
+      },
+      {
+        title: "Rollout & Migration",
+        description:
+          "Neue Geräte kommen per Zero-Touch ins System; bestehende Macs nehmen wir strukturiert in die Verwaltung auf.",
+      },
+      {
+        title: "Laufende Betreuung",
+        description:
+          "Updates, Monitoring und Support im Alltag - per Fernwartung oder vor Ort, mit festen Ansprechpartnern.",
+      },
+    ],
+    faq: [
+      {
+        question: "Betreut ihr auch gemischte Umgebungen mit Macs und Windows-PCs?",
+        answer:
+          "Ja - das ist sogar der häufigste Fall. Als Systemhaus betreuen wir Windows und macOS gleichwertig und sorgen dafür, dass beide Welten dieselben Dateiablagen, E-Mail-Konten und Drucker nutzen. Sie brauchen keinen zweiten Dienstleister nur für die Macs.",
+      },
+      {
+        question: "Ab wie vielen Macs lohnt sich ein MDM?",
+        answer:
+          "Als Faustregel: ab etwa fünf Geräten. Der eigentliche Auslöser ist aber selten die Stückzahl, sondern der Anlass - ein verlorenes MacBook, eine Compliance-Anforderung oder ein neuer Mitarbeiter, der am ersten Tag arbeitsfähig sein soll. Da die Einrichtung über Apple Business Manager einmalig ist, profitieren auch kleine Flotten früh davon.",
+      },
+      {
+        question: "Welches MDM setzt ihr für Macs ein?",
+        answer:
+          "Wir arbeiten mit Mosyle, einer auf Apple spezialisierten MDM-Plattform. Sie deckt Mac, iPhone und iPad ab, ist schnell eingeführt und liegt bei den Lizenzkosten pro Gerät unter vielen Enterprise-Alternativen - aus unserer Erfahrung ein sehr gutes Verhältnis aus Funktionsumfang und Kosten für kleine und mittlere Unternehmen. Einen ausführlichen Vergleich der gängigen Apple-MDM-Plattformen finden Sie in unserem Ratgeber.",
+      },
+      {
+        question: "Was ist der Apple Business Manager - und brauchen wir den?",
+        answer:
+          "Der Apple Business Manager ist Apples kostenloses Portal für Unternehmen. Er ordnet gekaufte Geräte verbindlich Ihrer Organisation zu, ermöglicht den automatischen Rollout in Verbindung mit einem MDM und verwaltet Volumenlizenzen für Apps. Für eine professionell verwaltete Apple-Umgebung ist er die Grundlage - wir richten ihn für Sie ein.",
+      },
+      {
+        question: "Funktionieren Microsoft 365 und Teams auf dem Mac?",
+        answer:
+          "Ja. Word, Excel, PowerPoint, Outlook, Teams und OneDrive gibt es als vollwertige Mac-Anwendungen, die wir per MDM automatisch installieren und aktuell halten. Auch die Anbindung an Exchange Online, SharePoint und die Telefonanlage ist auf dem Mac Standard - richtig eingerichtet merkt niemand einen Unterschied.",
+      },
+      {
+        question: "Übernehmt ihr auch bestehende, bisher unverwaltete Macs?",
+        answer:
+          "Ja. Bestehende Geräte nehmen wir strukturiert in die Verwaltung auf - je nach Ausgangslage per Neuinstallation mit Datenübernahme oder durch nachträgliche Registrierung im MDM. Dabei bringen wir Verschlüsselung, Updates und Sicherheitsrichtlinien auf den definierten Stand.",
+      },
+    ],
+    relatedSlugs: ["it-beratung", "workspaces", "home-office"],
+  },
 ];
 
 export function getServicesSorted(): Service[] {
