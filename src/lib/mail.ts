@@ -21,6 +21,8 @@ export interface ContactMail {
   text: string;
   /** E-Mail-Adresse der anfragenden Person (Reply-To) */
   replyTo?: string;
+  /** Empfängeradresse; ohne Angabe gilt CONTACT_TO bzw. SITE.email */
+  to?: string;
 }
 
 export type MailOutcome =
@@ -45,7 +47,7 @@ function getTransporter(): Transporter {
 }
 
 export async function sendContactMail(mail: ContactMail): Promise<MailOutcome> {
-  const to = process.env.CONTACT_TO || SITE.email;
+  const to = mail.to || process.env.CONTACT_TO || SITE.email;
   const from = process.env.CONTACT_FROM || "kontakt@datadiorama.com";
 
   if (process.env.SMTP_HOST) {

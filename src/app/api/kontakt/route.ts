@@ -66,11 +66,13 @@ export async function POST(request: Request) {
   ].join("\n");
 
   // Versand über SMTP (z. B. Google-Relay) bzw. Resend – siehe lib/mail.ts.
+  // Bewerbungen gehen an jobs@, allgemeine Anfragen an seo@.
   const result = await sendContactMail({
     fromLabel: "datadiorama Website",
     subject,
     text,
     replyTo: email,
+    to: job ? "jobs@datadiorama.com" : "seo@datadiorama.com",
   });
   if (!result.ok) {
     return NextResponse.json(
