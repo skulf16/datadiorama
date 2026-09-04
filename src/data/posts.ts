@@ -25,8 +25,10 @@ const POST_AUTHORS: Record<string, string> = {
   "microsoft-365-migration-fallbeispiel": "Tino Schmidt",
   "web-app-vs-desktop-app": "Tino Schmidt",
   "word-online-nutzen": "Tino Schmidt",
+  // Tino Schmidt: alle Mac-/Apple-Themen
   "apple-business-manager": "Tino Schmidt",
   "mdm-vergleich-jamf-kandji-mosyle": "Tino Schmidt",
+  "apple-device-management-mdm-fuer-mac": "Tino Schmidt",
   // Alle übrigen Beiträge: Maximilian Dalichow (Standard-Autor)
 };
 
@@ -466,12 +468,12 @@ export const POSTS: Post[] = [
     slug: "mdm-vergleich-jamf-kandji-mosyle",
     title: "MDM für Apple im Vergleich: Jamf, Kandji oder Mosyle?",
     excerpt:
-      "Drei MDM-Plattformen für Mac, iPhone und iPad im Vergleich: Funktionsumfang, Verwaltungsaufwand und Kosten - und warum wir für kleine und mittlere Unternehmen meist bei Mosyle landen.",
+      "Drei MDM-Plattformen für Mac, iPhone und iPad im Vergleich: Funktionsumfang, Verwaltungsaufwand und Alltagstauglichkeit - und warum wir für kleine und mittlere Unternehmen meist bei Mosyle landen.",
     category: "Software & Tools",
     date: "2026-09-03",
     readingMinutes: 9,
     metaDescription:
-      "Jamf, Kandji und Mosyle im Vergleich: Welches Apple-MDM passt zu welchem Unternehmen? Funktionen, Kosten und Praxiserfahrung aus dem Systemhaus-Alltag.",
+      "Jamf, Kandji und Mosyle im Vergleich: Welches Apple-MDM passt zu welchem Unternehmen? Funktionen, Pflegeaufwand und Praxiserfahrung aus dem Systemhaus-Alltag.",
     relatedServiceSlugs: ["mac-it-service", "it-beratung"],
   },
 ];

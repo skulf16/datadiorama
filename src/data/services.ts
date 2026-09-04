@@ -948,7 +948,7 @@ export const SERVICES: Service[] = [
     image: `${IMG}/2025/03/datadiorama-8009.jpg`,
     image2: `${IMG}/2025/03/datadiorama-8126.jpg`,
     intro:
-      "Ein Mac IT-Service übernimmt die Einrichtung, Verwaltung und Betreuung von Apple-Geräten im Unternehmen: vom automatischen Rollout neuer Macs über die zentrale Geräteverwaltung (MDM) bis zum Support im Alltag. datadiorama betreut als IT-Systemhaus aus Potsdam Macs, iPhones und iPads genauso selbstverständlich wie Windows-Umgebungen - viele unserer Kunden fahren beides parallel. Sie bekommen Apple-Arbeitsplätze, die zentral verwaltet, sicher konfiguriert und im Störungsfall schnell wieder einsatzbereit sind.",
+      "datadiorama übernimmt für Sie als Systemhaus spezialisiert auf Mac IT-Service die Einrichtung, Verwaltung und Betreuung von Apple-Geräten im Unternehmen: vom automatischen Rollout neuer Macs über die zentrale Geräteverwaltung (MDM) bis zum Support im Alltag. datadiorama betreut als IT-Systemhaus aus Potsdam Macs, iPhones und iPads genauso selbstverständlich wie Windows-Umgebungen - viele unserer Kunden fahren beides parallel.",
     keyTakeaways: [
       "Mac-Betreuung vom Systemhaus: Einrichtung, Geräteverwaltung, Support und Sicherheit aus einer Hand.",
       "Zero-Touch-Rollout: Neue Macs konfigurieren sich beim ersten Einschalten selbst - über Apple Business Manager und MDM.",
@@ -996,11 +996,6 @@ export const SERVICES: Service[] = [
         heading: "Macs neben Windows: gemischte Umgebungen sind der Normalfall",
         body:
           "Die wenigsten Unternehmen sind reine Apple-Häuser. Der Normalfall im Mittelstand: Windows-Arbeitsplätze in Verwaltung und Buchhaltung, Macs in Geschäftsführung, Marketing oder Entwicklung - dazu Microsoft 365 oder Google Workspace als gemeinsame Plattform. Genau für diese Realität sind wir aufgestellt: Als Systemhaus betreuen wir beide Welten und sorgen dafür, dass Dateiablagen, E-Mail, Kalender, Drucker und Telefonie auf dem Mac genauso funktionieren wie auf dem PC.\n\nDas unterscheidet uns von reinen Apple-Dienstleistern, die bei der Windows-Hälfte Ihrer IT passen müssen - und von Windows-Systemhäusern, für die der Mac ein geduldeter Sonderfall bleibt.",
-      },
-      {
-        heading: "Was kostet Mac-Betreuung für Unternehmen?",
-        body:
-          "Die laufende Betreuung rechnen wir als monatliche Pauschale pro Gerät oder Arbeitsplatz ab - abhängig vom Leistungsumfang (Verwaltung, Support-Zeiten, Vor-Ort-Anteil). Die MDM-Lizenz für Mosyle kommt pro Gerät hinzu und ist im Vergleich zu anderen Apple-MDM-Lösungen bewusst günstig gewählt. Einmalige Projekte wie die Einführung von Apple Business Manager und MDM oder die Migration bestehender, unverwalteter Macs kalkulieren wir als Festpreis-Projekt.\n\nNach einem kostenlosen Erstgespräch nennen wir Ihnen einen konkreten Rahmen - ohne offene Tagessätze und ohne Grundgebühr für Leistungen, die Sie nicht brauchen.",
       },
     ],
     benefits: [
