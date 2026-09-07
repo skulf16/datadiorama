@@ -5,8 +5,10 @@ const nextConfig: NextConfig = {
   // übernommen). Es werden keine externen Bildquellen mehr geladen.
   async redirects() {
     // Alte WordPress-URLs auf neue, sprechende Pfade umleiten (SEO-Erhalt).
-    // Hinweis: /leistungen/hotel-wlan bleibt unverändert und braucht keinen Redirect.
     return [
+      { source: "/hotel-wlan", destination: "/leistungen/hotel-wlan", permanent: true },
+      // Alte WordPress-RSS-Feeds auf den jeweiligen Beitrag umleiten
+      { source: "/:slug/feed", destination: "/beitraege/:slug", permanent: true },
       // Leistungs-Detailseiten
       // IT-Support wurde zu IT-Beratung umbenannt (Haupt-Keyword-Wechsel)
       { source: "/leistungen/it-support", destination: "/leistungen/it-beratung", permanent: true },
