@@ -29,6 +29,8 @@ const POST_AUTHORS: Record<string, string> = {
   "apple-business-manager": "Tino Schmidt",
   "mdm-vergleich-jamf-kandji-mosyle": "Tino Schmidt",
   "apple-device-management-mdm-fuer-mac": "Tino Schmidt",
+  // Tino Schmidt: Gesundheitswesen
+  "it-support-gesundheitswesen": "Tino Schmidt",
   // Alle übrigen Beiträge: Maximilian Dalichow (Standard-Autor)
 };
 
@@ -463,6 +465,18 @@ export const POSTS: Post[] = [
     metaDescription:
       "Apple Business Manager erklärt: Einrichtung, Kosten, automatische Geräteregistrierung und App-Verwaltung - und warum erst die Kombination mit einem MDM den Nutzen bringt.",
     relatedServiceSlugs: ["mac-it-service", "it-beratung"],
+  },
+  {
+    slug: "it-support-gesundheitswesen",
+    title: "IT-Support im Gesundheitswesen: Wie Datadiorama bei Kapazitätsengpässen hilft",
+    excerpt:
+      "Über 5000 Stunden Projektarbeit und Fieldservice für Krankenhäuser und Pflegeeinrichtungen seit 2022: Wie Datadiorama IT-Teams im Gesundheitswesen entlastet – von KIS-Systemen über Gruppenrichtlinien bis zur Glasfasertechnik.",
+    category: "IT-Strategie",
+    date: "2026-09-08",
+    readingMinutes: 4,
+    metaDescription:
+      "IT-Support im Gesundheitswesen: Datadiorama entlastet Krankenhaus- und Pflege-IT bei Urlaubszeit, Krankheit und Projektspitzen – mit KIS-Erfahrung und KRITIS-Kenntnis.",
+    relatedServiceSlugs: ["it-beratung", "netzwerkservice"],
   },
   {
     slug: "mdm-vergleich-jamf-kandji-mosyle",

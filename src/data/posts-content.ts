@@ -2509,4 +2509,51 @@ export const POST_CONTENT: Record<string, PostContent> = {
       }
     ]
   },
+  // Originaltext vom Kunden (September 2026): DD Gesundheit Support.
+  "it-support-gesundheitswesen": {
+    "intro": "Seit 2022 hat unser Datadiorama Team über 5000 Stunden in Projektarbeit und Fieldservice für Krankenhäuser und Pflegeeinrichtungen geleistet. Weshalb Datadiorama bei Kapazitätsengpässen im Gesundheitswesen sinnvoll helfen kann – und wie wir uns in Krankenhaus- und Pflege-IT-Teams einfügen, damit schnell ein Mehrwert entsteht.",
+    "keyTakeaways": [
+      "Über 5000 Stunden Projektarbeit und Fieldservice für Krankenhäuser und Pflegeeinrichtungen seit 2022.",
+      "Wir springen ein bei Urlaub, krankheits- oder elternzeitbedingten Ausfällen und wenn Projekte vorübergehend hohe personelle Anforderungen stellen.",
+      "Erfahrung mit KIS-Systemen, Gruppenrichtlinien, Gematik-Boxen, C-Bögen, Etikettendruckern und Glasfasertechnik.",
+      "Die Datenschutzanforderungen und die Anforderungen an die kritische Infrastruktur im Gesundheitswesen sind uns bekannt.",
+      "Vom MVZ bis zum Krankenhausverbund: Standortvernetzung über MPLS oder VSAN und sichere VPN-Anbindung ins Home-Office."
+    ],
+    "sections": [
+      {
+        "heading": "Wenn Personal fehlt: Wir springen ein",
+        "body": "Wir springen ein in der Urlaubszeit oder wenn Mitarbeiter:innen aus gesundheitlichen Gründen oder Elternzeit vorübergehend fehlen. Auch wenn ein Projekt vorübergehend hohe personelle Anforderungen stellt, stützt Datadiorama den Betrieb."
+      },
+      {
+        "heading": "Erfahrung mit KIS-Systemen und dem Krankenhausalltag",
+        "body": "Unser Team kennt die Installation und Anforderungen verschiedener KIS-Systeme (zum Beispiel Orbis) und arbeitet sich daher schnell in die notwendigen Anforderungen ein.\n\nWir haben die Sensibilität und die Flexibilität, uns in den Krankenhausalltag einzufügen, so wie das lokale IT-Team es benötigt. Wir haben die Fähigkeiten und die Erfahrung, die Gruppenrichtlinien für eine Domäne zu entwickeln – aber wir sind uns auch nicht zu schade, Festplatten auszubauen und Schrott zu entsorgen."
+      },
+      {
+        "heading": "Lösungsorientiert auch unter Zeitdruck",
+        "body": "Als lösungsorientierter Dienstleister konnten wir auch in angespannten Situationen und unter Zeitdruck in OP-Umgebungen oder bei laufender Intensivpflege IT-Probleme lösen und Medizin und Pflege zurückbringen ins reibungslose Arbeiten.\n\nDatadiorama hat die Qualifikation und die Erfahrung, um sich so in ein Krankenhaus- oder Pflege-IT-Team einzufügen, dass schnell ein Mehrwert entsteht."
+      },
+      {
+        "heading": "Datenschutz, kritische Infrastruktur und Technik im Detail",
+        "body": "Die Datenschutzanforderungen und die Anforderungen an die kritische Infrastruktur im Gesundheitswesen sind uns bekannt. Ganz praktisch sind wir vertraut mit Gematik-Boxen, C-Bögen und Etikettendruckern. Lokale und regionale Glasfasertechnik haben wir in vielen Unternehmen aufgebaut, repariert und verbessert.\n\nWir unterstützen bei der Verbindung von Standorten über MPLS oder VSAN und bringen Mitarbeitende mit Ihrem gewünschten VPN ins Home-Office."
+      },
+      {
+        "heading": "Vom MVZ bis zum Krankenhausverbund",
+        "body": "Vom MVZ bis zum Krankenhausverbund ist Datadiorama der richtige Ansprechpartner für die Entlastung Ihrer IT.\n\nDank unserer vielfältigen Kundenlandschaft haben wir Erfahrungen mit zahlreichen technischen Lösungen. Dies gibt uns die Fähigkeit, im Gesundheitssektor innovative Ansätze einzubringen, die sich aus der internen Sicht vielleicht bisher nicht erschlossen haben.\n\nKontaktieren Sie uns und wir beraten gemeinsam vor Ort, wie wir Ihre IT unterstützen können."
+      }
+    ],
+    "faq": [
+      {
+        "question": "In welchen Situationen unterstützt Datadiorama IT-Teams im Gesundheitswesen?",
+        "answer": "In der Urlaubszeit, wenn Mitarbeiter:innen aus gesundheitlichen Gründen oder wegen Elternzeit vorübergehend fehlen, und wenn ein Projekt vorübergehend hohe personelle Anforderungen stellt. Datadiorama fügt sich dabei so in das lokale IT-Team ein, wie es dieses benötigt."
+      },
+      {
+        "question": "Mit welchen Systemen im Krankenhausumfeld hat Datadiorama Erfahrung?",
+        "answer": "Mit verschiedenen KIS-Systemen (zum Beispiel Orbis), Gruppenrichtlinien für Domänen, Gematik-Boxen, C-Bögen, Etikettendruckern sowie lokaler und regionaler Glasfasertechnik. Auch Standortvernetzung über MPLS oder VSAN und VPN-Anbindungen ins Home-Office gehören dazu."
+      },
+      {
+        "question": "Für welche Einrichtungsgrößen ist die Unterstützung geeignet?",
+        "answer": "Vom MVZ bis zum Krankenhausverbund. Datadiorama hat seit 2022 über 5000 Stunden Projektarbeit und Fieldservice für Krankenhäuser und Pflegeeinrichtungen geleistet und kennt die Datenschutz- und KRITIS-Anforderungen im Gesundheitswesen."
+      }
+    ]
+  },
 };
