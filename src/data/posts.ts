@@ -449,7 +449,7 @@ export const POSTS: Post[] = [
       "Ab einer Handvoll Macs wird manuelle Verwaltung zum Risiko. Wie Mobile Device Management (MDM) für macOS funktioniert, was Apple Business Manager und Zero-Touch-Rollout leisten - und wann sich der Einstieg lohnt.",
     category: "IT-Infrastruktur",
     date: "2026-09-03",
-    readingMinutes: 9,
+    readingMinutes: 10,
     metaDescription:
       "Apple Device Management erklärt: Macs, iPhones & iPads per MDM zentral verwalten - mit Apple Business Manager, Zero-Touch-Rollout, FileVault & Update-Steuerung.",
     relatedServiceSlugs: ["mac-it-service", "it-beratung", "home-office"],
