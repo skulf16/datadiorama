@@ -1007,26 +1007,8 @@ export const SERVICES: Service[] = [
       },
       {
         heading: "Selbst verwalten, Apple-Spezialist oder Systemhaus: Was passt wann?",
-        body: "",
-        table: {
-          headers: [
-            "Kriterium",
-            "Selbstverwaltung durch Mitarbeitende",
-            "Reiner Apple-Dienstleister",
-            "Windows-Systemhaus ohne Apple-Fokus",
-            "Systemhaus mit Mac- und Windows-Kompetenz",
-          ],
-          rows: [
-            ["Geeignet bis", "ca. 3-5 Geräte", "reine Apple-Umgebungen", "reine Windows-Umgebungen", "gemischte Umgebungen jeder Größe"],
-            ["Sicherheits-Nachweise (Verschlüsselung, Updates)", "keine", "ja", "für Macs meist lückenhaft", "ja, für beide Welten"],
-            ["Zero-Touch-Rollout", "nein", "ja", "selten", "ja"],
-            ["Integration Microsoft 365 / Netzwerk / Drucker", "Handarbeit je Gerät", "oft nur Apple-seitig", "Windows-seitig", "durchgängig"],
-            ["Anzahl Ansprechpartner", "intern", "zwei (plus Windows-Partner)", "einer, aber mit Mac-Lücke", "einer"],
-            ["Ehrliche Grenze", "ab dem ersten verlorenen Gerät riskant", "passt nicht, wenn Windows-Hälfte existiert", "Macs bleiben Fremdkörper", "bei sehr großen Enterprise-Flotten ggf. dedizierte Apple-Teams sinnvoll"],
-          ],
-        },
-        bodyAfterTable:
-          "Die Tabelle zeigt den Normalfall im Mittelstand: Windows-Arbeitsplätze in Verwaltung und Buchhaltung, Macs in Geschäftsführung, Marketing oder Entwicklung, dazu Microsoft 365 oder Google Workspace als gemeinsame Plattform. Genau für diese Realität sind wir aufgestellt - Sie brauchen keinen zweiten Dienstleister nur für die Macs.",
+        body:
+          "Der Normalfall im Mittelstand: Windows-Arbeitsplätze in Verwaltung und Buchhaltung, Macs in Geschäftsführung, Marketing oder Entwicklung, dazu Microsoft 365 oder Google Workspace als gemeinsame Plattform. Genau für diese Realität sind wir aufgestellt - Sie brauchen keinen zweiten Dienstleister nur für die Macs.",
       },
       {
         heading: "Was kostet Mac-Betreuung?",
