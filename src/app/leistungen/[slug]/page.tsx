@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/sections/PageHero";
 import { FactBox } from "@/components/aeo/FactBox";
@@ -44,11 +45,33 @@ export async function generateMetadata({
 // Leistungen mit pluralischem navLabel („Was Ihnen … bringen“ statt „bringt“).
 const PLURAL_NAV_LABELS = new Set(["telefonanlagen", "workspaces"]);
 
+/** Rendert Markdown-Links ([Text](/pfad)) in Fließtext als interne Links. */
+function InlineText({ text }: { text: string }) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return (
+    <>
+      {parts.map((part, i) => {
+        const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (m) {
+          return (
+            <Link key={i} href={m[2]}>
+              {m[1]}
+            </Link>
+          );
+        }
+        return part;
+      })}
+    </>
+  );
+}
+
 function Paragraphs({ text }: { text: string }) {
   return (
     <>
       {text.split("\n\n").map((p, i) => (
-        <p key={i}>{p}</p>
+        <p key={i}>
+          <InlineText text={p} />
+        </p>
       ))}
     </>
   );
@@ -127,7 +150,7 @@ export default async function ServiceDetailPage({
               {proseSections.map((sec, i) => (
                 <div key={i}>
                   <h2>{sec.heading}</h2>
-                  <Paragraphs text={sec.body} />
+                  {sec.body && <Paragraphs text={sec.body} />}
                   {sec.bullets && (
                     <ul>
                       {sec.bullets.map((b) => (
@@ -135,6 +158,29 @@ export default async function ServiceDetailPage({
                       ))}
                     </ul>
                   )}
+                  {sec.table && (
+                    <div className="overflow-x-auto">
+                      <table>
+                        <thead>
+                          <tr>
+                            {sec.table.headers.map((h) => (
+                              <th key={h}>{h}</th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {sec.table.rows.map((row, r) => (
+                            <tr key={r}>
+                              {row.map((cell, c) => (
+                                <td key={c}>{cell}</td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                  {sec.bodyAfterTable && <Paragraphs text={sec.bodyAfterTable} />}
                 </div>
               ))}
             </div>
@@ -217,7 +263,10 @@ export default async function ServiceDetailPage({
 
       <CtaSection
         title={`Interesse an ${service.navLabel}?`}
-        subtitle="Vereinbaren Sie ein kostenloses Erstgespräch – wir beraten Sie ehrlich und unverbindlich."
+        subtitle={
+          service.ctaText ??
+          "Vereinbaren Sie ein kostenloses Erstgespräch – wir beraten Sie ehrlich und unverbindlich."
+        }
       />
     </>
   );

@@ -33,6 +33,8 @@ export interface ContentSection {
   bullets?: string[];
   /** Optionale Vergleichstabelle (GEO: zitierfähige Alternativen-Übersicht) */
   table?: { headers: string[]; rows: string[][] };
+  /** Optionale Absätze nach der Tabelle (Einordnung/Fazit), getrennt durch \n\n */
+  bodyAfterTable?: string;
 }
 
 export interface Benefit {
@@ -64,6 +66,12 @@ export interface Service {
   // SEO
   metaTitle: string;
   metaDescription: string;
+  /** Optionaler serviceType fürs Service-Schema (Default: navLabel) */
+  schemaServiceType?: string;
+  /** Optionale Beschreibung fürs Service-Schema (Default: metaDescription) */
+  schemaDescription?: string;
+  /** Optionaler Subtitle für den Abschluss-CTA (Default: generischer Text) */
+  ctaText?: string;
 
   /** Antwort-zuerst-Einleitung (AEO): beantwortet die Kernfrage in 2–4 Sätzen */
   intro: string;

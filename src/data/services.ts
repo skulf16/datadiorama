@@ -796,7 +796,7 @@ export const SERVICES: Service[] = [
     relatedSlugs: ["workspaces", "mailserver", "it-beratung"],
   },
 
-  // 12 — Azure Beratung
+  // 12 - Azure Beratung
   {
     slug: "azure-beratung",
     order: 12,
@@ -806,19 +806,25 @@ export const SERVICES: Service[] = [
     tagline: "Wann sich der Schritt in die Microsoft-Cloud lohnt - und wann nicht.",
     cardDescription:
       "Wir prüfen, welche Ihrer Systeme in die Cloud gehören, planen die Migration und kalkulieren die Betriebskosten vorab.",
-    metaTitle: "Azure Beratung in Potsdam & Berlin - Microsoft Azure Consulting",
+    metaTitle: "Azure Beratung Potsdam & Berlin - Migration & Kosten",
     metaDescription:
-      "Azure Beratung vom IT-Systemhaus aus Potsdam: Cloud-Strategie, Azure Migration, Sicherheit & Kostenoptimierung. Persönliche Betreuung in Potsdam, Berlin & St. Gallen.",
+      "Azure Beratung vom Systemhaus aus Potsdam - Strategie, Migration, DSGVO und ehrliche Kostenkalkulation. Denn nicht jedes System gehört in die Cloud.",
+    schemaServiceType: "Cloud-Beratung und Migration (Microsoft Azure)",
+    schemaDescription:
+      "Azure Beratung für kleine und mittlere Unternehmen: Eignungsprüfung, Migrationsplanung, DSGVO-konforme Konfiguration und Kostenkalkulation - von der Bestandsaufnahme bis zum Regelbetrieb.",
+    ctaText:
+      "Ob Azure für Ihre Umgebung die richtige Antwort ist, zeigt erst die Bestandsaufnahme. Wenn Sie das klären möchten, vereinbaren Sie ein unverbindliches Erstgespräch - wir beraten Sie ehrlich, auch wenn die Antwort \"lokaler Server\" lautet.",
     image: `${IMG}/2025/03/datadiorama-7783.jpg`,
     image2: `${IMG}/2025/03/datadiorama-8127.jpg`,
     intro:
-      "Eine Azure Beratung prüft, welche Server, Daten und Anwendungen Ihres Unternehmens sich für Microsoft Azure eignen, plant die Migration und kalkuliert die laufenden Kosten vorab. datadiorama begleitet Sie dabei von der Bestandsaufnahme bis zum Regelbetrieb - als IT-Systemhaus aus Potsdam, das auch Ihre Arbeitsplätze und Netzwerke kennt. Mit einer ehrlichen Antwort: Nicht jedes System gehört in die Cloud.",
+      "Eine Azure Beratung klärt, welche Server, Daten und Anwendungen Ihres Unternehmens sich für Microsoft Azure eignen, plant die Migration und kalkuliert die laufenden Kosten, bevor die erste Rechnung kommt. datadiorama begleitet Sie dabei als IT-Systemhaus aus Potsdam von der Bestandsaufnahme bis zum Regelbetrieb - mit einer Antwort, die Sie von einem Cloud-Vertrieb selten hören: Nicht jedes System gehört in die Cloud.",
     keyTakeaways: [
-      "Eine Azure Beratung klärt, welche Systeme in die Cloud gehören, plant die Migration und kalkuliert die Betriebskosten vorab.",
-      "Typischer Ablauf: Bestandsaufnahme, Konzept mit Kostenschätzung, Testmigration, Umzug, Übergang in den Regelbetrieb.",
-      "Azure lohnt sich am ehesten, wenn eine Server-Erneuerung ansteht, Microsoft 365 bereits läuft oder Standorte und Home-Office angebunden werden sollen.",
-      "Es gibt Fälle, in denen die Cloud die teurere Wahl ist - eine seriöse Beratung sagt das offen.",
-      "Persönliche Beratung vor Ort in Potsdam und Berlin oder per Fernwartung.",
+      "Eine Azure Beratung prüft Eignung, plant die Migration und kalkuliert die monatlichen Betriebskosten vorab - das Ergebnis ist ein Konzept mit Architektur und Zeitplan, kein Prospekt.",
+      "Azure ist die Cloud-Plattform unter Microsoft 365: Dort betreiben Unternehmen eigene Server, Datenbanken und Anwendungen, während Microsoft 365 die fertigen Büroanwendungen liefert.",
+      "Der Umzug lohnt sich am ehesten, wenn eine Server-Erneuerung ansteht, Microsoft 365 bereits läuft oder Standorte und Home-Office zentral angebunden werden sollen.",
+      "Dauerhaft voll ausgelastete Systeme sind in der Cloud-Miete meist teurer als im Eigentum - eine seriöse Beratung sagt das offen und rechnet es vor.",
+      "Datenschutz ist lösbar: deutsche Rechenzentrumsregionen, Auftragsverarbeitung nach Art. 28 DSGVO und Multi-Faktor-Authentifizierung gehören in jedes Konzept.",
+      "Beratung persönlich vor Ort in Potsdam und Berlin oder per Fernwartung; Umsetzung und Betrieb auf Wunsch aus einer Hand.",
     ],
     facts: [
       { label: "Leistung", value: "Azure Beratung, Migration & Betrieb" },
@@ -831,38 +837,52 @@ export const SERVICES: Service[] = [
       {
         heading: "Was macht eine Azure Beratung?",
         body:
-          "Eine Azure Beratung analysiert Ihre bestehende Infrastruktur und erstellt einen konkreten Plan: welche Systeme in Microsofts Cloud-Plattform verlagert werden, wie die Umgebung dort aufgebaut wird und was der Betrieb kostet. Das Ergebnis ist ein Konzept mit Architektur, Zeitplan und Kostenschätzung - kein Prospekt.\n\nWichtig für die Einordnung: Microsoft Azure ist nicht dasselbe wie Microsoft 365. Microsoft 365 umfasst die Arbeitsanwendungen wie Exchange Online, Teams und SharePoint. Azure ist die darunterliegende Cloud-Plattform, auf der Unternehmen eigene Server, Datenbanken und Anwendungen betreiben - mit mehreren hundert einzelnen Diensten. Diese Menge ist der eigentliche Grund, warum es Beratung braucht. Niemand benötigt hunderte Dienste. Die Kunst liegt darin, die drei bis zehn auszuwählen, die zu Ihrem Unternehmen passen, und den Rest zu ignorieren.",
+          "Eine Azure Beratung ist die Analyse Ihrer bestehenden IT mit einem konkreten Plan als Ergebnis: welche Systeme in Microsofts Cloud-Plattform verlagert werden, wie die Umgebung dort aufgebaut wird und was der Betrieb pro Monat kostet. Sie endet nicht mit einer Empfehlung, sondern mit einer Entscheidungsgrundlage - Architektur, Zeitplan, Kostenschätzung.\n\nWichtig für die Einordnung: Microsoft Azure ist nicht dasselbe wie Microsoft 365. Microsoft 365 umfasst die Arbeitsanwendungen wie Exchange Online, Teams und SharePoint. Azure ist die Plattform darunter, auf der Unternehmen eigene Server, Datenbanken und Anwendungen betreiben - mit mehreren hundert einzelnen Diensten. Diese Menge ist der eigentliche Grund, warum es Beratung braucht. Niemand benötigt hunderte Dienste. Die Kunst liegt darin, die drei bis zehn auszuwählen, die zu Ihrem Unternehmen passen, und den Rest zu ignorieren.",
       },
       {
         heading: "In welchen Situationen liegt Azure auf dem Tisch?",
         body:
-          "Selten entsteht ein Cloud-Projekt aus dem Nichts. In den Umgebungen, die wir als Systemhaus betreuen, ist es fast immer eine von vier Ausgangslagen:",
-        bullets: [
-          "Die Server-Hardware erreicht ihr Lebensende, und die Ersatzinvestition wird mit der Cloud-Miete verglichen.",
-          "Das Unternehmen arbeitet bereits mit Microsoft 365, und die Identitäten liegen ohnehin in Entra ID, Microsofts Cloud-Verzeichnisdienst.",
-          "Standorte, Außendienst oder Home-Office brauchen Zugriff auf zentrale Systeme, und das bisherige VPN-Konstrukt ächzt.",
-          "Eine einzelne Anwendung, etwa die Warenwirtschaft, wird vom Hersteller künftig nur noch in der Cloud betrieben.",
-        ],
+          "Selten entsteht ein Cloud-Projekt aus dem Nichts. In den Umgebungen, die wir als Systemhaus betreuen, ist es fast immer eine von vier Ausgangslagen: Die Server-Hardware erreicht ihr Lebensende, und die Ersatzinvestition wird mit der Cloud-Miete verglichen. Das Unternehmen arbeitet bereits mit Microsoft 365, und die Benutzerkonten liegen ohnehin in Entra ID, Microsofts Cloud-Verzeichnisdienst. Standorte, Außendienst oder Home-Office brauchen Zugriff auf zentrale Systeme, und das gewachsene VPN-Konstrukt ächzt. Oder ein Hersteller stellt eine einzelne Anwendung, etwa die Warenwirtschaft, künftig nur noch als Cloud-Dienst bereit.\n\nErkennen Sie sich in einer dieser Lagen wieder? Dann ist der richtige nächste Schritt keine Buchung, sondern eine Bestandsaufnahme.",
       },
       {
         heading: "Lohnt sich Azure auch für kleine Unternehmen?",
         body:
-          "Ja, aber anders, als die Werbung es zeichnet. Kleine Unternehmen profitieren vor allem davon, dass sie keine Hardware vorfinanzieren und keine Serverpflege organisieren müssen; bezahlt wird nach Verbrauch. Der häufigste sinnvolle Einstieg ist deshalb nicht die große Migration, sondern ein einzelner Baustein: ein Cloud-Backup nach der 3-2-1-Regel, nach der Unternehmen drei Kopien ihrer Daten auf zwei Medientypen vorhalten sollten, davon eine außer Haus (Quelle: BSI). Oder ein einzelner Server, der ohnehin ersetzt werden müsste.\n\nDer Punkt, an dem viele Projekte kippen, ist die Kostenlogik: Ein lokaler Server kostet einmal viel und dann wenig. Azure kostet nichts in der Anschaffung und dann jeden Monat. Wer eine Umgebung eins zu eins in die Cloud hebt, ohne die Maschinen passend zu dimensionieren, zahlt drauf. Deshalb gehört die Verbrauchskalkulation in die Beratung, nicht in die erste Monatsrechnung.",
+          "Ja - aber anders, als die Werbung es zeichnet. Kleine Unternehmen profitieren vor allem davon, dass sie keine Hardware vorfinanzieren und keine Serverpflege organisieren müssen; bezahlt wird nach Verbrauch. Der häufigste sinnvolle Einstieg ist deshalb nicht die große Migration, sondern ein einzelner Baustein: ein Cloud-Backup nach der 3-2-1-Regel, nach der Unternehmen drei Kopien ihrer Daten auf zwei Medientypen vorhalten sollten, davon eine außer Haus (Quelle: BSI). Oder ein einzelner Server, der ohnehin ersetzt werden müsste.\n\nDer Punkt, an dem viele Projekte kippen, ist die Kostenlogik: Ein lokaler Server kostet einmal viel und dann wenig. Azure kostet nichts in der Anschaffung und dann jeden Monat. Wer eine Umgebung eins zu eins in die Cloud hebt, ohne die Maschinen passend zu dimensionieren, zahlt drauf. Deshalb gehört die Verbrauchskalkulation in die Beratung, nicht in die erste Monatsrechnung.",
       },
       {
-        heading: "Alternativen im Vergleich: Azure, lokaler Server oder Private Cloud?",
+        heading: "Azure, lokaler Server oder Private Cloud: Was passt wann?",
         body:
-          "Wer nur eine Option prüft, entscheidet nicht, sondern bestätigt. Azure spielt seine Stärke aus, wo Last schwankt, Teams verteilt arbeiten oder Investitionen vermieden werden sollen: keine Anschaffungskosten, kurzfristige Skalierung, wählbarer Datenstandort wie Deutschland. Ein lokaler Server bleibt die bessere Wahl bei stabilen Altanwendungen mit großen lokalen Datenmengen und geringem Bedarf an Fernzugriff. Eine Private Cloud beim Dienstleister passt, wenn feste Monatskosten gewünscht sind und wenig Eigenbetrieb. Und ein Hybrid-Modell kombiniert beides: Kritisches bleibt lokal verfügbar, der Rest läuft in Azure.\n\nEhrlich eingeordnet: Azure ist nicht automatisch die richtige Antwort. Dauerhaft voll ausgelastete Rechenlast ist in der Miete teurer als im Eigentum, und ein funktionierender, gepflegter lokaler Server ist kein Sanierungsfall. Genau das klären wir in der Bestandsaufnahme.",
+          "Wer nur eine Option prüft, entscheidet nicht, sondern bestätigt. Darum stellen wir in jeder Beratung mindestens drei Modelle nebeneinander:",
+        table: {
+          headers: [
+            "Kriterium",
+            "Microsoft Azure",
+            "Lokaler Server",
+            "Private Cloud beim Dienstleister",
+            "Hybrid-Modell",
+          ],
+          rows: [
+            ["Anschaffungskosten", "keine, Abrechnung nach Verbrauch", "hoch (Hardware, Lizenzen)", "keine bis gering", "mittel"],
+            ["Laufende Kosten", "monatlich, nutzungsabhängig", "gering nach Anschaffung", "feste Monatspauschale", "gemischt"],
+            ["Skalierung", "kurzfristig, in beide Richtungen", "nur durch Neukauf", "nach Absprache", "teils/teils"],
+            ["Fernzugriff und Standorte", "Kernstärke", "erfordert VPN-Aufbau", "gut", "gut"],
+            ["Betrieb bei Internetausfall", "nicht erreichbar", "läuft weiter", "nicht erreichbar", "Kritisches läuft lokal weiter"],
+            ["Datenstandort", "wählbare Region, z. B. Deutschland", "im eigenen Haus", "beim Dienstleister, vertraglich geregelt", "kombiniert"],
+            ["Typischer Fall", "schwankende Last, verteilte Teams, anstehende Server-Erneuerung", "stabile Altanwendungen, große lokale Datenmengen", "feste Kosten gewünscht, kein Eigenbetrieb", "Produktion, Offline-Pflichten"],
+          ],
+        },
+        bodyAfterTable:
+          "Ehrlich eingeordnet: Azure ist nicht automatisch die richtige Antwort. Dauerhaft voll ausgelastete Rechenlast ist in der Miete in der Regel teurer als im Eigentum, und ein funktionierender, gepflegter lokaler Server ist kein Sanierungsfall. Nicht jedes System gehört in die Cloud - genau das klären wir in der Bestandsaufnahme. Für den lokalen Weg mit voller Datenhoheit beraten wir Sie ebenso, siehe [Datensicherheit / Private Cloud](/leistungen/private-cloud).",
       },
       {
         heading: "Was kostet der Betrieb in Azure?",
         body:
-          "Die Betriebskosten setzen sich im Kern aus drei Blöcken zusammen: Rechenleistung, Speicher und Datenverkehr aus der Cloud heraus. Dazu kommen Lizenzen und, falls beauftragt, die Betreuung durch einen Dienstleister. Konkrete Euro-Beträge hängen so stark an Größe und Nutzungsprofil der Umgebung, dass jede pauschale Zahl unseriös wäre; belastbar wird die Kalkulation erst nach der Bestandsaufnahme. Nehmen Sie dafür am besten direkt Kontakt mit uns auf.\n\nDrei Stellhebel entscheiden über die Rechnung: Reservierungen (wer Kapazität für ein oder drei Jahre fest bucht, zahlt deutlich weniger als im flexiblen Tarif), richtige Dimensionierung (Cloud-Maschinen lassen sich kleiner anlegen als alte physische Server, die auf Zuwachs gekauft wurden) und Abschalten (Testsysteme, die nachts und am Wochenende durchlaufen, sind reine Geldvernichtung). Klingt banal. Ist aber in der Praxis der häufigste Kostentreiber.",
+          "Die Betriebskosten setzen sich im Kern aus drei Blöcken zusammen: Rechenleistung, Speicher und Datenverkehr aus der Cloud heraus. Dazu kommen Lizenzen und, falls beauftragt, die Betreuung durch einen Dienstleister. Konkrete Euro-Beträge hängen so stark an Größe und Nutzungsprofil der Umgebung, dass jede pauschale Zahl unseriös wäre; belastbar wird die Kalkulation erst nach der Bestandsaufnahme.\n\nDrei Stellhebel entscheiden über die Rechnung. Reservierungen: Wer Kapazität für ein oder drei Jahre fest bucht, zahlt laut Microsoft-Preismodell deutlich weniger als im flexiblen Tarif (Quelle: Microsoft Learn, Azure Reservations). Dimensionierung: Cloud-Maschinen lassen sich kleiner anlegen als alte physische Server, die auf Zuwachs gekauft wurden. Abschalten: Testsysteme, die nachts und am Wochenende durchlaufen, sind reine Geldvernichtung. Klingt banal. Ist aber in der Praxis der häufigste Kostentreiber.",
       },
       {
         heading: "Wie steht es um Datenschutz und DSGVO?",
         body:
-          "Azure lässt sich DSGVO-konform betreiben - das passiert aber nicht von selbst, sondern durch Konfiguration. Drei Punkte gehören in jedes Konzept: die Regionswahl (Microsoft betreibt Rechenzentrumsregionen unter anderem in Deutschland und der Schweiz), der Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO und der Zugriffsschutz mit Multi-Faktor-Authentifizierung und abgestuften Berechtigungen. Ein Admin-Konto ohne MFA ist im Jahr 2026 fahrlässig; einen vollständigen Schutz gibt es in der IT-Sicherheit allerdings nicht.\n\nFür die Einordnung der Anbieter-Sicherheit hilft der Kriterienkatalog C5 des BSI, mit dem Cloud-Dienste ihre Sicherheitsmaßnahmen nachweisen. Bei Spezialfällen, etwa besonders sensiblen Datenkategorien, gehört Ihr Datenschutzbeauftragter mit an den Tisch.",
+          "Azure lässt sich DSGVO-konform betreiben - das passiert aber nicht von selbst, sondern durch Konfiguration. Drei Punkte gehören in jedes Konzept: die Regionswahl (Microsoft betreibt Rechenzentrumsregionen unter anderem in Deutschland und der Schweiz), der Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO und der Zugriffsschutz mit Multi-Faktor-Authentifizierung und abgestuften Berechtigungen. Ein Admin-Konto ohne MFA ist im Jahr 2026 fahrlässig; einen vollständigen Schutz gibt es in der IT-Sicherheit allerdings nicht.\n\nFür die Einordnung der Anbieter-Sicherheit hilft der Kriterienkatalog C5 des BSI, mit dem Cloud-Dienste ihre Sicherheitsmaßnahmen nachweisen (Quelle: BSI). Bei Spezialfällen, etwa besonders sensiblen Datenkategorien, gehört Ihr Datenschutzbeauftragter mit an den Tisch - die datenschutzrechtliche Einzelfallprüfung ersetzt keine IT-Beratung.",
       },
     ],
     benefits: [
@@ -889,7 +909,7 @@ export const SERVICES: Service[] = [
       },
       {
         title: "Migration",
-        description: "Server, Daten und Anwendungen werden schrittweise verlagert, meist außerhalb der Geschäftszeiten, damit Ihr Betrieb weiterläuft.",
+        description: "Server, Daten und Anwendungen werden schrittweise verlagert, in der Regel außerhalb der Geschäftszeiten, damit Ihr Betrieb weiterläuft.",
       },
       {
         title: "Regelbetrieb & Optimierung",
@@ -920,7 +940,7 @@ export const SERVICES: Service[] = [
       {
         question: "Welche Systeme gehören nicht in die Cloud?",
         answer:
-          "Typische Kandidaten für den Verbleib im Haus sind Altanwendungen ohne Cloud-Freigabe des Herstellers, Systeme mit sehr großen lokalen Datenmengen, Maschinensteuerungen in der Produktion und alles, was auch bei einem Internetausfall laufen muss. Genau dafür gibt es Hybrid-Modelle.",
+          "Nicht jedes System gehört in die Cloud. Typische Kandidaten für den Verbleib im Haus sind Altanwendungen ohne Cloud-Freigabe des Herstellers, Systeme mit sehr großen lokalen Datenmengen, Maschinensteuerungen in der Produktion und alles, was auch bei einem Internetausfall laufen muss. Genau dafür gibt es Hybrid-Modelle.",
       },
       {
         question: "Wie lange dauert eine Migration zu Azure?",
@@ -932,29 +952,35 @@ export const SERVICES: Service[] = [
     relatedSlugs: ["microsoft-365", "private-cloud", "it-beratung"],
   },
 
-  // 13 - Mac & Apple IT-Service (ENTWURF: Bilder ergänzen, Erfahrungswerte prüfen)
+  // 13 - Mac IT-Service
   {
     slug: "mac-it-service",
     order: 13,
     navLabel: "Mac IT-Service",
     icon: "workspace",
-    title: "Mac IT-Service für Unternehmen - Ihr Apple-Systemhaus",
+    title: "Mac IT-Service für Unternehmen: Ihr Apple-Systemhaus",
     tagline: "Betreuung, Verwaltung und Support für Macs im Unternehmen - aus einer Hand.",
     cardDescription:
       "Wir betreuen Apple-Arbeitsplätze im Unternehmen: Einrichtung, Geräteverwaltung per MDM, Support und Sicherheit - auch in gemischten Umgebungen mit Windows.",
-    metaTitle: "Mac IT-Service & Apple Support für Unternehmen",
+    metaTitle: "Mac IT-Service & Apple Support für Unternehmen | Potsdam",
     metaDescription:
-      "Mac IT-Service vom Systemhaus: Apple-Geräte im Unternehmen einrichten, per MDM verwalten und laufend betreuen - auch neben Windows. Potsdam, Berlin & St. Gallen.",
+      "Mac IT-Service vom Systemhaus - Zero-Touch-Rollout, MDM mit Mosyle, Support neben Windows. Denn ein Mac im Unternehmen ist kein Einzelgerät. Potsdam & Berlin.",
+    schemaServiceType: "Apple-Gerätebetreuung, MDM und Support für Unternehmen",
+    schemaDescription:
+      "Mac IT-Service vom Systemhaus: Zero-Touch-Rollout über Apple Business Manager, zentrale Verwaltung per Mosyle MDM, Integration in Windows- und Microsoft-365-Umgebungen sowie laufender Support.",
+    ctaText:
+      "Ob Ihre Macs schon ein MDM brauchen oder erst eine saubere Bestandsaufnahme, klärt sich am schnellsten im Gespräch. Vereinbaren Sie ein unverbindliches Erstgespräch - wir schauen uns Ihre Apple-Geräte und die Umgebung drumherum ehrlich an.",
     image: `${IMG}/2025/03/datadiorama-8009.jpg`,
     image2: `${IMG}/2025/03/datadiorama-8126.jpg`,
     intro:
-      "datadiorama übernimmt für Sie als Systemhaus spezialisiert auf Mac IT-Service die Einrichtung, Verwaltung und Betreuung von Apple-Geräten im Unternehmen: vom automatischen Rollout neuer Macs über die zentrale Geräteverwaltung (MDM) bis zum Support im Alltag. datadiorama betreut als IT-Systemhaus aus Potsdam Macs, iPhones und iPads genauso selbstverständlich wie Windows-Umgebungen - viele unserer Kunden fahren beides parallel.",
+      "Ein Mac IT-Service ist die laufende Betreuung von Apple-Geräten im Unternehmen durch ein Systemhaus: Einrichtung, zentrale Verwaltung per MDM, Sicherheit und Support aus einer Hand. datadiorama betreut als IT-Systemhaus aus Potsdam Macs, iPhones und iPads genauso selbstverständlich wie Windows-Umgebungen - viele unserer Kunden fahren beides parallel. Der Grundsatz dahinter: Ein Mac im Unternehmen ist kein Einzelgerät, sondern Teil Ihrer IT.",
     keyTakeaways: [
-      "Mac-Betreuung vom Systemhaus: Einrichtung, Geräteverwaltung, Support und Sicherheit aus einer Hand.",
-      "Zero-Touch-Rollout: Neue Macs konfigurieren sich beim ersten Einschalten selbst - über Apple Business Manager und MDM.",
-      "Zentrale Verwaltung mit Mosyle: Updates, Sicherheitsrichtlinien und Software auf allen Geräten, ohne jeden Mac einzeln anzufassen.",
-      "Auch für gemischte Umgebungen: Macs neben Windows, Microsoft 365 oder Google Workspace - kein Entweder-oder.",
-      "Persönlich vor Ort in Potsdam und Berlin oder per Fernwartung; feste Ansprechpartner statt Hotline.",
+      "Mac-Betreuung vom Systemhaus: Einrichtung, Geräteverwaltung (MDM), Support und Sicherheit aus einer Hand - auch neben Windows.",
+      "Zero-Touch-Rollout: Neue Macs konfigurieren sich beim ersten Einschalten selbst, über Apple Business Manager und MDM (Quelle: Apple Platform Deployment, Apple Support-Dokumentation).",
+      "Zentrale Verwaltung mit Mosyle: Updates, Festplattenverschlüsselung (FileVault) und Software auf allen Geräten, ohne jeden Mac einzeln anzufassen.",
+      "Faustregel aus unserer Praxis: Ab etwa fünf bis zehn Macs kippt die Selbstverwaltung - dann braucht es ein MDM.",
+      "Verlorene Geräte lassen sich aus der Ferne sperren oder löschen; Compliance-Nachweise für Versicherung und Audit inklusive.",
+      "Persönlich vor Ort in Potsdam und Berlin oder per Fernwartung, mit festen Ansprechpartnern statt Hotline.",
     ],
     facts: [
       { label: "Leistung", value: "Mac-Betreuung, MDM & Apple Support" },
@@ -967,35 +993,45 @@ export const SERVICES: Service[] = [
       {
         heading: "Was umfasst ein Mac IT-Service für Unternehmen?",
         body:
-          "Ein Mac IT-Service ist die laufende Betreuung von Apple-Geräten im Unternehmen durch ein Systemhaus - vergleichbar mit klassischer IT-Betreuung, nur mit Apple-Kompetenz. Dazu gehören die Einrichtung neuer Geräte, die zentrale Verwaltung per Mobile Device Management (MDM), automatische Updates und Sicherheitsrichtlinien, die Anbindung an Ihre bestehende Infrastruktur und der Support, wenn etwas klemmt.\n\nDer Unterschied zum Apple Store oder zur Apple-Hotline: Wir kennen Ihre Umgebung. Ein Mac im Unternehmen ist kein Einzelgerät, sondern Teil eines Netzwerks mit Dateiablagen, Druckern, E-Mail, Microsoft 365 oder Google Workspace und Sicherheitsanforderungen. Genau diese Integration ist unser Alltag als Systemhaus - seit 2013.",
-        bullets: [
-          "Beschaffung, Einrichtung und Zero-Touch-Rollout neuer Macs",
-          "Zentrale Geräteverwaltung (MDM) mit Sicherheitsrichtlinien und Update-Steuerung",
-          "Integration in bestehende Netzwerke, Microsoft 365 und Google Workspace",
-          "Support per Fernwartung und vor Ort in Potsdam und Berlin",
-        ],
+          "Ein Mac IT-Service deckt den gesamten Lebenszyklus eines Apple-Geräts im Unternehmen ab: Beschaffung und Einrichtung neuer Geräte, zentrale Verwaltung per Mobile Device Management (MDM), automatische Updates und Sicherheitsrichtlinien, die Anbindung an Ihre bestehende Infrastruktur und den Support, wenn etwas klemmt. Vergleichbar mit klassischer IT-Betreuung, nur mit Apple-Kompetenz.\n\nDer Unterschied zum Apple Store oder zur Apple-Hotline: Wir kennen Ihre Umgebung. Ein Mac im Unternehmen ist kein Einzelgerät, sondern Teil eines Netzwerks mit Dateiablagen, Druckern, E-Mail, Microsoft 365 oder Google Workspace und Sicherheitsanforderungen. Genau diese Integration ist unser Alltag als Systemhaus - seit 2013.",
       },
       {
-        heading: "Wann lohnt sich professionelle Mac-Betreuung?",
+        heading: "Ab wann lohnt sich professionelle Mac-Betreuung?",
         body:
-          "In vielen Unternehmen fangen Macs klein an: Die Geschäftsführung arbeitet mit einem MacBook, das Marketing braucht Apple-Geräte für Grafik und Video, neue Mitarbeitende bringen den Wunsch nach dem gewohnten Gerät mit. Solange es zwei oder drei Geräte sind, verwaltet die sich jeder selbst. Ab etwa fünf bis zehn Macs kippt das: Niemand weiß, welche Geräte auf welchem Stand sind, Updates bleiben liegen, und beim Ausscheiden eines Mitarbeiters ist unklar, wie man an das Gerät und die Daten kommt.\n\nSpätestens dann braucht es zentrale Verwaltung - und einen Partner, der Apple-Umgebungen nicht nebenbei, sondern strukturiert betreut. Typische Auslöser aus unserer Praxis:",
-        bullets: [
-          "Die Zahl der Macs wächst, aber niemand hat einen Überblick über Geräte, Updates und Sicherheit.",
-          "Ein neuer Mitarbeiter soll am ersten Tag ein fertig eingerichtetes Gerät haben - nicht nach drei Tagen Handarbeit.",
-          "Compliance oder Cyber-Versicherung verlangen Festplattenverschlüsselung, Update-Nachweise und Gerätekontrolle.",
-          "Der bisherige IT-Dienstleister kennt nur Windows und behandelt Macs als Fremdkörper.",
-          "Ein MacBook geht verloren, und niemand kann es aus der Ferne sperren oder löschen.",
-        ],
+          "In vielen Unternehmen fangen Macs klein an: Die Geschäftsführung arbeitet mit einem MacBook, das Marketing braucht Apple-Geräte für Grafik und Video, neue Mitarbeitende bringen den Wunsch nach dem gewohnten Gerät mit. Solange es zwei oder drei Geräte sind, verwaltet die jeder selbst. Ab etwa fünf bis zehn Macs kippt das: Niemand weiß, welche Geräte auf welchem Stand sind, Updates bleiben liegen, und beim Ausscheiden eines Mitarbeiters ist unklar, wie man an Gerät und Daten kommt.\n\nDer eigentliche Auslöser ist allerdings selten die Stückzahl, sondern ein Ereignis. Ein MacBook geht verloren, und niemand kann es aus der Ferne sperren. Die Cyber-Versicherung fragt nach Festplattenverschlüsselung und Update-Nachweisen. Ein neuer Kollege soll am ersten Tag arbeitsfähig sein, nicht nach drei Tagen Handarbeit. Oder der bisherige IT-Dienstleister kennt nur Windows und behandelt Macs als Fremdkörper. Kommt Ihnen eines davon bekannt vor? Dann ist der Zeitpunkt jetzt.",
       },
       {
-        heading: "Zentrale Geräteverwaltung mit Mosyle und Apple Business Manager",
+        heading: "Zero-Touch-Rollout mit Apple Business Manager und Mosyle",
         body:
-          "Kern jeder professionellen Mac-Umgebung ist ein Mobile Device Management. Wir setzen dafür auf Mosyle, eine auf Apple spezialisierte MDM-Plattform, in Kombination mit dem Apple Business Manager. Das Zusammenspiel ermöglicht den sogenannten Zero-Touch-Rollout: Ein neu gekaufter Mac wird beim ersten Einschalten automatisch Ihrem Unternehmen zugeordnet, bezieht seine Konfiguration, Sicherheitsrichtlinien und Programme selbst - ohne dass ihn ein Administrator je angefasst hat.\n\nIm laufenden Betrieb steuert das MDM Updates für macOS und Anwendungen, erzwingt Festplattenverschlüsselung (FileVault), verteilt WLAN- und VPN-Profile und kann verlorene Geräte aus der Ferne sperren oder löschen. Für Sie heißt das: Jeder Mac ist nachweisbar auf einem definierten, sicheren Stand - ob er in Potsdam im Büro steht oder im Home-Office in St. Gallen.",
+          "Kern jeder professionell verwalteten Mac-Umgebung ist ein Mobile Device Management. Wir setzen dafür auf Mosyle, eine auf Apple spezialisierte MDM-Plattform, in Kombination mit dem Apple Business Manager - Apples kostenlosem Unternehmensportal, das gekaufte Geräte verbindlich Ihrer Organisation zuordnet. Das Zusammenspiel ermöglicht den Zero-Touch-Rollout: Ein neu gekaufter Mac wird beim ersten Einschalten automatisch Ihrem Unternehmen zugewiesen und bezieht Konfiguration, Sicherheitsrichtlinien und Programme selbst, ohne dass ihn ein Administrator je angefasst hat (Quelle: Apple Platform Deployment).\n\nIm laufenden Betrieb steuert das MDM Updates für macOS und Anwendungen, erzwingt die Festplattenverschlüsselung FileVault, verteilt WLAN- und VPN-Profile und kann verlorene Geräte aus der Ferne sperren oder löschen. Für Sie heißt das: Jeder Mac ist nachweisbar auf einem definierten, dokumentierten Stand - ob er im Büro in Potsdam steht oder im Home-Office. Warum Mosyle? Die Plattform deckt Mac, iPhone und iPad ab, ist schnell eingeführt und liegt bei den Lizenzkosten pro Gerät nach unserer Erfahrung unter vielen Enterprise-Alternativen. Es gibt [Alternativen wie Jamf oder Microsoft Intune](/beitraege/mdm-vergleich-jamf-kandji-mosyle); welche passt, hängt an Gerätemix und vorhandenen Lizenzen.",
       },
       {
-        heading: "Macs neben Windows: gemischte Umgebungen sind der Normalfall",
+        heading: "Selbst verwalten, Apple-Spezialist oder Systemhaus: Was passt wann?",
+        body: "",
+        table: {
+          headers: [
+            "Kriterium",
+            "Selbstverwaltung durch Mitarbeitende",
+            "Reiner Apple-Dienstleister",
+            "Windows-Systemhaus ohne Apple-Fokus",
+            "Systemhaus mit Mac- und Windows-Kompetenz",
+          ],
+          rows: [
+            ["Geeignet bis", "ca. 3-5 Geräte", "reine Apple-Umgebungen", "reine Windows-Umgebungen", "gemischte Umgebungen jeder Größe"],
+            ["Sicherheits-Nachweise (Verschlüsselung, Updates)", "keine", "ja", "für Macs meist lückenhaft", "ja, für beide Welten"],
+            ["Zero-Touch-Rollout", "nein", "ja", "selten", "ja"],
+            ["Integration Microsoft 365 / Netzwerk / Drucker", "Handarbeit je Gerät", "oft nur Apple-seitig", "Windows-seitig", "durchgängig"],
+            ["Anzahl Ansprechpartner", "intern", "zwei (plus Windows-Partner)", "einer, aber mit Mac-Lücke", "einer"],
+            ["Ehrliche Grenze", "ab dem ersten verlorenen Gerät riskant", "passt nicht, wenn Windows-Hälfte existiert", "Macs bleiben Fremdkörper", "bei sehr großen Enterprise-Flotten ggf. dedizierte Apple-Teams sinnvoll"],
+          ],
+        },
+        bodyAfterTable:
+          "Die Tabelle zeigt den Normalfall im Mittelstand: Windows-Arbeitsplätze in Verwaltung und Buchhaltung, Macs in Geschäftsführung, Marketing oder Entwicklung, dazu Microsoft 365 oder Google Workspace als gemeinsame Plattform. Genau für diese Realität sind wir aufgestellt - Sie brauchen keinen zweiten Dienstleister nur für die Macs.",
+      },
+      {
+        heading: "Was kostet Mac-Betreuung?",
         body:
-          "Die wenigsten Unternehmen sind reine Apple-Häuser. Der Normalfall im Mittelstand: Windows-Arbeitsplätze in Verwaltung und Buchhaltung, Macs in Geschäftsführung, Marketing oder Entwicklung - dazu Microsoft 365 oder Google Workspace als gemeinsame Plattform. Genau für diese Realität sind wir aufgestellt: Als Systemhaus betreuen wir beide Welten und sorgen dafür, dass Dateiablagen, E-Mail, Kalender, Drucker und Telefonie auf dem Mac genauso funktionieren wie auf dem PC.\n\nDas unterscheidet uns von reinen Apple-Dienstleistern, die bei der Windows-Hälfte Ihrer IT passen müssen - und von Windows-Systemhäusern, für die der Mac ein geduldeter Sonderfall bleibt.",
+          "Die Kosten bestehen üblicherweise aus zwei Blöcken: der MDM-Lizenz pro Gerät und Monat sowie der Betreuung selbst, als monatliche Pauschale pro Gerät oder Arbeitsplatz oder als Projektaufwand für die Ersteinrichtung. Konkrete Beträge hängen an Geräteanzahl, gewünschtem Leistungsumfang und dem Zustand der bestehenden Umgebung. Ein pauschaler Preis vor der Bestandsaufnahme wäre geraten, nicht kalkuliert - deshalb nennen wir ihn erst danach. Die Einrichtung von Apple Business Manager und MDM fällt nur einmal an; davon profitieren auch kleine Flotten früh.",
       },
     ],
     benefits: [
@@ -1020,24 +1056,24 @@ export const SERVICES: Service[] = [
     ],
     process: [
       {
-        title: "Erstgespräch & Bestandsaufnahme",
+        title: "Erstgespräch und Bestandsaufnahme",
         description:
           "Wir erfassen Ihre Apple-Geräte, die bestehende Infrastruktur und klären Ziele: Verwaltung, Sicherheit, Support.",
       },
       {
-        title: "Apple Business Manager & MDM",
+        title: "Apple Business Manager und MDM einrichten",
         description:
-          "Wir richten den Apple Business Manager für Ihr Unternehmen ein, verbinden ihn mit Mosyle und definieren Ihre Richtlinien.",
+          "Wir registrieren Ihr Unternehmen im Apple Business Manager, verbinden ihn mit Mosyle und definieren Ihre Richtlinien.",
       },
       {
-        title: "Rollout & Migration",
+        title: "Rollout und Migration",
         description:
-          "Neue Geräte kommen per Zero-Touch ins System; bestehende Macs nehmen wir strukturiert in die Verwaltung auf.",
+          "Neue Geräte kommen per Zero-Touch ins System; bestehende Macs nehmen wir strukturiert in die Verwaltung auf - je nach Ausgangslage per Neuinstallation mit Datenübernahme oder nachträglicher Registrierung.",
       },
       {
         title: "Laufende Betreuung",
         description:
-          "Updates, Monitoring und Support im Alltag - per Fernwartung oder vor Ort, mit festen Ansprechpartnern.",
+          "Updates, Monitoring und Support im Alltag, per Fernwartung oder vor Ort in Potsdam und Berlin, mit festen Ansprechpartnern.",
       },
     ],
     faq: [
@@ -1049,17 +1085,17 @@ export const SERVICES: Service[] = [
       {
         question: "Ab wie vielen Macs lohnt sich ein MDM?",
         answer:
-          "Als Faustregel: ab etwa fünf Geräten. Der eigentliche Auslöser ist aber selten die Stückzahl, sondern der Anlass - ein verlorenes MacBook, eine Compliance-Anforderung oder ein neuer Mitarbeiter, der am ersten Tag arbeitsfähig sein soll. Da die Einrichtung über Apple Business Manager einmalig ist, profitieren auch kleine Flotten früh davon.",
+          "Als Faustregel: ab etwa fünf Geräten. Der eigentliche Auslöser ist aber selten die Stückzahl, sondern der Anlass - ein verlorenes MacBook, eine Compliance-Anforderung oder ein neuer Mitarbeiter, der am ersten Tag arbeitsfähig sein soll. Da die Einrichtung über den Apple Business Manager einmalig ist, profitieren auch kleine Flotten früh davon.",
       },
       {
         question: "Welches MDM setzt ihr für Macs ein?",
         answer:
-          "Wir arbeiten mit Mosyle, einer auf Apple spezialisierten MDM-Plattform. Sie deckt Mac, iPhone und iPad ab, ist schnell eingeführt und liegt bei den Lizenzkosten pro Gerät unter vielen Enterprise-Alternativen - aus unserer Erfahrung ein sehr gutes Verhältnis aus Funktionsumfang und Kosten für kleine und mittlere Unternehmen. Einen ausführlichen Vergleich der gängigen Apple-MDM-Plattformen finden Sie in unserem Ratgeber.",
+          "Wir arbeiten mit Mosyle, einer auf Apple spezialisierten MDM-Plattform. Sie deckt Mac, iPhone und iPad ab, ist schnell eingeführt und liegt bei den Lizenzkosten pro Gerät nach unserer Erfahrung unter vielen Enterprise-Alternativen. Alternativen wie Jamf oder Microsoft Intune können je nach Umgebung ebenfalls passen; das klären wir in der Bestandsaufnahme.",
       },
       {
         question: "Was ist der Apple Business Manager - und brauchen wir den?",
         answer:
-          "Der Apple Business Manager ist Apples kostenloses Portal für Unternehmen. Er ordnet gekaufte Geräte verbindlich Ihrer Organisation zu, ermöglicht den automatischen Rollout in Verbindung mit einem MDM und verwaltet Volumenlizenzen für Apps. Für eine professionell verwaltete Apple-Umgebung ist er die Grundlage - wir richten ihn für Sie ein.",
+          "Der Apple Business Manager ist Apples kostenloses Portal für Unternehmen. Er ordnet gekaufte Geräte verbindlich Ihrer Organisation zu, ermöglicht in Verbindung mit einem MDM den automatischen Rollout und verwaltet Volumenlizenzen für Apps. Für eine professionell verwaltete Apple-Umgebung ist er die Grundlage - wir richten ihn für Sie ein.",
       },
       {
         question: "Funktionieren Microsoft 365 und Teams auf dem Mac?",
